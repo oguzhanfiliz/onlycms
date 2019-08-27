@@ -1,0 +1,88 @@
+<div class="wrap">
+	<section class="app-content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="widget">
+					<header class="widget-header">
+						<h4 class="widget-title">World Map</h4>
+					</header><!-- .widget-header -->
+					<hr class="widget-separator">
+					<div class="widget-body">
+						<div data-plugin="vectorMap" data-options="
+							{
+								map: 'world_mill',
+								backgroundColor: '#ffffff',
+								regionsSelectable: true,
+								regionStyle: {
+								initial: { fill: '#3498db', 'fill-opacity': 1, stroke: 'none', 'stroke-width': 0, 'stroke-opacity': 1 },
+									hover: { 'fill-opacity': 0.8, cursor: 'pointer' },
+									selected: { fill: '#2980b9' },
+								},
+								markerStyle: {
+									initial: { fill: '#f1c40f', 'fill-opacity': 1, stroke: '#f1c40f', 'stroke-width': 10, 'stroke-opacity': .5 },
+									hover: { 'fill-opacity': 1, stroke: '#f1c40f', 'stroke-width': 10, 'stroke-opacity': 1 }
+								},
+								markers: [
+									{latLng: [41.90, 12.45], name: 'Vatican City'},
+									{latLng: [37.4200756, -122.0727955], name: 'Mountain View'},
+									{latLng: [30.0444196, 31.2357116], name: 'Ciro City'},
+									{latLng: [25.697717409104378, 32.6398587481324], name: 'Luxor City'},
+									{latLng: [35.71591543556279, 139.73647358577884], name: 'Tokyo'},
+									{latLng: [40.432109135597095, -3.6912417157348276], name: 'Madrid'},
+									{latLng: [645.9938550249877, -40.7213303307281], name: 'New York'},
+									{latLng: [-23.501280327970314, -46.65224788028561], name: 'Sao Paulo'}
+								]
+							}" style="width: 100%; height: 400px;">
+						</div>
+					</div><!-- .widget-body -->
+				</div><!-- .widget -->
+			</div><!-- END column -->
+
+			<div class="col-md-6">
+				<div class="widget">
+					<header class="widget-header">
+						<h4 class="widget-title">Africa Map</h4>
+					</header><!-- .widget-header -->
+					<hr class="widget-separator">
+					<div class="widget-body">
+						<div id="africa-map" data-plugin="vectorMap" data-options="
+							{
+								map: 'africa_mill',
+								backgroundColor: '#ffffff',
+								regionsSelectable: true,
+								regionStyle: {
+									initial: { fill: '#3498db', 'fill-opacity': 1, stroke: 'none', 'stroke-width': 0, 'stroke-opacity': 1 },
+									hover: { 'fill-opacity': 0.8, cursor: 'pointer' },
+									selected: { fill: '#2980b9' },
+								}
+							}" style="width: 100%; height: 400px;">
+						</div>
+					</div><!-- .widget-body -->
+				</div><!-- .widget -->
+			</div><!-- END column -->
+
+			<div class="col-md-6">
+				<div class="widget">
+					<header class="widget-header">
+						<h4 class="widget-title">USA Map</h4>
+					</header><!-- .widget-header -->
+					<hr class="widget-separator">
+					<div class="widget-body">
+						<div data-plugin="vectorMap" data-options="
+							{
+								map: 'us_mill',
+								backgroundColor: '#ffffff',
+								regionsSelectable: true,
+								regionStyle: {
+									initial: { fill: '#3498db', 'fill-opacity': 1, stroke: 'none', 'stroke-width': 0, 'stroke-opacity': 1 },
+									hover: { 'fill-opacity': 0.8, cursor: 'pointer' },
+									selected: { fill: '#2980b9' },
+								}
+							}" style="width: 100%; height: 400px;">
+						</div>
+					</div><!-- .widget-body -->
+				</div><!-- .widget -->
+			</div><!-- END column -->
+		</div><!-- .row -->
+	</section><!-- .app-content -->
+</div><!-- .wrap -->

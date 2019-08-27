@@ -1,0 +1,157 @@
+<div class="wrap">
+	<section class="app-content">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="app-action-panel" id="compose-action-panel">
+					<div class="action-panel-toggle" data-toggle="class" data-target="#compose-action-panel" data-class="open">
+						<i class="fa fa-chevron-right"></i>
+						<i class="fa fa-chevron-left"></i>
+					</div><!-- .app-action-panel -->
+
+					<div class="m-b-lg">
+						<a href="inbox.html" type="button" class="btn action-panel-btn btn-default btn-block">Back To Inbox</a>
+					</div>
+
+					<div class="app-actions-list scrollable-container">
+						<!-- mail category list -->
+						<div class="list-group">
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-envelope"></i>Inbox</a>
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-star"></i>Starred</a>
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-bookmark"></i>Important</a>
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-paper-plane"></i>Sent</a>
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-exclamation-triangle"></i>Drafts</a>
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-folder"></i>All Mail</a>
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-exclamation-circle"></i>Spam</a>
+							<a href="javascript:void(0)" class="text-color list-group-item"><i class="m-r-sm fa fa-trash"></i>Trash</a>
+						</div><!-- .list-group -->
+
+						<hr class="m-0 m-b-md" style="border-color: #ddd;">
+
+						<!-- mail label list -->
+						<div class="list-group">
+							<h4>Labels</h4>
+							<a href="#" class="list-group-item">
+								<i class="m-r-sm fa fa-circle text-warning"></i>
+								<span>Personal</span>
+								<div class="item-actions">
+									<i class="item-action fa fa-edit" data-toggle="modal" data-target="#labelModal"></i>
+									<i class="item-action fa fa-trash" data-toggle="modal" data-target="#deleteItemModal"></i>
+								</div>
+							</a>
+							<a href="#" class="list-group-item">
+								<i class="m-r-sm fa fa-circle text-primary"></i>
+								<span>Work</span>
+								<div class="item-actions">
+									<i class="item-action fa fa-edit" data-toggle="modal" data-target="#labelModal"></i>
+									<i class="item-action fa fa-trash" data-toggle="modal" data-target="#deleteItemModal"></i>
+								</div>
+							</a>
+							<a href="#" class="list-group-item">
+								<i class="m-r-sm fa fa-circle text-danger"></i>
+								<span>Business</span>
+								<div class="item-actions">
+									<i class="item-action fa fa-edit" data-toggle="modal" data-target="#labelModal"></i>
+									<i class="item-action fa fa-trash" data-toggle="modal" data-target="#deleteItemModal"></i>
+								</div>
+							</a>
+							<a href="#" class="list-group-item">
+								<i class="m-r-sm fa fa-circle text-success"></i>
+								<span>Clients</span>
+								<div class="item-actions">
+									<i class="item-action fa fa-edit" data-toggle="modal" data-target="#labelModal"></i>
+									<i class="item-action fa fa-trash" data-toggle="modal" data-target="#deleteItemModal"></i>
+								</div>
+							</a>
+							<a href="#" class="list-group-item text-color" data-toggle="modal" data-target="#labelModal"><i class="fa fa-plus m-r-sm"></i> Add New Label</a>
+						</div><!-- .list-group -->
+
+						<hr class="m-0 m-b-md" style="border-color: #ddd;">
+				
+						<div class="list-group">
+							<a href="#" class="text-color list-group-item"><i class="m-r-sm fa fa-gear"></i>settings</a>
+							<a href="#" class="text-color list-group-item"><i class="m-r-sm fa fa-exclamation-circle"></i>Need Help?</a>
+						</div>
+					</div><!-- .app-actions-list -->
+				</div><!-- .app-action-panel -->
+			</div><!-- END column -->
+
+			<div class="col-md-10">
+				<div class="panel panel-default new-message">						
+					<form action="#">
+						<div class="panel-body">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="To">
+							</div><!-- .form-group -->
+
+							<div class="form-group m-b-0">
+								<div class="row">
+									<div class="col-sm-6">
+										<input type="text" class="form-control m-b-lg" placeholder="Cc">
+									</div>
+									<div class="col-sm-6">
+										<input type="text" class="form-control m-b-lg" placeholder="Bcc">
+									</div>
+								</div>
+							</div><!-- .form-group -->
+
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Subject">
+							</div><!-- .form-group -->
+
+							<textarea name="new_message_body" class="form-control full-wysiwyg"></textarea>
+						</div><!-- .panel-body -->
+
+						<div class="panel-footer clearfix">
+							<div class="pull-right">
+								<button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+								<button type="button" class="btn btn-success"><i class="fa fa-save"></i></button>
+								<button type="button" class="btn btn-primary">Send <i class="fa fa-send"></i></button>
+							</div>
+						</div><!-- .panel-footer -->
+					</form>
+				</div><!-- .panel -->
+			</div><!-- END column -->
+		</div><!-- .row -->
+	</section><!-- .app-content -->
+</div><!-- .wrap -->
+
+<!-- new label Modal -->
+<div id="labelModal" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Create / update label</h4>
+			</div>
+			<form action="#" id="newCategoryForm">
+				<div class="modal-body">
+					<div class="form-group m-0">
+						<input type="text" id="catLabel" class="form-control" placeholder="Label">
+					</div>
+				</div><!-- .modal-body -->
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+				</div><!-- .modal-footer -->
+			</form>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- delete item Modal -->
+<div id="deleteItemModal" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Delete item</h4>
+			</div>
+			<div class="modal-body">
+				<h5>Do you really want to delete this item ?</h5>
+			</div><!-- .modal-body -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+			</div><!-- .modal-footer -->
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

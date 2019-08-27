@@ -1,0 +1,382 @@
+<div class="wrap">
+  <section class="app-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Vertical Bars</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+              tooltip : {
+                trigger: 'axis'
+              },
+              legend: {
+                data:['Sale','Market']
+              },
+              calculable : true,
+              xAxis : [
+                {
+                  type : 'category',
+                  data : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+                }
+              ],
+              yAxis : [
+                {
+                  type : 'value'
+                }
+              ],
+              series : [
+                {
+                  name:'Sale',
+                  type:'bar',
+                  data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                  markPoint : {
+                    data : [
+                      {type : 'max', name: 'Max'},
+                      {type : 'min', name: 'Min'}
+                    ]
+                  },
+                  markLine : {
+                    data : [
+                      {type : 'average', name: 'Average'}
+                    ]
+                  }
+                },
+                {
+                  name:'Market',
+                  type:'bar',
+                  data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+                  markPoint : {
+                    data : [
+                      {name : 'Max', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
+                      {name : 'Min', value : 2.3, xAxis: 11, yAxis: 3}
+                    ]
+                  },
+                  markLine : {
+                    data : [
+                      {type : 'average', name : 'Average'}
+                    ]
+                  }
+                }
+              ]
+            }" style="height:300px">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Horizontal Bars</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+              tooltip : {
+                trigger: 'axis'
+              },
+              legend: {
+                data:['2011', '2012']
+              },
+              calculable : true,
+              grid : {
+                x: 60
+              },
+              xAxis : [
+                {
+                  type : 'value',
+                  boundaryGap : [0, 0.01]
+                }
+              ],
+              yAxis : [
+                {
+                  type : 'category',
+                  data : ['Brasil','Indonesia','USA','India','China','World(M)']
+                }
+              ],
+              series : [
+                {
+                  name:'2011',
+                  type:'bar',
+                  data:[18203, 23489, 29034, 104970, 131744, 630230]
+                },
+                {
+                  name:'2012',
+                  type:'bar',
+                  data:[19325, 23438, 31000, 121594, 134141, 681807]
+                }
+              ]
+            }" style="height:300px">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">2-Direction Bars</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+              tooltip : {
+                trigger: 'axis'
+              },
+              legend: {
+                data:['Profit', 'Out', 'In']
+              },
+              calculable : true,
+              xAxis : [
+                {
+                  type : 'value'
+                }
+              ],
+              yAxis : [
+                {
+                  type : 'category',
+                  axisTick : {show: false},
+                  data : ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+                }
+              ],
+              series : [
+                {
+                  name:'Profit',
+                  type:'bar',
+                  itemStyle : { normal: {label : {show: true, position: 'inside'}}},
+                  data:[200, 170, 240, 244, 200, 220, 210]
+                },
+                {
+                  name:'In',
+                  type:'bar',
+                  stack: 'Total',
+                  barWidth : 5,
+                  itemStyle: {normal: {
+                      label : {show: true}
+                  }},
+                  data:[320, 302, 341, 374, 390, 450, 420]
+                },
+                {
+                  name:'Out',
+                  type:'bar',
+                  stack: 'Total',
+                  itemStyle: {normal: {
+                      label : {show: true, position: 'left'}
+                  }},
+                  data:[-120, -132, -101, -134, -190, -230, -210]
+                }
+              ]
+            }" style="height:300px">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Horizontal Stacked Bars</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+              tooltip : {
+                trigger: 'axis',
+                axisPointer : {
+                  type : 'shadow'
+                }
+              },
+              legend: {
+                data: ['Interview', 'Marketing','Advertising','Video Ads','Search Engine']
+              },
+              grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+              },
+              xAxis:{
+                type: 'value'
+              },
+              yAxis: {
+                type: 'category',
+                data: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+              },
+              series: [
+                {
+                  name: 'Interview',
+                  type: 'bar',
+                  stack: 'Total',
+                  label: {
+                    normal: {
+                      show: true,
+                      position: 'insideRight'
+                    }
+                  },
+                  data: [320, 302, 301, 334, 390, 330, 320]
+                },
+                {
+                  name: 'Marketing',
+                  type: 'bar',
+                  stack: 'Total',
+                  label: {
+                    normal: {
+                      show: true,
+                      position: 'insideRight'
+                    }
+                  },
+                  data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                  name: 'Advertising',
+                  type: 'bar',
+                  stack: 'Total',
+                  label: {
+                    normal: {
+                      show: true,
+                      position: 'insideRight'
+                    }
+                  },
+                  data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                  name: 'Video Ads',
+                  type: 'bar',
+                  stack: 'Total',
+                  label: {
+                    normal: {
+                      show: true,
+                      position: 'insideRight'
+                    }
+                  },
+                  data: [150, 212, 201, 154, 190, 330, 410]
+                },
+                {
+                  name: 'Search Eengine',
+                  type: 'bar',
+                  stack: 'Total',
+                  label: {
+                    normal: {
+                      show: true,
+                      position: 'insideRight'
+                    }
+                  },
+                  data: [820, 832, 901, 934, 1290, 1330, 1320]
+                }
+              ]
+            }" style="height:300px">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+
+      <div class="col-md-12">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Stacked Bars</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+              tooltip : {
+                  trigger: 'axis',
+                  axisPointer : {
+                      type : 'shadow'
+                  }
+              },
+              legend: {
+                  data:['Interview', 'Marketing','Advertising','Video Ads','search engine','Baidu','Google','Ask','Other']
+              },
+              grid: {
+                  left: '3%',
+                  right: '4%',
+                  bottom: '3%',
+                  containLabel: true
+              },
+              xAxis : [
+                  {
+                      type : 'category',
+                      data: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+                  }
+              ],
+              yAxis : [
+                  {
+                      type : 'value'
+                  }
+              ],
+              series : [
+                  {
+                      name:'Interview',
+                      type:'bar',
+                      data:[320, 332, 301, 334, 390, 330, 320]
+                  },
+                  {
+                      name:'Marketing',
+                      type:'bar',
+                      stack: 'advertising',
+                      data:[120, 132, 101, 134, 90, 230, 210]
+                  },
+                  {
+                      name:'ads',
+                      type:'bar',
+                      stack: 'advertising',
+                      data:[220, 182, 191, 234, 290, 330, 310]
+                  },
+                  {
+                      name:'Video Ads',
+                      type:'bar',
+                      stack: 'advertising',
+                      data:[150, 232, 201, 154, 190, 330, 410]
+                  },
+                  {
+                      name:'search engine',
+                      type:'bar',
+                      data:[862, 1018, 964, 1026, 1679, 1600, 1570],
+                      markLine : {
+                          lineStyle: {
+                              normal: {
+                                  type: 'dashed'
+                              }
+                          },
+                          data : [
+                              [{type : 'min'}, {type : 'max'}]
+                          ]
+                      }
+                  },
+                  {
+                      name:'Baidu',
+                      type:'bar',
+                      barWidth : 5,
+                      stack: 'search engine',
+                      data:[620, 732, 701, 734, 1090, 1130, 1120]
+                  },
+                  {
+                      name:'Google',
+                      type:'bar',
+                      stack: 'search engine',
+                      data:[120, 132, 101, 134, 290, 230, 220]
+                  },
+                  {
+                      name:'Ask',
+                      type:'bar',
+                      stack: 'search engine',
+                      data:[60, 72, 71, 74, 190, 130, 110]
+                  },
+                  {
+                      name:'Other',
+                      type:'bar',
+                      stack: 'search engine',
+                      data:[62, 82, 91, 84, 109, 110, 120]
+                  }
+              ]
+            }" style="height:450px">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+    </div><!-- END row -->
+  </section><!-- .app-content -->
+</div><!-- .wrap -->

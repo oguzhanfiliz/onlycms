@@ -1,0 +1,237 @@
+<div class="wrap">
+  <section class="app-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Line Chart</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+              tooltip : {
+                trigger: 'axis'
+              },
+              legend: {
+                data:['Income','Revenue']
+              },
+              calculable : true,
+              xAxis : [
+                {
+                  type : 'category',
+                  data : ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+                }
+              ],
+              yAxis : [
+                {
+                  type : 'value'
+                }
+              ],
+              series : [
+                {
+                  name:'Income',
+                  type:'line',
+                  data:[15, 17.9, 20, 23.2, 25.6, 76.7, 100.6, 112.2, 32.6, 20.0, 18.4, 15.3],
+                  markPoint : {
+                    data : [
+                      {type : 'max', name: 'Max'},
+                      {type : 'min', name: 'Min'}
+                    ]
+                  },
+                  markLine : {
+                    data : [
+                      {type : 'average', name: 'Average'}
+                    ]
+                  }
+                },
+                {
+                  name:'Revenue',
+                  type:'line',
+                  data:[11.6, 14.9, 18, 26.4, 28.7, 70.7, 97.6, 127.2, 48.7, 18.8, 14, 10.3],
+                  markPoint : {
+                    data : [
+                      {name : 'Max', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
+                      {name : 'Min', value : 2.3, xAxis: 11, yAxis: 3}
+                    ]
+                  },
+                  markLine : {
+                    data : [
+                      {type : 'average', name : 'Average'}
+                    ]
+                  }
+                }
+              ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Stacked Line Chart</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['Interview','Marketing','Advertising','Video Ads','Search']
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [
+                    {
+                        name:'Interview',
+                        type:'line',
+                        stack: 'Total',
+                        data:[120, 132, 101, 134, 90, 230, 210]
+                    },
+                    {
+                        name:'Marketing',
+                        type:'line',
+                        stack: 'Total',
+                        data:[220, 182, 191, 234, 290, 330, 310]
+                    },
+                    {
+                        name:'Advertising',
+                        type:'line',
+                        stack: 'Total',
+                        data:[150, 232, 201, 154, 190, 330, 410]
+                    },
+                    {
+                        name:'Video Ads',
+                        type:'line',
+                        stack: 'Total',
+                        data:[320, 332, 301, 334, 390, 330, 320]
+                    },
+                    {
+                        name:'Search',
+                        type:'line',
+                        stack: 'Total',
+                        data:[820, 932, 901, 934, 1290, 1330, 1320]
+                    }
+                ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Basic Area</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['Income']
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ['Jan','Feb','Mar','Apr','May','Jun','Jul']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'Income',
+                        type:'line',
+                        smooth:true,
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[520, 720, 601, 420, 230, 200, 210]
+                    }
+                ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Stacked Area</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['Preorder','Sale','Deal']
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+                    }
+                ],
+                yAxis : [
+                    {
+                        type : 'value'
+                    }
+                ],
+                series : [
+                    {
+                        name:'Deal',
+                        type:'line',
+                        smooth:true,
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[10, 12, 21, 54, 260, 830, 710]
+                    },
+                    {
+                        name:'Sale',
+                        type:'line',
+                        smooth:true,
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[30, 182, 434, 791, 390, 30, 10]
+                    },
+                    {
+                        name:'Preorder',
+                        type:'line',
+                        smooth:true,
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        data:[1320, 1132, 601, 234, 120, 90, 20]
+                    }
+                ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+    </div><!-- END row -->
+  </section><!-- .app-content -->
+</div><!-- .wrap -->

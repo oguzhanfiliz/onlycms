@@ -1,0 +1,227 @@
+<div class="wrap">
+  <section class="app-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Basic Pie</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+                tooltip : {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data: ['Interview','Marketing','Advertising','Video Ads','Search']
+                },
+                series : [
+                    {
+                        name: 'Access Sources',
+                        type: 'pie',
+                        radius : '55%',
+                        center: ['50%', '60%'],
+                        data:[
+                            {value:335, name:'Interview'},
+                            {value:310, name:'Marketing'},
+                            {value:234, name:'Advertising'},
+                            {value:135, name:'Video Ads'},
+                            {value:1548, name:'Search'}
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Doughnut</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data:['Interview','Marketing','Advertising','Video Ads','Search']
+                },
+                series: [
+                    {
+                        name:'Access Sources',
+                        type:'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '30',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:335, name:'Interview'},
+                            {value:310, name:'Marketing'},
+                            {value:234, name:'Advertising'},
+                            {value:135, name:'Video Ads'},
+                            {value:1548, name:'Search'}
+                        ]
+                    }
+                ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Nested Pie</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data:['Through','Marketing ','Search','Marketing','Advertising','Video Ads','Baidu','Google','Ask','Other']
+                },
+                series: [
+                    {
+                        name:'Access Sources',
+                        type:'pie',
+                        selectedMode: 'single',
+                        radius: [0, '30%'],
+
+                        label: {
+                            normal: {
+                                position: 'inner'
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:335, name:'Through', selected:true},
+                            {value:679, name:'Marketing '},
+                            {value:1548, name:'Search'}
+                        ]
+                    },
+                    {
+                        name:'Access Sources',
+                        type:'pie',
+                        radius: ['40%', '55%'],
+
+                        data:[
+                            {value:335, name:'Through'},
+                            {value:310, name:'Marketing'},
+                            {value:234, name:'Advertising'},
+                            {value:135, name:'Video Ads'},
+                            {value:1048, name:'Baidu'},
+                            {value:251, name:'Google'},
+                            {value:147, name:'Ask'},
+                            {value:102, name:'Other'}
+                        ]
+                    }
+                ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+
+      <div class="col-md-6">
+        <div class="widget">
+          <header class="widget-header">
+            <h4 class="widget-title">Rose Pie</h4>
+          </header><!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="widget-body">
+            <div data-plugin="chart" data-options="{
+                tooltip : {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
+                legend: {
+                    x : 'center',
+                    y : 'top',
+                    data:['rose1','rose2','rose3','rose4','rose5','rose6', 'rose7']
+                },
+                calculable : true,
+                series : [
+                    {
+                        name:'Rose',
+                        type:'pie',
+                        radius : [20, 110],
+                        center : ['50%', 200],
+                        roseType : 'radius',
+                        label: {
+                            normal: {
+                                show: false
+                            },
+                            emphasis: {
+                                show: true
+                            }
+                        },
+                        lableLine: {
+                            normal: {
+                                show: false
+                            },
+                            emphasis: {
+                                show: true
+                            }
+                        },
+                        data:[
+                            {value:10, name:'rose1'},
+                            {value:5, name:'rose2'},
+                            {value:15, name:'rose3'},
+                            {value:25, name:'rose4'},
+                            {value:20, name:'rose5'},
+                            {value:35, name:'rose6'},
+                            {value:30, name:'rose7'},
+                        ]
+                    }
+                ]
+            }" style="height: 300px;">
+            </div>
+          </div><!-- .widget-body -->
+        </div><!-- .widget -->
+      </div><!-- END column -->
+    </div><!-- END row -->
+  </section><!-- .app-content -->
+</div><!-- .wrap -->
