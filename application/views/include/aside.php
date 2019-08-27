@@ -1,0 +1,169 @@
+<aside id="menubar" class="menubar light">
+	<div class="app-user">
+		<div class="media">
+			<div class="media-left">
+				<div class="avatar avatar-md avatar-circle">
+					<a href="<?php echo base_url("index");?>"><img class="img-responsive" src="<?php echo base_url("assets");?>/images/221.jpg" alt="avatar"/></a>
+				</div><!-- .avatar -->
+			</div>
+			<div class="media-body">
+				<div class="foldable">
+					<h5><a href="javascript:void(0)" class="username">John Doe</a></h5>
+					<ul>
+						<li class="dropdown">
+							<a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<small>Web Developer</small>
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu animated flipInY">
+								<li>
+									<a class="text-color" href="/index.html">
+										<span class="m-r-xs"><i class="fa fa-home"></i></span>
+										<span>Home</span>
+									</a>
+								</li>
+								<li>
+									<a class="text-color" href="profile.html">
+										<span class="m-r-xs"><i class="fa fa-user"></i></span>
+										<span>Profile</span>
+									</a>
+								</li>
+								<li>
+									<a class="text-color" href="settings.html">
+										<span class="m-r-xs"><i class="fa fa-gear"></i></span>
+										<span>Settings</span>
+									</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a class="text-color" href="logout.html">
+										<span class="m-r-xs"><i class="fa fa-power-off"></i></span>
+										<span>Home</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- .media-body -->
+		</div><!-- .media -->
+	</div><!-- .app-user -->
+
+	<div class="menubar-scroll">
+		<div class="menubar-scroll-inner">
+			<ul class="app-menu">
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
+						<span class="menu-text">Gösterge Paneli</span>
+			
+					</a>
+					<ul class="submenu">
+						<li><a href="index.html"><span class="menu-text">Dashboard 1</span></a></li>
+						<li><a href="dashboard.2.html"><span class="menu-text">Dashboard 2</span></a></li>
+						<li><a href="dashboard.3.html"><span class="menu-text">Dashboard 3</span></a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi fa fa-newspaper-o zmdi-hc-lg"></i>
+						<span class="menu-text">Ayarlar</span>
+					</a>
+				</li>
+
+				<li class="has-submenu">
+					<a href="javascript:void(0)" class="submenu-toggle">
+						<i class="menu-icon zmdi zmdi-apps zmdi-hc-lg"></i>
+						<span class="menu-text">Slider</span>
+						<span class="label label-warning menu-label">2</span>
+						<i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+					</a>
+					<ul class="submenu">
+						<li><a href="../default/index.html"><span class="menu-text">Default</span></a></li>
+						<li><a href="../topbar/index.html"><span class="menu-text">Topbar</span></a></li>
+					</ul>
+				</li>
+
+				<li class="has-submenu">
+					<a href="javascript:void(0)" class="submenu-toggle">
+						<i class="menu-icon zmdi zmdi-apps zmdi-hc-lg"></i>
+						<span class="menu-text">Galeriler</span>
+						<span class="label label-info menu-label">2</span>
+						<i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+					</a>
+					<ul class="submenu">
+						<li><a href="calendar.html"><span class="menu-text">Video Galerisi</span></a></li>
+						<li><a href="contacts.html"><span class="menu-text">Resim Galerisi</span></a></li>
+						<li><a href="contacts.html"><span class="menu-text">Dosya Galerisi</span></a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="<?php echo base_url("product");?>">
+						<i class="menu-icon zmdi fa fa-cubes zmdi-hc-lg"></i>
+						<span class="menu-text">Ürünler</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi fa fa-newspaper-o	 zmdi-hc-lg"></i>
+						<span class="menu-text">Haberler</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi zmdi-pages zmdi-hc-lg	"></i>
+						<span class="menu-text">Eğitimler</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+						<span class="menu-text">Referanslar</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi zmdi-lamp zmdi-hc-lg"></i>
+						<span class="menu-text">Referanslar</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon fa fa-user-secret"></i>
+						<span class="menu-text">Kullanıcılar</span>
+					</a>
+				</li>
+
+					<a href="javascript:void(0)">
+						<i class="menu-icon fa fa-users"></i>
+						<span class="menu-text">Aboneler</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi zmdi-puzzle-piece zmdi-hc-lg"></i>
+						<span class="menu-text">Markalar</span>
+					</a>
+				</li>
+
+				<li class="menu-separator"><hr></li>
+
+				<li>
+					<a href="<?php echo base_url('../index.php');?>">
+						<i class="menu-icon zmdi zmdi-file-text zmdi-hc-lg"></i>
+						<span class="menu-text">Ana Sayfa</span>
+					</a>
+				</li>
+
+
+
+				<li>
+					<a href="javascript:void(0)">
+						<i class="menu-icon zmdi zmdi-language-javascript zmdi-hc-lg"></i>
+						<span class="menu-text">Angular Version</span>
+					</a>
+				</li>
+			</ul><!-- .app-menu -->
+		</div><!-- .menubar-scroll-inner -->
+	</div><!-- .menubar-scroll -->
+</aside>

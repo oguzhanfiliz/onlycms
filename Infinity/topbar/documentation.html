@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="description" content="Admin, Dashboard, Bootstrap" />
+	<link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
+	<title>Infinity - Bootstrap Admin Template</title>
+	
+	<link rel="stylesheet" href="../libs/bower/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
+	<!-- build:css ../assets/css/app.min.css -->
+	<link rel="stylesheet" href="../libs/bower/animate.css/animate.min.css">
+	<link rel="stylesheet" href="../libs/bower/fullcalendar/dist/fullcalendar.min.css">
+	<link rel="stylesheet" href="../libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="../assets/css/bootstrap.css">
+	<link rel="stylesheet" href="../assets/css/core.css">
+	<link rel="stylesheet" href="../assets/css/app.css">
+	<!-- endbuild -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
+	<script src="../libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+	<script>
+		Breakpoints();
+	</script>
+</head>
+	
+<body class="menubar-top menubar-light theme-primary">
+<!--============= start main area -->
+
+<!-- APP NAVBAR ==========-->
+<nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top primary">
+  
+  <!-- navbar header -->
+  <div class="navbar-header">
+    <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+    </button>
+
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="zmdi zmdi-hc-lg zmdi-more"></span>
+    </button>
+
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="zmdi zmdi-hc-lg zmdi-search"></span>
+    </button>
+
+    <a href="../index.html" class="navbar-brand">
+      <span class="brand-icon"><i class="fa fa-gg"></i></span>
+      <span class="brand-name">Infinity</span>
+    </a>
+  </div><!-- .navbar-header -->
+  
+  <div class="navbar-container container-fluid">
+    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+      <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
+        <li class="hidden-float hidden-menubar-top">
+          <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger">
+            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+          </a>
+        </li>
+        <li>
+          <h5 class="page-title hidden-menubar-top">Dashboard</h5>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
+        <li class="nav-item dropdown hidden-float">
+          <a href="javascript:void(0)" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+            <i class="zmdi zmdi-hc-lg zmdi-search"></i>
+          </a>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-notifications"></i></a>
+          <div class="media-group dropdown-menu animated flipInY">
+            <a href="javascript:void(0)" class="media-group-item">
+              <div class="media">
+                <div class="media-left">
+                  <div class="avatar avatar-xs avatar-circle">
+                    <img src="../assets/images/221.jpg" alt="">
+                    <i class="status status-online"></i>
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="media-heading">John Doe</h5>
+                  <small class="media-meta">Active now</small>
+                </div>
+              </div>
+            </a><!-- .media-group-item -->
+
+            <a href="javascript:void(0)" class="media-group-item">
+              <div class="media">
+                <div class="media-left">
+                  <div class="avatar avatar-xs avatar-circle">
+                    <img src="../assets/images/205.jpg" alt="">
+                    <i class="status status-offline"></i>
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="media-heading">John Doe</h5>
+                  <small class="media-meta">2 hours ago</small>
+                </div>
+              </div>
+            </a><!-- .media-group-item -->
+
+            <a href="javascript:void(0)" class="media-group-item">
+              <div class="media">
+                <div class="media-left">
+                  <div class="avatar avatar-xs avatar-circle">
+                    <img src="../assets/images/207.jpg" alt="">
+                    <i class="status status-away"></i>
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="media-heading">Sara Smith</h5>
+                  <small class="media-meta">idle 5 min ago</small>
+                </div>
+              </div>
+            </a><!-- .media-group-item -->
+
+            <a href="javascript:void(0)" class="media-group-item">
+              <div class="media">
+                <div class="media-left">
+                  <div class="avatar avatar-xs avatar-circle">
+                    <img src="../assets/images/211.jpg" alt="">
+                    <i class="status status-away"></i>
+                  </div>
+                </div>
+                <div class="media-body">
+                  <h5 class="media-heading">Donia Dyab</h5>
+                  <small class="media-meta">idle 5 min ago</small>
+                </div>
+              </div>
+            </a><!-- .media-group-item -->
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-settings"></i></a>
+          <ul class="dropdown-menu animated flipInY">
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My Profile</a></li>
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-balance-wallet"></i>Balance</a></li>
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-phone-msg"></i>Connection<span class="label label-primary">3</span></a></li>
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-info"></i>privacy</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="side-panel-toggle" data-toggle="class" data-target="#side-panel" data-class="open" role="button"><i class="zmdi zmdi-hc-lg zmdi-apps"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div><!-- navbar-container -->
+</nav>
+<!--========== END app navbar -->
+
+<!-- APP ASIDE ==========-->
+<aside id="menubar" class="menubar light">
+  <div class="app-user">
+    <div class="media">
+      <div class="media-left">
+        <div class="avatar avatar-md avatar-circle">
+          <a href="javascript:void(0)"><img class="img-responsive" src="../assets/images/221.jpg" alt="avatar"/></a>
+        </div><!-- .avatar -->
+      </div>
+      <div class="media-body">
+        <div class="foldable">
+          <h5><a href="javascript:void(0)" class="username">John Doe</a></h5>
+          <ul>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <small>Web Developer</small>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu animated flipInY">
+                <li>
+                  <a class="text-color" href="/index.html">
+                    <span class="m-r-xs"><i class="fa fa-home"></i></span>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-color" href="profile.html">
+                    <span class="m-r-xs"><i class="fa fa-user"></i></span>
+                    <span>Profile</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-color" href="settings.html">
+                    <span class="m-r-xs"><i class="fa fa-gear"></i></span>
+                    <span>Settings</span>
+                  </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a class="text-color" href="logout.html">
+                    <span class="m-r-xs"><i class="fa fa-power-off"></i></span>
+                    <span>Home</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div><!-- .media-body -->
+    </div><!-- .media -->
+  </div><!-- .app-user -->
+
+  <div class="menubar-scroll">
+    <div class="menubar-scroll-inner">
+      <ul class="app-menu">
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
+            <span class="menu-text">Dashboards</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="index.html"><span class="menu-text">Dashboard 1</span></a></li>
+            <li><a href="dashboard.2.html"><span class="menu-text">Dashboard 2</span></a></li>
+            <li><a href="dashboard.3.html"><span class="menu-text">Dashboard 3</span></a></li>
+          </ul>
+        </li>
+        
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-layers zmdi-hc-lg"></i>
+            <span class="menu-text">Layouts</span>
+            <span class="label label-warning menu-label">2</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="../default/index.html"><span class="menu-text">Default</span></a></li>
+            <li><a href="../topbar/index.html"><span class="menu-text">Topbar</span></a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-puzzle-piece zmdi-hc-lg"></i>
+            <span class="menu-text">UI Kit</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="buttons.html"><span class="menu-text">Buttons</span></a></li>
+            <li><a href="alerts.html"><span class="menu-text">Alerts</span></a></li>
+            <li><a href="panels.html"><span class="menu-text">Panels</span></a></li>
+            <li><a href="lists.html"><span class="menu-text">Lists</span></a></li>
+            <li><a href="icons.html"><span class="menu-text">Icons</span></a></li>
+            <li><a href="media.html"><span class="menu-text">Media</span></a></li>
+            <li><a href="widgets.html"><span class="menu-text">Widgets</span></a></li>
+            <li><a href="tabs.html"><span class="menu-text">Tabs &amp; Accordions</span></a></li>
+            <li><a href="progress.html"><span class="menu-text">Progress</span></a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-inbox zmdi-hc-lg"></i>
+            <span class="menu-text">Mail Box</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li>
+              <a href="inbox.html">
+                <span class="menu-text">Inbox</span>
+                <span class="label label-primary menu-label">12</span>
+              </a>
+            </li>
+            <li><a href="compose.html"><span class="menu-text">Compose</span></a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="search.web.html">
+            <i class="menu-icon zmdi zmdi-search zmdi-hc-lg"></i>
+            <span class="menu-text">Search</span>
+          </a>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-pages zmdi-hc-lg"></i>
+            <span class="menu-text">Pages</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="profile.html"><span class="menu-text">Profile</span></a></li>
+            <li><a href="price.html"><span class="menu-text">Prices</span></a></li>
+            <li><a href="invoice.html"><span class="menu-text">Invoice</span></a></li>
+            <li><a href="gallery.1.html"><span class="menu-text">Gallery</span></a></li>
+            <li><a href="gallery.2.html"><span class="menu-text">Gallery 2</span></a></li>
+            <li><a href="support.html"><span class="menu-text">FAQ</span></a></li>
+            <li class="has-submenu">
+              <a href="javascript:void(0)" class="submenu-toggle">
+                <i class="menu-icon zmdi zmdi-plus zmdi-hc-lg"></i>
+                <span class="menu-text">Misc Pages</span>
+                <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+              </a>
+              <ul class="submenu">
+                <li><a href="login.html"><span class="menu-text">Login</span></a></li>
+                <li><a href="signup.html"><span class="menu-text">Sign Up</span></a></li>
+                <li><a href="password-forget.html"><span class="menu-text">Reset Password</span></a></li>
+                <li><a href="unlock.html"><span class="menu-text">Unlock Screen</span></a></li>
+                <li><a href="404.html"><span class="menu-text">404 Error</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+            <span class="menu-text">Forms</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="form.layouts.html"><span class="menu-text">Form Layouts</span></a></li>
+            <li><a href="form.elements.html"><span class="menu-text">Form Elements</span></a></li>
+            <li><a href="form.custom.html"><span class="menu-text">Customized Elements</span></a></li>
+            <li><a href="form.plugins.html"><span class="menu-text">Form Plugins</span></a></li>
+            <li><a href="file-upload.html"><span class="menu-text">File Upload</span></a></li>
+            <li><a href="form.datetime.html"><span class="menu-text">DateTime Pickers</span></a></li>
+            <li><a href="editors.html"><span class="menu-text">Editors</span></a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-storage zmdi-hc-lg"></i>
+            <span class="menu-text">Tables</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="tables.basic.html"><span class="menu-text">Basic Tables</span></a></li>
+            <li><a href="datatables.html"><span class="menu-text">DataTables</span></a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-chart zmdi-hc-lg"></i>
+            <span class="menu-text">Charts</span>
+            <span class="label label-success menu-label">7</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="charts.flot.html"><span class="menu-text">Flot Charts</span></a></li>
+            <li><a href="echarts.bar.html"><span class="menu-text">Bar echarts</span></a></li>
+            <li><a href="echarts.pie.html"><span class="menu-text">Pie echarts</span></a></li>
+            <li><a href="echarts.line.html"><span class="menu-text">Line echarts</span></a></li>
+            <li><a href="echarts.map.html"><span class="menu-text">Map echarts</span></a></li>
+            <li><a href="echarts.scatter.html"><span class="menu-text">Scatter echarts</span></a></li>
+            <li><a href="echarts.custom.html"><span class="menu-text">Custom echarts</span></a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
+            <span class="menu-text">Maps</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="map-google.html"><span class="menu-text">Google Maps</span></a></li>
+            <li><a href="map-vector.html"><span class="menu-text">Vector Maps</span></a></li>
+          </ul>
+        </li>
+
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="submenu-toggle">
+            <i class="menu-icon zmdi zmdi-apps zmdi-hc-lg"></i>
+            <span class="menu-text">Apps</span>
+            <span class="label label-info menu-label">2</span>
+            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="calendar.html"><span class="menu-text">Calendar</span></a></li>
+            <li><a href="contacts.html"><span class="menu-text">Contacts</span></a></li>
+          </ul>
+        </li>
+
+        <li class="menu-separator"><hr></li>
+
+        <li>
+          <a href="documentation.html">
+            <i class="menu-icon zmdi zmdi-file-text zmdi-hc-lg"></i>
+            <span class="menu-text">Documentation</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="javascript:void(0)">
+            <i class="menu-icon zmdi zmdi-settings zmdi-hc-lg"></i>
+            <span class="menu-text">Settings</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="javascript:void(0)">
+            <i class="menu-icon zmdi zmdi-language-javascript zmdi-hc-lg"></i>
+            <span class="menu-text">Angular Version</span>
+          </a>
+        </li>
+      </ul><!-- .app-menu -->
+    </div><!-- .menubar-scroll-inner -->
+  </div><!-- .menubar-scroll -->
+</aside>
+<!--========== END app aside -->
+
+<!-- navbar search -->
+<div id="navbar-search" class="navbar-search collapse">
+  <div class="navbar-search-inner">
+    <form action="#">
+      <span class="search-icon"><i class="fa fa-search"></i></span>
+      <input class="search-field" type="search" placeholder="search..."/>
+    </form>
+    <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+      <i class="fa fa-close"></i>
+    </button>
+  </div>
+  <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
+</div><!-- .navbar-search -->
+
+<!-- APP MAIN ==========-->
+<main id="app-main" class="app-main">
+  <div class="wrap">
+  <section class="app-content">
+    <div class="m-b-xl">
+      <h1 style="font-size: 48px;">Documentation</h1>
+      <h4>Here are The instructions to get up and running</h4>
+    </div>
+    <div class="m-b-lg nav-tabs-horizontal">
+      <!-- tabs list -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">Introduction</a></li>
+        <li role="presentation"><a href="#installation" aria-controls="material-design" role="tab" data-toggle="tab">Installation</a></li>
+        <li role="presentation"><a href="#file_structure"  aria-controls="file_structure" role="tab" data-toggle="tab">File Structure</a></li>
+        <li role="presentation"><a href="#themes" aria-controls="themes" role="tab" data-toggle="tab">Themes</a></li>
+        <li role="presentation"><a href="#utilities"  aria-controls="utilities" role="tab" data-toggle="tab">CSS Utilities</a></li>
+        <li role="presentation"><a href="#lazyload"  aria-controls="lazyload" role="tab" data-toggle="tab">Lazyload</a></li>
+        <li role="presentation"><a href="#changelog"  aria-controls="changelog" role="tab" data-toggle="tab">Change Log</a></li>
+      </ul><!-- .nav-tabs -->
+
+      <!-- Tab panes -->
+      <div class="tab-content p-md">
+        <div role="tabpanel" class="tab-pane active in fade" id="intro">
+          <h3 class="m-b-lg m-t-xl">Introduction</h3>
+          <div class="m-l-lg">
+            <p class="m-h-lg fz-md lh-lg">Infinity is a responsive Bootstrap 3.3.6 Admin Template. It provides you with a vast collection of ready to use code snippets and utilities, many custom pages and a collection of applications and widgets</p>
+            <h4 class="fw-600 title-color m-h-lg">What you get when you get Infinity:</h4>
+            <div class="m-l-lg">
+              <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                <li>8 built-in Color Skins And You Can Your Own</li>
+                <li>Light/Dark Sidebar Themes</li>
+                <li>Free Landing Pages For Your Website</li>
+                <li>Multiple Layout</li>
+                <li>Responsive layout</li>
+                <li>Live Skin Customizer</li>
+                <li>Loading progress bar</li>
+                <li>Hundreds of UI Components</li>
+                <li>Dozens of Widgets</li>
+                <li>Hundreds of Utility Classes</li>
+                <li>Font Icons(font-awesome, glyphicons, material design icons)</li>
+                <li>HTML5 &amp; CSS3</li>
+                <li>Bootstrap 3.3.6 Framework</li>
+                <li>Sass for CSS preprocessing (compiled CSS included)</li>
+                <li>Grunt Tasks Manager</li>
+                <li>Bower Dependency Management</li>
+                <li>Clean and Friendly Code</li>
+              </ul>
+            </div>
+          </div><!-- .m-l-lg -->
+        </div><!-- .tab-pane -->
+        <div role="tabpanel" class="tab-pane fade" id="installation">
+          <h3 class="m-b-lg m-t-xl">Installation</h3>
+          <div class="m-l-lg">
+            <h4 class="fw-600 title-color m-h-lg">Zero installation</h4>
+            <div class="m-l-lg">
+              <p class="fz-md m-b-lg">For zero-installation We include all files to be ready for use</p>
+<pre>
+root/
+  |-- api
+  |-- assets
+  |-- default
+  |-- topbar
+  |-- libs
+</pre>
+              <p class="fz-md m-h-lg">Put previous folders into your site root directory (use default or topbar).</p>
+            </div><!-- .m-l-lg -->
+
+            <h4 class="fw-600 title-color m-h-lg">Using Grunt</h4>
+            <div class="m-l-lg">
+              <p class="fz-md m-b-lg">We use <a href="http://gruntjs.com/">Grunt</a> for build processes. You can optionally use it, Compiled and ready files are included as mentioned above.</p>
+              <p class="fz-md m-b-lg">To use grunt you need some tools to be installed:</p>
+              <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                <li><a href="http://nodejs.org/">NodeJs</a> For managing our dependences</li>
+                <li><a href="http://gruntjs.com/">Bower</a> For managing frontend dependences</li>
+                <li><a href="http://bower.io/">Grunt</a> for task management</li>
+              </ul>
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">Available Commands:</h5>
+              <div class="m-l-lg">
+                <p class="fz-md lh-lg m-t-lg">You can use those commands to build <strong class="fw-500">dist</strong> and test your site:</p>
+                <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                  <li><code>npm install</code> to install grunt and grunt dependencies</li>
+                  <li><code>bower install --force-latest</code> to install dependencies</li>
+                  <li><code>grunt build</code> to build the <strong class="fw-500">dist</strong> folder with minified CSS JS</li>
+                  <li><code>npm start</code> to start development server</li>
+                </ul>
+                
+                <p class="fz-md lh-lg m-t-lg">We use <strong class="fw-500">assemble</strong> to assemble layout files from the templates, if you made changes to the templates and wanted to reassemble layouts:</p>
+                <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                  <li><code>grunt assemble</code> to reassemble both of (<strong class="fw-500">default</strong> and <strong class="fw-500">topbar</strong>) layouts</li>
+                  <li><code>grunt assemble:default</code> to reassemble the (<strong class="fw-500">default</strong>) layout</li>
+                  <li><code>grunt assemble:topbar</code> to reassemble the (<strong class="fw-500">topbar</strong>) layout</li>
+                </ul>
+              </div><!-- .m-l-lg -->
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">SASS commands</h5>
+              <div class="m-l-lg">
+                <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                  <li><code>grunt sass:app</code> to compile <strong class="fw-500">assets/sass/app.scss</strong> to <strong class="fw-500">assets/css/app.css</strong></li>
+                </ul>
+              </div><!-- .m-l-lg -->
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">Other commands</h5>
+              <div class="m-l-lg">
+                <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                  <li><code>grunt copy:libs</code> to copy <strong class="fw-500">bower_components</strong> contents to <strong class="fw-500">libs/bower</strong> directory</li>
+                </ul>
+              </div><!-- .m-l-lg -->
+
+            </div><!-- .m-l-lg -->
+          </div><!-- .m-l-lg -->
+        </div><!-- .tab-pane -->
+        
+        <div role="tabpanel" class="tab-pane fade" id="file_structure">
+        <h3 class="m-b-lg m-t-xl">File Structure</h3>
+        <div class="m-l-lg">
+          <p class="fz-md lh-lg m-t-lg">The following directories and files, contain all files and resources (raw and compiled) you need to get started</p>
+<pre>
+root/
+  |-- api/
+  |-- |-- json/
+  |-- assets/
+  |-- |-- css/
+  |-- |-- fonts/
+  |-- |-- images/
+  |-- |-- js/
+  |-- |-- sass/
+  |-- |-- |-- app-sass/
+  |-- |-- |-- bootstrap-sass/
+  |-- |-- |-- libs-sass/
+  |-- libs/
+  |-- |-- bower
+  |-- |-- misc
+  |-- templates/
+  |-- |-- apps/
+  |-- |-- |-- mailbox/
+  |-- |-- charts/
+  |-- |-- dashboard/
+  |-- |-- forms/
+  |-- |-- layouts/
+  |-- |-- maps/
+  |-- |-- misc/
+  |-- |-- pages/
+  |-- |-- search/
+  |-- |-- tables/
+  |-- |-- uikit/
+  |-- default/
+  |-- topbar/
+  |-- dist/ => this folder containes minified (version) of files
+  |-- |-- api/
+  |-- |-- assets/
+  |-- |-- default/
+  |-- |-- topbar/
+  |-- |-- libs/
+  |-- |-- index.html
+  |-- Gruntfile.js
+  |-- bower.json
+  |-- package.json
+  |-- index.html
+</pre>
+          </div><!-- .m-l-lg -->
+        </div><!-- .tab-pane -->
+          
+        <div role="tabpanel" class="tab-pane fade" id="themes">
+          <h3 class="m-b-lg m-t-xl">Themes Introduction</h3>
+          <div class="m-l-lg">
+            <p class="m-h-md fz-md lh-lg">
+              Infinity has 8 predefined themes (primary, success, warning, danger, pink, purple, inverse and dark). For each theme we include variants of (buttons, radios, checkboxes, backgrounds, text colors, ...)<br>
+              <strong class="fw-500">In infinity v2.0.0 we introduced the functionality for adding more themes.</strong>
+            </p>
+
+            <h4 class="fw-600 title-color m-h-lg">There are two types of themes:</h4>
+            <div class="m-l-lg">
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">Complete Theme:</h5>
+              <p class="fz-md m-b-lg m-l-lg">
+                Those themes change the <strong class="fw-500">( navbar background )</strong> and the <strong class="fw-500">( text and borders coloring in the menubar )</strong> in addition to including variants of (buttons, radios, checkboxes, backgrounds, text colors, ...)
+              </p>
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">Partial Theme:</h5>
+              <p class="fz-md m-b-lg m-l-lg">
+                Those themes change only the <strong class="fw-500">( navbar background )</strong> and the <strong class="fw-500">( text and borders coloring in the menubar )</strong>
+              </p>
+            </div>
+          </div>
+
+          <h3 class="m-b-lg m-t-xl">Adding Themes</h3>
+          <div class="m-l-lg">
+            <p class="m-h-md fz-md lh-lg">
+              To add your own theme, there are few steps to follow. This process is divided into two parts as following:
+            </p>
+            
+            <h4 class="fw-600 title-color m-h-lg">SASS ( CSS )</h4>
+            <div class="m-l-lg">
+              <p class="m-h-md fz-md lh-lg">
+                There are 3 different ways to choose from in this part, you should pick one of theme:
+              </p>
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">- Adding a complete theme:</h5>
+              <div class="m-l-lg">
+                <p class="fz-md m-b-sm">If you want to add a <strong class="fw-500">complete theme</strong> <span class="fz-lg fw-600 text-danger">* <sup>(1)</sup></span>:</p>
+                <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                  <li>Go to <strong class="fw-500">( assets/sass/app-sass/_variables.scss )</strong>.</li>
+                  <li>Define a new variable under the <code>//= contextual colors</code> comment section and assign your <strong class="fw-500">color value</strong> to it.</li>
+                  <li>Assign the newly created variable to a new key <strong class="fw-500">( which will be the theme name )</strong> in the <code>$contextualColors</code> map.</li>
+                  <li>Run the command <code>grunt sass:app</code> in your command line to Compile SASS. <span class="fz-lg fw-600 text-danger">*<sup>(2)</sup></span></li>
+                  <li>Finish the <strong class="fw-500">( javascript )</strong> part as mention below and you are done.</li>
+                </ul>
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(1)</sup></span>Note that using this option <strong class="fw-500">( adding a complete theme )</strong> leads to generating a whole bunch of 
+                  (buttons, radios, checkboxes, backgrounds, text colors, ...) variants, 
+                  and this mean a lot of generated CSS code which also means much bigger CSS files, 
+                  so if all you need is to tweak the <strong class="fw-500">( navbar background )</strong> and the <strong class="fw-500">( text and borders coloring in the menubar )</strong> then it would be better to add a <strong class="fw-500">( partial theme )</strong> using one of the next two ways
+                </p>
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(2)</sup></span> Note: you must have SASS installed on your machine to complete this step
+                </p>
+              </div>
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">- Adding a partial theme using (SASS):</h5>
+              <div class="m-l-lg">
+                <p class="fz-md m-b-sm">To add a <strong class="fw-500">partial theme</strong> using SASS:</p>
+                <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                  <li>Go to <strong class="fw-500">( assets/sass/app-sass/_themes.scss )</strong></li>
+                  <li>Call the mixin <code>@include theme-variant(themeName, color)</code> <span class="fz-lg fw-600 text-danger">*<sup>(1)</sup></span></li>
+                  <li>Run the command <code>grunt sass:app</code> in your command line to Compile SASS.<span class="fz-lg fw-600 text-danger">*<sup>(2)</sup></span></li>
+                  <li>Finish the <strong class="fw-500">( javascript )</strong> part as mention below and you are done.</li>
+                </ul>
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(1)</sup></span> <span class="text-danger">Important:</span> themeName can't have spaces or any special characters in it, it can have only alphabet and <strong class="fw-500">( -, _ )</strong>.
+                </p>
+
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(2)</sup></span> Note: you must have SASS installed on your machine to complete this step
+                </p>
+              </div>
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">- Adding a partial theme using (plain CSS):</h5>
+              <div class="m-l-lg">
+                <p class="fz-md m-b-sm">If you are not using SASS you can include the needed code using vanilla CSS.</p>
+                <p class="fz-md m-b-sm">Include the following code in your CSS, substituting <strong class="fw-500">( themeName and colorValue )</strong> with your own theme name and color.</p>
+<pre>
+.theme-themeName .navbar-brand, .theme-themeName .navbar-brand:hover, .theme-themeName .navbar-brand:focus {
+  color: colorValue; }
+.theme-themeName .theme-color {
+  color: colorValue; }
+.theme-themeName .menubar .app-menu li.open, .theme-themeName .menubar .app-menu li.active {
+  border-left-color: colorValue; }
+.theme-themeName .menubar .app-menu li.open &gt; a, .theme-themeName .menubar .app-menu li.active &gt; a, .theme-themeName .menubar .app-menu li:hover &gt; a, .theme-themeName .menubar .app-menu li.menu-heading &gt; a {
+  color: colorValue; }
+
+/* add new variants and helper classes for the new theme */
+.radio-themeName input[type="radio"] + label::after {
+  background-color: colorValue; }
+.radio-themeName input[type="radio"]:checked + label::before {
+  border-color: colorValue; }
+.radio-themeName input[type="radio"]:checked + label::after {
+  background-color: colorValue; }
+
+.text-themeName {
+  color: colorValue; }
+
+.bg-themeName, .themeName {
+  background-color: colorValue;
+  color: #fff; }
+
+</pre>
+              </div>
+            </div><!-- .m-l-lg -->
+
+            <h4 class="fw-600 title-color m-h-lg">Javascript</h4>
+            <div class="m-l-lg">
+              <p class="m-h-md fz-md lh-lg">
+                Regardless the way you have chosen to add the <strong class="fw-500">( CSS )</strong>, there is one way to accomplish the <strong class="fw-500">( javascript )</strong> part:<br>
+                In any place in your javascript code files <strong class="fw-500">( that are preceded by: <i>app.js</i> file )</strong> you can do the following actions:
+              </p>
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">- Adding a new theme:</h5>
+              <div class="m-l-lg">
+                <p class="fz-md m-b-sm">Call the following function passing the new theme's name <span class="fz-lg fw-600 text-danger">* <sup>(1)</sup></span> to it:</p>
+                <p><code class="fz-md">addNewTheme( 'themeName' );</code></p>
+
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(1)</sup></span> Note: the <strong class="fw-500">( theme name must )</strong> be the same as the one you used in SASS/CSS
+                </p>
+              </div>
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">- Removing an existing theme:</h5>
+              <div class="m-l-lg">
+                <p class="fz-md m-b-sm">Call the following function passing the name of the theme you want to remove <span class="fz-lg fw-600 text-danger">* <sup>(1, 2)</sup></span>:</p>
+                <p><code class="fz-md">removeTheme( 'themeName' );</code></p>
+
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(1)</sup></span> Note: the <strong class="fw-500">( primary )</strong> theme is protected against removal
+                </p>
+
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(2)</sup></span> Note: to completely remove a theme <strong class="fw-500">( That you have added )</strong> you have to undo any changes you made to SASS/CSS in the previous steps.
+                </p>
+              </div>
+
+              <h5 class="m-b-sm m-t-xl title-color fz-md fw-600">- Adding/Removing using browser's console:</h5>
+              <div class="m-l-lg">
+                <p class="fz-md m-b-sm">You can - for testing purpose - use the previously mentioned methods <code>addNewTheme( 'themeName' );</code> and <code>removeTheme( 'themeName' );</code> from the browser's console<span class="fz-lg fw-600 text-danger">* <sup>(1)</sup></span>:</p>
+                <p class="fz-md m-h-lg fs-italic">
+                  <span class="fz-lg fw-600 text-danger">*<sup>(1)</sup></span> Note: do that for testing purpose only because you will see the affect only on your own machine and the website visitors will not see any changes until you deploy them in your javascript code.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div><!-- .tab-pane -->
+
+        <div role="tabpanel" class="tab-pane fade" id="utilities">
+          <h3 class="m-b-lg m-t-xl">Utility Classes</h3>
+          <div class="m-l-lg">
+            <p class="fz-md lh-lg m-t-lg">There are many SASS variables you can config to build the css file. many classes are extended from bootstrap css.<a href="http://getbootstrap.com/css/#helper-classes">bootstrap utilities documentation</a></p>
+
+<h4 class="fw-600 title-color m-h-lg">padding</h4>
+<pre>
+/* Padding all: (padding-top, padding-right, padding-bottom, padding-left) */
+
+  .p-xs{ padding: $padding-xs !important; }
+  .p-sm{ padding: $padding-sm !important; }
+  .p-md{ padding: $padding-md !important; }
+  .p-lg{ padding: $padding-lg !important; }
+  .p-xl{ padding: $padding-xl !important; }
+  .p-0{ padding: 0 !important; }
+
+/* Horizontal padding: (padding-top, padding-bottom) */
+
+  .p-h-0{ padding-top: 0 !important; padding-bottom: 0!important; }
+  .p-h-xs{ padding-top: $padding-xs !important; padding-bottom: $padding-xs !important; }
+  .p-h-sm{ padding-top: $padding-sm !important; padding-bottom: $padding-sm !important; }
+  .p-h-md{ padding-top: $padding-md !important; padding-bottom: $padding-md !important; }
+  .p-h-lg{ padding-top: $padding-lg !important; padding-bottom: $padding-lg !important; }
+  .p-h-xl{ padding-top: $padding-xl !important; padding-bottom: $padding-xl !important; }
+
+/* Vertical padding: (padding-left, padding-right) */
+
+  .p-v-0{ padding-left: 0 !important; padding-right: 0!important; }
+  .p-v-xs{ padding-right: $padding-xs !important; padding-left: $padding-xs !important; }
+  .p-v-sm{ padding-right: $padding-sm !important; padding-left: $padding-sm !important; }
+  .p-v-md{ padding-right: $padding-md !important; padding-left: $padding-md !important; }
+  .p-v-lg{ padding-right: $padding-lg !important; padding-left: $padding-lg !important; }
+  .p-v-xl{ padding-right: $padding-xl !important; padding-left: $padding-xl !important; }
+
+/* Top padding: (padding-top) */
+
+  .p-t-0{ padding-top: 0 !important; }
+  .p-t-xs{ padding-top: $padding-xs !important; }
+  .p-t-sm{ padding-top: $padding-sm !important; }
+  .p-t-md{ padding-top: $padding-md !important; }
+  .p-t-lg{ padding-top: $padding-lg !important; }
+  .p-t-xl{ padding-top: $padding-xl !important; }
+
+/* Right padding: (padding-right) */
+
+ .p-r-0{ padding-right: 0 !important; }
+ .p-r-xs{ padding-right: $padding-xs !important; }
+ .p-r-sm{ padding-right: $padding-sm !important; }
+ .p-r-md{ padding-right: $padding-md !important; }
+ .p-r-lg{ padding-right: $padding-lg !important; }
+ .p-r-xl{ padding-right: $padding-xl !important; }
+
+/* Bottom padding: (padding-bottom) */
+
+  .p-b-0{ padding-bottom: 0 !important; }
+  .p-b-xs{ padding-bottom: $padding-xs !important; }
+  .p-b-sm{ padding-bottom: $padding-sm !important; }
+  .p-b-md{ padding-bottom: $padding-md !important; }
+  .p-b-lg{ padding-bottom: $padding-lg !important; }
+  .p-b-xl{ padding-bottom: $padding-xl !important; }
+
+/* Left padding: (padding-left) */
+
+  .p-l-0{ padding-left: 0 !important; }
+  .p-l-xs{ padding-left: $padding-xs; }
+  .p-l-sm{ padding-left: $padding-sm !important; }
+  .p-l-md{ padding-left: $padding-md !important; }
+  .p-l-lg{ padding-left: $padding-lg !important; }
+  .p-l-xl{ padding-left: $padding-xl !important; }
+
+</pre>
+
+<h4 class="fw-600 title-color m-h-lg">Margin</h4>
+<pre>
+/* Margin all: (margin-top, margin-right, margin-bottom, margin-left) */
+
+  .m-0{ margin: 0 !important; }
+  .m-xs{ margin: $margin-xs !important; }
+  .m-sm{ margin: $margin-sm !important; }
+  .m-md{ margin: $margin-md !important; }
+  .m-lg{ margin: $margin-lg !important; }
+  .m-xl{ margin: $margin-xl !important; }
+
+/* Horizontal margin: (margin-top, margin-bottom) */
+
+  .m-h-0{ margin-top: 0!important; margin-bottom: 0!important; }
+  .m-h-xs{ margin-top: $margin-xs !important; margin-bottom: $margin-xs !important; }
+  .m-h-sm{ margin-top: $margin-sm !important; margin-bottom: $margin-sm !important; }
+  .m-h-md{ margin-top: $margin-md !important; margin-bottom: $margin-md !important; }
+  .m-h-lg{ margin-top: $margin-lg !important; margin-bottom: $margin-lg !important; }
+  .m-h-xl{ margin-top: $margin-xl !important; margin-bottom: $margin-xl !important; }
+
+/* Vertical margin: (margin-left, margin-right) */
+
+  .m-v-0{ margin-left: 0!important; margin-right: 0!important; }
+  .m-v-xs{ margin-left: $margin-xs !important; margin-right: $margin-xs !important; }
+  .m-v-sm{ margin-left: $margin-sm !important; margin-right: $margin-sm !important; }
+  .m-v-md{ margin-left: $margin-md !important; margin-right: $margin-md !important; }
+  .m-v-lg{ margin-left: $margin-lg !important; margin-right: $margin-lg !important; }
+  .m-v-xl{ margin-left: $margin-xl !important; margin-right: $margin-xl !important; }
+
+/* Top padding: (padding-top) */
+
+  .m-t-0{ margin-top: 0 !important; }
+  .m-t-xs{ margin-top: $margin-xs !important; }
+  .m-t-sm{ margin-top: $margin-sm !important; }
+  .m-t-md{ margin-top: $margin-md !important; }
+  .m-t-lg{ margin-top: $margin-lg !important; }
+  .m-t-xl{ margin-top: $margin-xl !important; }
+
+/* Right padding: (padding-right) */
+
+  .m-r-0{ margin-right: 0 !important; }
+  .m-r-xs{ margin-right: $margin-xs !important; }
+  .m-r-sm{ margin-right: $margin-sm !important; }
+  .m-r-md{ margin-right: $margin-md !important; }
+  .m-r-lg{ margin-right: $margin-lg !important; }
+  .m-r-xl{ margin-right: $margin-xl !important; }
+
+/* Bottom padding: (padding-bottom) */
+
+  .m-b-0{ margin-bottom: 0 !important; }
+  .m-b-xs{ margin-bottom: $margin-xs !important; }
+  .m-b-sm{ margin-bottom: $margin-sm !important; }
+  .m-b-md{ margin-bottom: $margin-md !important; }
+  .m-b-lg{ margin-bottom: $margin-lg !important; }
+  .m-b-xl{ margin-bottom: $margin-xl !important; }
+
+/* Left padding: (padding-left) */
+
+  .m-l-0{ margin-left: 0 !important; }
+  .m-l-xs{ margin-left: $margin-xs !important; }
+  .m-l-sm{ margin-left: $margin-sm !important; }
+  .m-l-md{ margin-left: $margin-md !important; }
+  .m-l-lg{ margin-left: $margin-lg !important; }
+  .m-l-xl{ margin-left: $margin-xl !important; }
+
+</pre>
+<h4 class="fw-600 title-color m-h-lg">Font size</h4>
+<pre>
+  .fz-xs{ font-size: $font-size-xs !important; }
+  .fz-sm{ font-size: $font-size-sm !important; }
+  .fz-md{ font-size: $font-size-md !important; }
+  .fz-lg{ font-size: $font-size-lg !important; }
+  .fz-xl{ font-size: $font-size-xl !important; }
+</pre>
+
+<h4 class="fw-600 title-color m-h-lg">Font weight</h4>
+<pre>
+  .fw-300{ font-weight: 300 !important; }
+  .fw-400{ font-weight: 400 !important; }
+  .fw-500{ font-weight: 500 !important; }
+  .fw-600{ font-weight: 600 !important; }
+  .fw-700{ font-weight: 700 !important; }
+  .fw-800{ font-weight: 800 !important; }
+  .fw-800{ font-weight: 900 !important; }
+</pre>
+
+<h4 class="fw-600 title-color m-h-lg">Line Height</h4>
+<pre>
+  .lh-xs, .lh-1{ line-height: 1; }
+  .lh-sm{ line-height: 1.3; }
+  .lh-md{ line-height: 1.6; }
+  .lh-lg{ line-height: 1.8; }
+  .lh-xl{ line-height: 2; }
+</pre>
+
+<h4 class="fw-600 title-color m-h-lg">Text Alignment</h4>
+<pre>
+  .text-right{ text-align: right !important; }
+  .text-center{ text-align: center !important; }
+  .text-left{ text-align: left !important; }
+</pre>
+
+<h4 class="fw-600 title-color m-h-lg">Text color</h4>
+<pre>
+  .text-primary{ color: $primary !important; }
+  .text-success{ color: $success !important; }
+  .text-info{ color: $info !important; }
+  .text-warning{ color: $warning !important; }
+  .text-danger{ color: $danger !important; }
+  .text-pink{ color: $pink !important; }
+  .text-purple{ color: $purple !important; }
+  .text-inverse{ color: $inverse !important; }
+  .text-dark{ color: $dark !important; }
+  .text-white{ color: $text-white !important; }
+  .text-color{ color: $text-color !important; }
+  .title-color{ color: $title-color !important; }
+  .watermark{ color: $watermark; }
+  .text-muted{ color: inherit; opacity: .6; }
+</pre>
+
+<h4 class="fw-600 title-color m-h-lg">Backgrounds</h4>
+<pre>
+  .bg-primary, .primary{ background-color: $brand-primary; color: #fff; }
+  .bg-success, .success{ background-color: $brand-success; color: #fff; }
+  .bg-info, .info{ background-color: $brand-info; color: #fff; }
+  .bg-warning, .warning{ background-color: $brand-warning; color: #fff; }
+  .bg-danger, .danger{ background-color: $brand-danger; color: #fff; }
+  .bg-pink, .pink{ background-color: $pink; color: #fff; }
+  .bg-purple, .purple{ background-color: $purple; color: #fff; }
+  .bg-inverse, .inverse{ background-color: $inverse; color: #fff; }
+  .bg-dark, .dark{ background-color: $dark; color: #fff; }
+  .bg-white, .white, .light{ background-color: #fff !important; color: $text-color; }
+</pre>
+          </div><!-- .m-l-lg -->
+        </div><!-- .tab-pane -->
+        <div role="tabpanel" class="tab-pane fade" id="lazyload">
+          <h3 class="m-b-lg m-t-xl">Lazyload</h3>
+          <div class="m-l-lg">
+            <p class="fz-md lh-lg m-t-lg">You can dynamically call jquery plugins on DOM elements using <code>data-plugin</code>attribute:</p>
+            <p class="fz-md lh-xl m-t-xl"><strong class="fw-500">Example:</strong><br><code>&lt;div data-plugin="counterUp" data-options="{delay: 10, time: 1000}"&gt;&lt;/div&gt;</code><br>This is equivalent to <code>$('selector').counterUp({delay: 10, time: 1000})</code><br>You can config the plugins in <strong class="fw-500">assets/js/library.js</strong></p>
+          </div><!-- .m-l-lg -->
+        </div><!-- .tab-pane -->
+
+        <div role="tabpanel" class="tab-pane fade" id="changelog">
+          <h3 class="m-b-lg m-t-xl">Change Log</h3>
+          <div class="m-l-lg">
+            <h4 class="fw-600 title-color m-h-lg">- Release V2.0.0</h4>
+            <div class="m-l-lg">
+              <p class="fz-md m-h-lg fs-italic">This is a major update <strong class="fw-500">( new version )</strong> of Infinity. Many changes have been made to core files of the template so if you already have the previous release integrated withe your own code be careful when upgrading to this version</p>
+              <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                <li>Adding third dashboard</li>
+                <li>Introducing a free landing page</li>
+                <li>Adding the functionality for adding/removing themes</li>
+                <li>Highlighting the open link in the ( menubar )</li>
+                <li>New look and feel for small devices</li>
+                <li>Centering navbar-brand for small screens</li>
+                <li>Showing the name of the fold menu item on hover</li>
+                <li>Menubar submenus now can be nested to any level</li>
+                <li>The superfish plugin is removed</li>
+                <li>Renaming app-aside to menubar</li>
+                <li>Fixing the scrolling issue in the fold ( menubar )</li>
+                <li>Fixing the ( topbar ) layout issues for small screens</li>
+                <li>Fixing many issues and adding more power to the responsiveness</li>
+                <li>Folding/unfolding the ( menubar ) and change the layout based on the screen size</li>
+                <li>Readjusting the ( menubar ) when resize and orientationchange events occurs</li>
+                <li>Adjusting the app-user component based on the current layout and screen size</li>
+                <li>Refactoring the HTML, SASS and Javascript code to maximize performance and cleanness</li>
+                <li>Splitting app.scss into two files: core.scss and app.scss</li>
+                <li>Renaming assets/sass/app-sass/components to Renaming assets/sass/app-sass/ui-components</li>
+                <li>And many internal code modifications</li>
+              </ul>
+            </div><!-- .m-l-lg -->
+
+            <h4 class="fw-600 title-color m-h-lg">- Release V1.0.1</h4>
+            <div class="m-l-lg">
+              <p class="fz-md m-h-lg fs-italic">This is the First Update</p>
+              <ul class="fz-md lh-lg p-l-lg" style="list-style-type: square;">
+                <li>Rebuilding the second Dashboard</li>
+                <li>Rebuilding Buttons Demo Page</li>
+                <li>Rebuilding Panels Demo Page</li>
+              </ul>
+            </div><!-- .m-l-lg -->
+
+            <h4 class="fw-600 title-color m-h-lg">- Release V1.0.0</h4>
+            <div class="m-l-lg">
+              <p class="fz-md m-h-lg fs-italic">This is the Initial Release</p>
+            </div><!-- .m-l-lg -->
+          </div><!-- .m-l-lg -->
+        </div><!-- .tab-pane -->
+      </div><!-- .tab-content -->
+    </div><!-- .nav-tabs-horizontal -->
+  </section><!-- .app-content -->
+</div><!-- .wrap -->
+  <!-- APP FOOTER -->
+  <div class="wrap p-t-0">
+    <footer class="app-footer">
+      <div class="clearfix">
+        <ul class="footer-menu pull-right">
+          <li><a href="javascript:void(0)">Careers</a></li>
+          <li><a href="javascript:void(0)">Privacy Policy</a></li>
+          <li><a href="javascript:void(0)">Feedback <i class="fa fa-angle-up m-l-md"></i></a></li>
+        </ul>
+        <div class="copyright pull-left">Copyright RaThemes 2016 &copy;</div>
+      </div>
+    </footer>
+  </div>
+  <!-- /#app-footer -->
+</main>
+<!--========== END app main -->
+
+	<!-- APP CUSTOMIZER -->
+	<div id="app-customizer" class="app-customizer">
+		<a href="javascript:void(0)" 
+			class="app-customizer-toggle theme-color" 
+			data-toggle="class" 
+			data-class="open"
+			data-active="false"
+			data-target="#app-customizer">
+			<i class="fa fa-gear"></i>
+		</a>
+		<div class="customizer-tabs">
+			<!-- tabs list -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#menubar-customizer" aria-controls="menubar-customizer" role="tab" data-toggle="tab">Menubar</a></li>
+				<li role="presentation"><a href="#navbar-customizer" aria-controls="navbar-customizer" role="tab" data-toggle="tab">Navbar</a></li>
+			</ul><!-- .nav-tabs -->
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane in active fade" id="menubar-customizer">
+					<div class="hidden-menubar-top hidden-float">
+						<div class="m-b-0">
+							<label for="menubar-fold-switch">Fold Menubar</label>
+							<div class="pull-right">
+								<input id="menubar-fold-switch" type="checkbox" data-switchery data-size="small" />
+							</div>
+						</div>
+						<hr class="m-h-md">
+					</div>
+					<div class="radio radio-default m-b-md">
+						<input type="radio" id="menubar-light-theme" name="menubar-theme" data-toggle="menubar-theme" data-theme="light">
+						<label for="menubar-light-theme">Light</label>
+					</div>
+
+					<div class="radio radio-inverse m-b-md">
+						<input type="radio" id="menubar-dark-theme" name="menubar-theme" data-toggle="menubar-theme" data-theme="dark">
+						<label for="menubar-dark-theme">Dark</label>
+					</div>
+				</div><!-- .tab-pane -->
+				<div role="tabpanel" class="tab-pane fade" id="navbar-customizer">
+					<!-- This Section is populated Automatically By javascript -->
+				</div><!-- .tab-pane -->
+			</div>
+		</div><!-- .customizer-taps -->
+		<hr class="m-0">
+		<div class="customizer-reset">
+			<button id="customizer-reset-btn" class="btn btn-block btn-outline btn-primary">Reset</button>
+			<a href="https://themeforest.net/item/infinity-responsive-web-app-kit/16230780" class="m-t-sm btn btn-block btn-danger">Buy Now</a>
+		</div>
+	</div><!-- #app-customizer -->
+	
+	<!-- SIDE PANEL -->
+	<div id="side-panel" class="side-panel">
+		<div class="panel-header">
+			<h4 class="panel-title">Friends</h4>
+		</div>
+		<div class="scrollable-container">
+			<div class="media-group">
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/221.jpg" alt="">
+								<i class="status status-online"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">John Doe</h5>
+							<small class="media-meta">active now</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/205.jpg" alt="">
+								<i class="status status-online"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">John Doe</h5>
+							<small class="media-meta">active now</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/206.jpg" alt="">
+								<i class="status status-online"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Adam Kiti</h5>
+							<small class="media-meta">active now</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/207.jpg" alt="">
+								<i class="status status-away"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Jane Doe</h5>
+							<small class="media-meta">away</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/208.jpg" alt="">
+								<i class="status status-away"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Sara Adams</h5>
+							<small class="media-meta">away</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/209.jpg" alt="">
+								<i class="status status-away"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Smith Doe</h5>
+							<small class="media-meta">away</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/219.jpg" alt="">
+								<i class="status status-away"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Dana Dyab</h5>
+							<small class="media-meta">away</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/210.jpg" alt="">
+								<i class="status status-offline"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Jeffry Way</h5>
+							<small class="media-meta">2 hours ago</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/211.jpg" alt="">
+								<i class="status status-offline"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Jane Doe</h5>
+							<small class="media-meta">5 hours ago</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/212.jpg" alt="">
+								<i class="status status-offline"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Adam Khoury</h5>
+							<small class="media-meta">22 minutes ago</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/207.jpg" alt="">
+								<i class="status status-offline"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Sara Smith</h5>
+							<small class="media-meta">2 days ago</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+
+				<a href="javascript:void(0)" class="media-group-item">
+					<div class="media">
+						<div class="media-left">
+							<div class="avatar avatar-xs avatar-circle">
+								<img src="../assets/images/211.jpg" alt="">
+								<i class="status status-offline"></i>
+							</div>
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">Donia Dyab</h5>
+							<small class="media-meta">3 days ago</small>
+						</div>
+					</div>
+				</a><!-- .media-group-item -->
+			</div>
+		</div><!-- .scrollable-container -->
+	</div><!-- /#side-panel -->
+
+	<!-- build:js ../assets/js/core.min.js -->
+	<script src="../libs/bower/jquery/dist/jquery.js"></script>
+	<script src="../libs/bower/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+	<script src="../libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+	<script src="../libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script>
+	<script src="../libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+	<script src="../libs/bower/PACE/pace.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js ../assets/js/app.min.js -->
+	<script src="../assets/js/library.js"></script>
+	<script src="../assets/js/plugins.js"></script>
+	<script src="../assets/js/app.js"></script>
+	<!-- endbuild -->
+	<script src="../libs/bower/moment/moment.js"></script>
+	<script src="../libs/bower/fullcalendar/dist/fullcalendar.min.js"></script>
+	<script src="../assets/js/fullcalendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+  <title>Infinity - Bootstrap Admin Template</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="Admin, Dashboard, Bootstrap" />
+  <link rel="shortcut icon" sizes="196x196" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/core.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
+  <style>
+    .header{ padding: 100px 0; }
+    .showcase{ padding-top: 100px; background: #eceff1; }
+    .demo-item{ padding: 0 60px; margin-bottom: 100px; }
+    
+    .demo-img{
+      background: #fff;
+      box-shadow: 0 5px 10px #ccc;
+      padding: 12px;
+      display: block;
+      border-radius: 6px;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease;
+    }
+    .demo-img:hover{ box-shadow: 0 10px 15px #ccc; -webkit-transform: scale(1.05); transform: scale(1.05); }
+    @media (max-width: 480px){ .demo-item{ padding: 0 30px; } }
+
+    .footer{ margin-top: 80px; padding-bottom: 40px; }
+    .copyright{ letter-spacing: 1px; }
+
+    .landing-page-banner{ display: block; box-shadow: 0 5px 10px #ccc; -webkit-transition: all .5s ease; transition: all .5s ease; }
+    .landing-page-banner:hover{ box-shadow: 0 10px 15px #ccc; }
+    
+    #loading-div {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      z-index: 9999;
+      -webkit-transition: opacity 3s;
+      transition: opacity 3s;
+      background-color: #f3f3f3;
+    }
+    #loading-div img {
+      display: block;
+      position: absolute;
+      top: calc(50% - 25px);
+      left: calc(50% - 25px);
+    }
+    body{ height: 100%; overflow-y: hidden; }
+    body.loading-done{ overflow-y: auto; }
+    body .wrapper { opacity: 0; -webkit-transition: opacity .75s; transition: opacity .75s; }
+    body.loading-done .wrapper { opacity: 1; }
+    body.loading-done #loading-div { opacity: 0; visibility: hidden; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header white">
+      <div class="container">
+        <div class="text-center">
+          <a href="index.html"><img src="assets/images/index/infinity-logo.png" alt="infinity logo"></a>
+          <p>Responsive Bootstrap Admin Template</p>
+          <p class="m-t-xl m-b-0">
+            <a href="https://themeforest.net/item/infinity-responsive-web-app-kit/16230780" class="btn btn-primary fz-md">Download Now</a>
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="showcase">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="demo-item">
+              <a href="default/index.html" target="_blanck" class="demo-img white">
+                <img src="assets/images/index/default-demo-1.png" alt="demo 1">
+              </a>
+              <h4 class="text-center m-t-lg fw-700">Default&nbsp;&nbsp; Demo 1</h4>
+            </div>
+          </div><!-- END column -->
+
+          <div class="col-md-6">
+            <div class="demo-item">
+              <a href="topbar/index.html" target="_blanck" class="demo-img white">
+                <img src="assets/images/index/topbar-demo-1.png" alt="demo 1">
+              </a>
+              <h4 class="text-center m-t-lg fw-700">Topbar&nbsp;&nbsp; Demo 1</h4>
+            </div>
+          </div><!-- END column -->
+        </div><!-- .row -->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="demo-item">
+              <a href="default/dashboard.2.html" target="_blanck" class="demo-img white">
+                <img src="assets/images/index/default-demo-2.png" alt="demo 1">
+              </a>
+              <h4 class="text-center m-t-lg fw-700">Default&nbsp;&nbsp; Demo 2</h4>
+            </div>
+          </div><!-- END column -->
+
+          <div class="col-md-6">
+            <div class="demo-item">
+              <a href="topbar/dashboard.2.html" target="_blanck" class="demo-img white">
+                <img src="assets/images/index/topbar-demo-2.png" alt="demo 1">
+              </a>
+              <h4 class="text-center m-t-lg fw-700">Topbar&nbsp;&nbsp; Demo 2</h4>
+            </div>
+          </div><!-- END column -->
+        </div><!-- .row -->
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="demo-item">
+              <a href="default/dashboard.3.html" target="_blanck" class="demo-img white">
+                <img src="assets/images/index/default-demo-3.png" alt="demo 1">
+              </a>
+              <h4 class="text-center m-t-lg fw-700">Default&nbsp;&nbsp; Demo 3</h4>
+            </div>
+          </div><!-- END column -->
+
+          <div class="col-md-6">
+            <div class="demo-item">
+              <a href="topbar/dashboard.3.html" target="_blanck" class="demo-img white">
+                <img src="assets/images/index/topbar-demo-3.png" alt="demo 1">
+              </a>
+              <h4 class="text-center m-t-lg fw-700">Topbar&nbsp;&nbsp; Demo 3</h4>
+            </div>
+          </div><!-- END column -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+
+      <div class="container">
+        <a href="landing-page.html" class="landing-page-banner">
+          <img src="assets/images/index/landing-page-baner.png" alt="landing page banner">
+        </a>
+      </div><!-- .container -->
+    </div><!-- .showcase -->
+
+    <footer class="footer">
+      <p class="copyright text-center"><em>Copyright &copy; 2016 <a href="http://rathemes.com/" class="fw-500 text-color">Rathemes</a></em></p>
+    </footer>
+  </div><!-- .wrapper -->
+
+  <div id="loading-div">
+    <img src="assets/images/landing-page/puff.svg" width="50" alt="">
+  </div>
+  <script src="libs/bower/jquery/dist/jquery.js"></script>
+  <script>
+    $(function(){
+      $(window).on('load', function(){
+        $(document.body).addClass('loading-done');
+      });
+    });
+  </script>
+</body>
+</html>
