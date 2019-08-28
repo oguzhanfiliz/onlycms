@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.temizbiev.com/panel/';
+$config['base_url'] = 'http://37.247.114.52/~oguz/panel/';
 
 /*
 |--------------------------------------------------------------------------

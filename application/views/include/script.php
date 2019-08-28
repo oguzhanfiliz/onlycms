@@ -9,9 +9,16 @@
 <!-- endbuild -->
 
 <!-- build:js ../assets/js/app.min.js -->
-<script src="<?php echo base_url("assets");?>/js/library.js"></script>
-<script src="<?php echo base_url("assets");?>/js/plugins.js"></script>
-<script src="<?php echo base_url("assets");?>/js/app.js"></script>
+
+
+<!--<script src="<?php /*echo base_url("assets");*/?>/assets/js/library.js"></script>
+-->
+<!--library klasörünü include içinde php'ye dönüştürdüğüm için include altında library klasöründe diye yükledim burda. Eski hali yukarıdadır-->
+<?php $this->load->view("include/library");?>
+
+
+<script src="<?php echo base_url("assets");?>/assets/js/plugins.js"></script>
+<script src="<?php echo base_url("assets");?>/assets/js/app.js"></script>
 <!-- endbuild -->
 <script src="<?php echo base_url("assets");?>/libs/bower/moment/moment.js"></script>
 <script src="<?php echo base_url("assets");?>/libs/bower/fullcalendar/dist/fullcalendar.min.js"></script>

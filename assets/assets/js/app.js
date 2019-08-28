@@ -554,7 +554,7 @@
 // initialize app
 +function($, window) { 'use strict';
 	window.app.init();
-
+//tema renklerini değiştirdiğim kısım...
 	window.app.menubar.setTheme("dark");
 	window.app.menubar.applyTheme();
 
