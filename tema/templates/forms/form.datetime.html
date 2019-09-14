@@ -1,0 +1,94 @@
+<div class="wrap">
+	<section class="app-content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="widget">
+					<header class="widget-header">
+						<h4 class="widget-title">DatePicker</h4>
+					</header><!-- .widget-header -->
+					<hr class="widget-separator">
+					<div class="widget-body">
+						<div class="row">
+							<div class="col-md-4">
+								<label for="datetimepicker1">Inline Display</label>
+								<div id="datetimepicker1" data-plugin="datetimepicker" data-options="{ inline: true, viewMode: 'days' }"></div>
+							</div><!-- END column -->
+
+							<div class="col-md-7 col-md-offset-1">
+								<div class="form-group" style="position: relative;">
+									<label for="datetimepicker5">Simple input with default date</label>
+									<input type="text" id="datetimepicker5" class="form-control" data-plugin="datetimepicker" data-options="{ defaultDate: '3/27/2016' }">
+								</div><!-- .form-group -->
+
+								<div class="form-group">
+									<label for="datetimepicker2">Minimum Setup</label>
+									<div class='input-group date' id='datetimepicker2' data-plugin="datetimepicker">
+										<input type='text' class="form-control" />
+										<span class="input-group-addon bg-info text-white">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="datetimepicker4">Min View Mode</label>
+									<div class='input-group date' id='datetimepicker4' data-plugin="datetimepicker" data-options="{ viewMode: 'years', format: 'MM/YYYY' }">
+										<input type='text' class="form-control" />
+										<span class="input-group-addon bg-info text-white">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+							</div><!-- END column -->
+						</div>
+					</div><!-- .widget-body -->
+				</div><!-- .widget -->
+			</div><!-- END column -->
+
+			<div class="col-md-12">
+				<div class="widget">
+					<header class="widget-header">
+						<h4 class="widget-title">Bootstrap Timepicker</h4>
+					</header><!-- .widget-header -->
+					<hr class="widget-separator">
+					<div class="widget-body">
+						<form action="#" class="form-horizontal">
+							<div class="form-group">
+								<label for="timepicker" class="col-sm-4 control-label">Data attributes:</label>
+								<div class="col-sm-6">
+									<div class="input-group">
+										<input id="timepicker" class="form-control" data-provide="timepicker" data-template="dropdown" data-minute-step="1" type="text"/>
+										<span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span>
+									</div>
+									<p class="m-h-md">
+										<small>The timepicker can be instantiated lazily without using javascript using <code>data-provide="timepicker"</code>.</small>
+									</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="timepicker1" class="col-sm-4 control-label">Default Timepicker:</label>
+								<div class="input-group bootstrap-timepicker timepicker col-sm-6">
+									<input id="timepicker1" type="text" class="form-control" data-plugin="timepicker" data-options="{ showInputs: false }">
+									<span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="timepicker2" class="col-sm-4 control-label">24 hour Timepicker:</label>
+								<div class="input-group bootstrap-timepicker timepicker col-sm-6">
+									<input id="timepicker2" type="text" class="form-control input-small" data-plugin="timepicker" data-options="{ showInputs: false, showMeridian: false }">
+									<span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="timepicker3" class="col-sm-4 control-label">Minute step Timepicker:</label>
+								<div class="input-group bootstrap-timepicker timepicker col-sm-6">
+									<input id="timepicker3" type="text" class="form-control input-small" data-plugin="timepicker" data-options="{ minuteStep: 5, disableFocus: true }">
+									<span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span>
+								</div>
+							</div>
+						</form>
+					</div><!-- .widget-body -->
+				</div><!-- .widget -->
+			</div><!-- END column -->
+		</div><!-- .row -->
+	</section><!-- #dash-content -->
+</div><!-- .wrap -->

@@ -1,1 +1,1 @@
-Bismillahirrahmanirrahim
+<strong>Bismillahirrahmanirrahim</strong>

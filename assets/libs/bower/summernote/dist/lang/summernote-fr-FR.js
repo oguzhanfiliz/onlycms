@@ -1,4 +1,4 @@
-(function ($) {
+(function($) {
   $.extend($.summernote.lang, {
     'fr-FR': {
       font: {
@@ -11,7 +11,7 @@
         strikethrough: 'Barré',
         superscript: 'Exposant',
         subscript: 'Indice',
-        size: 'Taille de police'
+        size: 'Taille de police',
       },
       image: {
         image: 'Image',
@@ -22,7 +22,7 @@
         floatLeft: 'Aligné à gauche',
         floatRight: 'Aligné à droite',
         floatNone: 'Pas d\'alignement',
-        shapeRounded: 'Forme: Rectangle arrondie',
+        shapeRounded: 'Forme: Rectangle arrondi',
         shapeCircle: 'Forme: Cercle',
         shapeThumbnail: 'Forme: Vignette',
         shapeNone: 'Forme: Aucune',
@@ -32,14 +32,15 @@
         maximumFileSize: 'Taille de fichier maximale',
         maximumFileSizeError: 'Taille maximale du fichier dépassée',
         url: 'URL de l\'image',
-        remove: 'Supprimer l\'image'
+        remove: 'Supprimer l\'image',
+        original: 'Original',
       },
       video: {
         video: 'Vidéo',
         videoLink: 'Lien vidéo',
         insert: 'Insérer une vidéo',
         url: 'URL de la vidéo',
-        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion ou Youku)'
+        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion ou Youku)',
       },
       link: {
         link: 'Lien',
@@ -48,17 +49,24 @@
         edit: 'Modifier',
         textToDisplay: 'Texte à afficher',
         url: 'URL du lien',
-        openInNewWindow: 'Ouvrir dans une nouvelle fenêtre'
+        openInNewWindow: 'Ouvrir dans une nouvelle fenêtre',
       },
       table: {
-        table: 'Tableau'
+        table: 'Tableau',
+        addRowAbove: 'Ajouter une ligne au-dessus',
+        addRowBelow: 'Ajouter une ligne en dessous',
+        addColLeft: 'Ajouter une colonne à gauche',
+        addColRight: 'Ajouter une colonne à droite',
+        delRow: 'Supprimer la ligne',
+        delCol: 'Supprimer la colonne',
+        delTable: 'Supprimer le tableau',
       },
       hr: {
-        insert: 'Insérer une ligne horizontale'
+        insert: 'Insérer une ligne horizontale',
       },
       style: {
         style: 'Style',
-        normal: 'Normal',
+        p: 'Normal',
         blockquote: 'Citation',
         pre: 'Code source',
         h1: 'Titre 1',
@@ -66,16 +74,16 @@
         h3: 'Titre 3',
         h4: 'Titre 4',
         h5: 'Titre 5',
-        h6: 'Titre 6'
+        h6: 'Titre 6',
       },
       lists: {
         unordered: 'Liste à puces',
-        ordered: 'Liste numérotée'
+        ordered: 'Liste numérotée',
       },
       options: {
         help: 'Aide',
         fullscreen: 'Plein écran',
-        codeview: 'Afficher le code HTML'
+        codeview: 'Afficher le code HTML',
       },
       paragraph: {
         paragraph: 'Paragraphe',
@@ -84,7 +92,7 @@
         left: 'Aligner à gauche',
         center: 'Centrer',
         right: 'Aligner à droite',
-        justify: 'Justifier'
+        justify: 'Justifier',
       },
       color: {
         recent: 'Dernière couleur sélectionnée',
@@ -94,7 +102,7 @@
         transparent: 'Transparent',
         setTransparent: 'Définir la transparence',
         reset: 'Restaurer',
-        resetToDefault: 'Restaurer la couleur par défaut'
+        resetToDefault: 'Restaurer la couleur par défaut',
       },
       shortcut: {
         shortcuts: 'Raccourcis',
@@ -103,13 +111,45 @@
         action: 'Action',
         paragraphFormatting: 'Mise en forme des paragraphes',
         documentStyle: 'Style du document',
-        extraKeys: 'Touches supplémentaires'
+        extraKeys: 'Touches supplémentaires',
+      },
+      help: {
+        'insertParagraph': 'Insérer paragraphe',
+        'undo': 'Défaire la dernière commande',
+        'redo': 'Refaire la dernière commande',
+        'tab': 'Tabulation',
+        'untab': 'Tabulation arrière',
+        'bold': 'Mettre en caractère gras',
+        'italic': 'Mettre en italique',
+        'underline': 'Mettre en souligné',
+        'strikethrough': 'Mettre en texte barré',
+        'removeFormat': 'Nettoyer les styles',
+        'justifyLeft': 'Aligner à gauche',
+        'justifyCenter': 'Centrer',
+        'justifyRight': 'Aligner à droite',
+        'justifyFull': 'Justifier à gauche et à droite',
+        'insertUnorderedList': 'Basculer liste à puces',
+        'insertOrderedList': 'Basculer liste ordonnée',
+        'outdent': 'Diminuer le retrait du paragraphe',
+        'indent': 'Augmenter le retrait du paragraphe',
+        'formatPara': 'Changer le paragraphe en cours en normal (P)',
+        'formatH1': 'Changer le paragraphe en cours en entête H1',
+        'formatH2': 'Changer le paragraphe en cours en entête H2',
+        'formatH3': 'Changer le paragraphe en cours en entête H3',
+        'formatH4': 'Changer le paragraphe en cours en entête H4',
+        'formatH5': 'Changer le paragraphe en cours en entête H5',
+        'formatH6': 'Changer le paragraphe en cours en entête H6',
+        'insertHorizontalRule': 'Insérer séparation horizontale',
+        'linkDialog.show': 'Afficher fenêtre d\'hyperlien',
       },
       history: {
         undo: 'Annuler la dernière action',
-        redo: 'Restaurer la dernière action annulée'
-      }
-
-    }
+        redo: 'Restaurer la dernière action annulée',
+      },
+      specialChar: {
+        specialChar: 'Caractères spéciaux',
+        select: 'Choisir des caractères spéciaux',
+      },
+    },
   });
 })(jQuery);

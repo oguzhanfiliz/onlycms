@@ -1,0 +1,28 @@
+.input-form-error{
+	font-size: 12px;
+	color : #ff5b5b;
+	font-style: italic;
+}
+
+td{
+	vertical-align: middle!important;
+}
+th{
+	text-align: center;
+}
+
+.order{
+	text-align: center;
+	width: 50px;
+}
+
+.w100{
+	width: 100px;
+}
+.w50{
+	width: 50px;
+}
+
+.sortable{
+	cursor: move;
+}

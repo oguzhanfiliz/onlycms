@@ -23,5 +23,8 @@
 <script src="<?php echo base_url("assets");?>/libs/bower/moment/moment.js"></script>
 <script src="<?php echo base_url("assets");?>/libs/bower/fullcalendar/dist/fullcalendar.min.js"></script>
 <script src="<?php echo base_url("assets");?>/js/fullcalendar.js"></script>
-<!-- assets geliyor 1 kere libsin önüne asset yazarsan 2 tane olur  -->
-<!-- base_url application->config->config.php-->
+<script src="<?php echo base_url("assets");?>/js/sweetalert2.all.min.js"></script>
+<script src="<?php echo base_url("assets");?>/js/iziToast.min.js"></script>
+<?php $this->load->view("include/alert"); ?>
+<!--<script src="<?php /*echo base_url("assets");*/?>/js/custom.js"></script>-->
+
