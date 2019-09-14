@@ -8,12 +8,16 @@ Proje Codeigniter ile kodlama aşamasındadır.
 <https://codeigniter.com/download>`_
 
 *******************
-Release Information
+Yapılması gerekenler
 *******************
+Projeyi indirin ve mysql klasörü içerisindeki panel.sql adlı dosyayı veritabanınızda içeri aktarın.
+Daha sonra application\config içerisindeki database1.php adlı dosyanın adını database.php olarak değiştirip 
+bir düzenleyici yardımıyla açın içerisindeki 
+	'username' => '',
+	'password' => '',
+	'database' => '',
+	Kısımlarını düzenleyin
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
 
 **************************
 Changelog and New Features
