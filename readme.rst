@@ -16,7 +16,8 @@ bir düzenleyici yardımıyla açın içerisindeki
 	'username' => '',
 	'password' => '',
 	'database' => '',
-	Kısımlarını düzenleyin
+
+Kısımlarını düzenleyin
 
 
 **************************
