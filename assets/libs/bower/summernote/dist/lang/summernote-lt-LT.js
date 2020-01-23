@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
   $.extend($.summernote.lang, {
     'lt-LT': {
       font: {
@@ -11,7 +11,7 @@
         strikethrough: 'Perbrauktas',
         superscript: 'Viršutinis',
         subscript: 'Indeksas',
-        size: 'Šrifto dydis',
+        size: 'Šrifto dydis'
       },
       image: {
         image: 'Paveikslėlis',
@@ -27,20 +27,11 @@
         shapeThumbnail: 'Forma: miniatiūra',
         shapeNone: 'Forma: jokia',
         dragImageHere: 'Vilkite paveikslėlį čia',
-        dropImage: 'Drop image or Text',
         selectFromFiles: 'Pasirinkite failą',
         maximumFileSize: 'Maskimalus failo dydis',
         maximumFileSizeError: 'Maskimalus failo dydis viršytas!',
         url: 'Paveikslėlio URL adresas',
-        remove: 'Ištrinti paveikslėlį',
-        original: 'Original',
-      },
-      video: {
-        video: 'Video',
-        videoLink: 'Video Link',
-        insert: 'Insert Video',
-        url: 'Video URL?',
-        providers: '(YouTube, Vimeo, Vine, Instagram, DailyMotion or Youku)',
+        remove: 'Ištrinti paveikslėlį'
       },
       link: {
         link: 'Nuoroda',
@@ -49,24 +40,17 @@
         edit: 'Redaguoti',
         textToDisplay: 'Rodomas tekstas',
         url: 'Koks URL adresas yra susietas?',
-        openInNewWindow: 'Atidaryti naujame lange',
+        openInNewWindow: 'Atidaryti naujame lange'
       },
       table: {
-        table: 'Lentelė',
-        addRowAbove: 'Add row above',
-        addRowBelow: 'Add row below',
-        addColLeft: 'Add column left',
-        addColRight: 'Add column right',
-        delRow: 'Delete row',
-        delCol: 'Delete column',
-        delTable: 'Delete table',
+        table: 'Lentelė'
       },
       hr: {
-        insert: 'Įterpti horizontalią liniją',
+        insert: 'Įterpti horizontalią liniją'
       },
       style: {
         style: 'Stilius',
-        p: 'pus',
+        normal: 'Normalus',
         blockquote: 'Citata',
         pre: 'Kodas',
         h1: 'Antraštė 1',
@@ -74,16 +58,16 @@
         h3: 'Antraštė 3',
         h4: 'Antraštė 4',
         h5: 'Antraštė 5',
-        h6: 'Antraštė 6',
+        h6: 'Antraštė 6'
       },
       lists: {
         unordered: 'Suženklintasis sąrašas',
-        ordered: 'Sunumeruotas sąrašas',
+        ordered: 'Sunumeruotas sąrašas'
       },
       options: {
         help: 'Pagalba',
         fullscreen: 'Viso ekrano režimas',
-        codeview: 'HTML kodo peržiūra',
+        codeview: 'HTML kodo peržiūra'
       },
       paragraph: {
         paragraph: 'Pastraipa',
@@ -92,7 +76,7 @@
         left: 'Kairinė lygiuotė',
         center: 'Centrinė lygiuotė',
         right: 'Dešininė lygiuotė',
-        justify: 'Abipusis išlyginimas',
+        justify: 'Abipusis išlyginimas'
       },
       color: {
         recent: 'Paskutinė naudota spalva',
@@ -102,7 +86,7 @@
         transparent: 'Permatoma',
         setTransparent: 'Nustatyti skaidrumo intensyvumą',
         reset: 'Atkurti',
-        resetToDefault: 'Atstatyti numatytąją spalvą',
+        resetToDefault: 'Atstatyti numatytąją spalvą'
       },
       shortcut: {
         shortcuts: 'Spartieji klavišai',
@@ -111,45 +95,13 @@
         action: 'Veiksmas',
         paragraphFormatting: 'Pastraipos formatavimas',
         documentStyle: 'Dokumento stilius',
-        extraKeys: 'Papildomi klavišų deriniai',
-      },
-      help: {
-        'insertParagraph': 'Insert Paragraph',
-        'undo': 'Undoes the last command',
-        'redo': 'Redoes the last command',
-        'tab': 'Tab',
-        'untab': 'Untab',
-        'bold': 'Set a bold style',
-        'italic': 'Set a italic style',
-        'underline': 'Set a underline style',
-        'strikethrough': 'Set a strikethrough style',
-        'removeFormat': 'Clean a style',
-        'justifyLeft': 'Set left align',
-        'justifyCenter': 'Set center align',
-        'justifyRight': 'Set right align',
-        'justifyFull': 'Set full align',
-        'insertUnorderedList': 'Toggle unordered list',
-        'insertOrderedList': 'Toggle ordered list',
-        'outdent': 'Outdent on current paragraph',
-        'indent': 'Indent on current paragraph',
-        'formatPara': 'Change current block\'s format as a paragraph(P tag)',
-        'formatH1': 'Change current block\'s format as H1',
-        'formatH2': 'Change current block\'s format as H2',
-        'formatH3': 'Change current block\'s format as H3',
-        'formatH4': 'Change current block\'s format as H4',
-        'formatH5': 'Change current block\'s format as H5',
-        'formatH6': 'Change current block\'s format as H6',
-        'insertHorizontalRule': 'Insert horizontal rule',
-        'linkDialog.show': 'Show Link Dialog',
+        extraKeys: 'Papildomi klavišų deriniai'
       },
       history: {
         undo: 'Anuliuoti veiksmą',
-        redo: 'Perdaryti veiksmą',
-      },
-      specialChar: {
-        specialChar: 'SPECIAL CHARACTERS',
-        select: 'Select Special characters',
-      },
-    },
+        redo: 'Perdaryti veiksmą'
+      }
+
+    }
   });
 })(jQuery);

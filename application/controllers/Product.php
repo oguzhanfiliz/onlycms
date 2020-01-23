@@ -495,3 +495,5 @@ class Product extends CI_Controller
 	}
 
 }
+
+

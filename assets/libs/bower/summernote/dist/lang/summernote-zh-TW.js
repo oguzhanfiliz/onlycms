@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
   $.extend($.summernote.lang, {
     'zh-TW': {
       font: {
@@ -11,7 +11,7 @@
         strikethrough: '刪除線',
         subscript: '下標',
         superscript: '上標',
-        size: '字號',
+        size: '字號'
       },
       image: {
         image: '圖片',
@@ -27,20 +27,18 @@
         shapeThumbnail: '形狀: 縮略圖',
         shapeNone: '形狀: 無',
         dragImageHere: '將圖片拖曳至此處',
-        dropImage: 'Drop image or Text',
         selectFromFiles: '從本機上傳',
         maximumFileSize: '文件大小最大值',
         maximumFileSizeError: '文件大小超出最大值。',
         url: '圖片網址',
-        remove: '移除圖片',
-        original: 'Original',
+        remove: '移除圖片'
       },
       video: {
         video: '影片',
         videoLink: '影片連結',
         insert: '插入影片',
         url: '影片網址',
-        providers: '(優酷, Instagram, DailyMotion, Youtube等)',
+        providers: '(優酷, Instagram, DailyMotion, Youtube等)'
       },
       link: {
         link: '連結',
@@ -49,24 +47,17 @@
         edit: '編輯連結',
         textToDisplay: '顯示文字',
         url: '連結網址',
-        openInNewWindow: '在新視窗開啟',
+        openInNewWindow: '在新視窗開啟'
       },
       table: {
-        table: '表格',
-        addRowAbove: 'Add row above',
-        addRowBelow: 'Add row below',
-        addColLeft: 'Add column left',
-        addColRight: 'Add column right',
-        delRow: 'Delete row',
-        delCol: 'Delete column',
-        delTable: 'Delete table',
+        table: '表格'
       },
       hr: {
-        insert: '水平線',
+        insert: '水平線'
       },
       style: {
         style: '樣式',
-        p: '一般',
+        normal: '一般',
         blockquote: '引用區塊',
         pre: '程式碼區塊',
         h1: '標題 1',
@@ -74,16 +65,16 @@
         h3: '標題 3',
         h4: '標題 4',
         h5: '標題 5',
-        h6: '標題 6',
+        h6: '標題 6'
       },
       lists: {
         unordered: '項目清單',
-        ordered: '編號清單',
+        ordered: '編號清單'
       },
       options: {
         help: '幫助',
         fullscreen: '全螢幕',
-        codeview: '原始碼',
+        codeview: '原始碼'
       },
       paragraph: {
         paragraph: '段落',
@@ -92,7 +83,7 @@
         left: '靠右對齊',
         center: '靠中對齊',
         right: '靠右對齊',
-        justify: '左右對齊',
+        justify: '左右對齊'
       },
       color: {
         recent: '字型顏色',
@@ -102,7 +93,7 @@
         transparent: '透明',
         setTransparent: '透明',
         reset: '重設',
-        resetToDefault: '默認',
+        resetToDefault: '默認'
       },
       shortcut: {
         shortcuts: '快捷鍵',
@@ -111,45 +102,12 @@
         action: '動作',
         paragraphFormatting: '段落格式',
         documentStyle: '文件格式',
-        extraKeys: '額外按鍵',
-      },
-      help: {
-        'insertParagraph': 'Insert Paragraph',
-        'undo': 'Undoes the last command',
-        'redo': 'Redoes the last command',
-        'tab': 'Tab',
-        'untab': 'Untab',
-        'bold': 'Set a bold style',
-        'italic': 'Set a italic style',
-        'underline': 'Set a underline style',
-        'strikethrough': 'Set a strikethrough style',
-        'removeFormat': 'Clean a style',
-        'justifyLeft': 'Set left align',
-        'justifyCenter': 'Set center align',
-        'justifyRight': 'Set right align',
-        'justifyFull': 'Set full align',
-        'insertUnorderedList': 'Toggle unordered list',
-        'insertOrderedList': 'Toggle ordered list',
-        'outdent': 'Outdent on current paragraph',
-        'indent': 'Indent on current paragraph',
-        'formatPara': 'Change current block\'s format as a paragraph(P tag)',
-        'formatH1': 'Change current block\'s format as H1',
-        'formatH2': 'Change current block\'s format as H2',
-        'formatH3': 'Change current block\'s format as H3',
-        'formatH4': 'Change current block\'s format as H4',
-        'formatH5': 'Change current block\'s format as H5',
-        'formatH6': 'Change current block\'s format as H6',
-        'insertHorizontalRule': 'Insert horizontal rule',
-        'linkDialog.show': 'Show Link Dialog',
+        extraKeys: '額外按鍵'
       },
       history: {
         undo: '復原',
-        redo: '取消復原',
-      },
-      specialChar: {
-        specialChar: 'SPECIAL CHARACTERS',
-        select: 'Select Special characters',
-      },
-    },
+        redo: '取消復原'
+      }
+    }
   });
 })(jQuery);
