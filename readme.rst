@@ -16,8 +16,14 @@ bir düzenleyici yardımıyla açın içerisindeki
 	'username' => ' ',
 	'password' => '',
 	'database' => '',
+```sh
 application/config/config.php
-'$config['base_url'] = "siteadresiniz";'
+```
+```sh
+$config['base_url'] = "siteadresiniz";
+```
+siteadresinizi değiştirirseniz tüm urlleri çalışır hale gelecektir.
+
 site adresiniz kısmını düzenlerseniz tüm url'ler otomatikleşmiş olacaktır.
 Kısımlarını düzenleyin
 
