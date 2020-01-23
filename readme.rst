@@ -12,16 +12,19 @@ Yapılması gerekenler
 *******************
 Projeyi indirin ve mysql klasörü içerisindeki panel.sql adlı dosyayı veritabanınızda içeri aktarın.
 Daha sonra application\config içerisindeki database1.php adlı dosyanın adını database.php olarak değiştirip 
-bir düzenleyici yardımıyla açın içerisindeki 
+bir düzenleyici yardımıyla açın içerisindeki
+```sh
 	'username' => ' ',
 	'password' => '',
 	'database' => '',
+```
 ```sh
 application/config/config.php
 ```
 ```sh
 $config['base_url'] = "siteadresiniz";
 ```
+s
 siteadresinizi değiştirirseniz tüm urlleri çalışır hale gelecektir.
 
 site adresiniz kısmını düzenlerseniz tüm url'ler otomatikleşmiş olacaktır.
