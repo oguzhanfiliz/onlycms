@@ -13,17 +13,19 @@ Yapılması gerekenler
 Projeyi indirin ve mysql klasörü içerisindeki panel.sql adlı dosyayı veritabanınızda içeri aktarın.
 Daha sonra application\config içerisindeki database1.php adlı dosyanın adını database.php olarak değiştirip 
 bir düzenleyici yardımıyla açın içerisindeki 
-	'username' => '',
+	'username' => ' ',
 	'password' => '',
 	'database' => '',
 application/config/config.php
-$config['base_url'] = "siteadresiniz";
+'$config['base_url'] = "siteadresiniz";'
 site adresiniz kısmını düzenlerseniz tüm url'ler otomatikleşmiş olacaktır.
 Kısımlarını düzenleyin
+
+
 **************************
 Changelog and New Features
 **************************
-s 
+s
 You can find a list of all changes for each release in the `user
 guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
 
