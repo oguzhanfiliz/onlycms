@@ -104,7 +104,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="http://37.247.114.52/~oguz/panel/tema/default/index.html">
+					<a href="<?php echo base_url("news");?>">
 						<i class="menu-icon zmdi fa fa-newspaper-o	 zmdi-hc-lg"></i>
 						<span class="menu-text">Haberler</span>
 					</a>

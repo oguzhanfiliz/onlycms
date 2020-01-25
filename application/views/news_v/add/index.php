@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 	<head>
 		<?php $this->load->view("include/head");?>
 
@@ -49,5 +49,6 @@
 
 	<!-- build:js ../assets/js/core.min.js -->
 	<?php $this->load->view("include/script");?>
+	<?php $this->load->view("{$viewFolder}/{$subViewFolder}/page_script");?>
 </body>
 </html>

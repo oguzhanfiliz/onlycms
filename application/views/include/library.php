@@ -61,8 +61,8 @@
             "<?php echo base_url("assets");?>/libs/misc/jvectormap/maps/jquery-jvectormap-africa-mill.js"
         ],
         summernote: [
-            "http://37.247.114.52/~oguz/panel/assets/libs/bower/summernote/dist/summernote.css",
-            "http://37.247.114.52/~oguz/panel/assets/libs/bower/summernote/dist/summernote.min.js"
+            "<?php echo base_url("assets");?>/libs/bower/summernote/dist/summernote.css",
+            "<?php echo base_url("assets");?>/libs/bower/summernote/dist/summernote.min.js"
         ],
         DataTable: [
             "<?php echo base_url("assets");?>/libs/misc/datatables/datatables.min.css",

@@ -62,30 +62,4 @@
 
 	</table>
 <?php } ?>
-<?php foreach($item_images as $image){ ?>
 
-	<tr id="ord-<?php echo $image->id; ?>">
-		<td class="w100 text-center">
-			<input
-				data-url="<?php echo base_url("product/imageIsActiveSetter/$image->id"); ?>"
-				class="isActive"
-				type="checkbox"
-				data-switchery
-				data-color="#10c469"
-				<?php echo ($image->isActive) ? "checked" : ""; ?>
-			/>
-		</td>
-		<td class="w100 text-center">
-			<input
-				data-url="<?php echo base_url("product/isCoverSetter/$image->id/$image->product_id"); ?>"
-				class="isCover"
-				type="checkbox"
-				data-switchery
-				data-color="#ff5b5b"
-				<?php echo ($image->isCover) ? "checked" : ""; ?>
-			/>
-		</td>
-
-	</tr>
-
-<?php } ?>
