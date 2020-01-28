@@ -1,4 +1,3 @@
-[TOC]
 # Onlyfryou V2
 #### Content
 
@@ -25,5 +24,5 @@ $config['base_url'] = "siteurl";
 ```
 Complate!!! 
 ####DEMO
-[Links](http://oguzhanfiliz.com.tr/onlycms)
+Live Demo:[Links](http://oguzhanfiliz.com.tr/onlycms)
 
