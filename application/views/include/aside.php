@@ -101,12 +101,14 @@
 					<a href="<?php echo base_url("product");?>">
 						<i class="menu-icon zmdi fa fa-cubes zmdi-hc-lg"></i>
 						<span class="menu-text">Ürünler</span>
+						<i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
 					</a>
 				</li>
 				<li>
 					<a href="<?php echo base_url("news");?>">
 						<i class="menu-icon zmdi fa fa-newspaper-o	 zmdi-hc-lg"></i>
 						<span class="menu-text">Haberler</span>
+						<i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
 					</a>
 				</li>
 				<li>
