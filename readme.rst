@@ -6,6 +6,7 @@
 - CSS
 - BOOTSTRAP
 - JQUERY
+- MVC
 
 #### Config Directory
 
