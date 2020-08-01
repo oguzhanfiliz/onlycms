@@ -10,6 +10,8 @@ function convertToSEO($text){
 }
 
 
-function getFileName(){
+function get_readable_date($date){
+
+	return strftime('%e %B %Y', strtotime($date));
 
 }

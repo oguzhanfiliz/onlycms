@@ -18,7 +18,7 @@
 
         <a href="../index.html" class="navbar-brand">
             <span class="brand-icon"><i class="fa fa-gg"></i></span>
-            <span class="brand-name">Infinity</span>
+            <span class="brand-name">Teknokent</span>
         </a>
     </div><!-- .navbar-header -->
 
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li>
-                    <h5 class="page-title hidden-menubar-top hidden-float">Dashboard</h5>
+                    <h5 class="page-title hidden-menubar-top hidden-float">Yönetim paneli</h5>
                 </li>
             </ul>
 
