@@ -14,9 +14,10 @@ class Galleries extends CI_Controller
         $this->load->model("gallery_model");
         $this->load->model("gallery_model");
         $this->load->model("images_model");
+        $this->load->model("image_model");
         $this->load->model("video_model");
         $this->load->model("file_model");
-        
+
 
     }
 

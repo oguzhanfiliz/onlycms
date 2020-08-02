@@ -1,6 +1,6 @@
 <?php
 
-class Vıdeo_model extends CI_Model
+class Video_model extends CI_Model
 {
 
     public $tableName = "galleries";
