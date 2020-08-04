@@ -3,7 +3,7 @@
 class File_model extends CI_Model
 {
 
-    public $tableName = "galleries";
+    public $tableName = "files";
 
     public function __construct()
     {

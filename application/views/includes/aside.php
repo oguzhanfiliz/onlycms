@@ -8,7 +8,7 @@
             </div>
             <div class="media-body">
                 <div class="foldable">
-                    <h5><a href="javascript:void(0)" class="username">John Doe</a></h5>
+                    <h5><a href="javascript:void(0)" class="username">Oğuzhan Filiz</a></h5>
                     <ul>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,17 +68,12 @@
                     </a>
                 </li>
 
-                <li class="has-submenu">
-                    <a href="javascript:void(0)" class="submenu-toggle">
+        
+                <li>
+                    <a href="<?php echo base_url("galleries") ?>">
                         <i class="menu-icon zmdi zmdi-apps zmdi-hc-lg"></i>
-                        <span class="menu-text">Galeriler</span>
-                        <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                        <span class="menu-text">Galeri İşlemleri</span>
                     </a>
-                    <ul class="submenu">
-                        <li><a href="<?php echo base_url("galleries") ?>"><span class="menu-text">Resim Galerisi</span></a></li>
-                        <li><a href="#"><span class="menu-text">Video Galerisi</span></a></li>
-                        <li><a href="#"><span class="menu-text">Dosya Galerisi</span></a></li>
-                    </ul>
                 </li>
 
                 <li>

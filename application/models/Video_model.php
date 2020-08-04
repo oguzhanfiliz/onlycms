@@ -3,7 +3,7 @@
 class Video_model extends CI_Model
 {
 
-    public $tableName = "galleries";
+    public $tableName = "videos";
 
     public function __construct()
     {

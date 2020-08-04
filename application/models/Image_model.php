@@ -3,7 +3,7 @@
 class Image_model extends CI_Model
 {
 
-    public $tableName = "galleries";
+    public $tableName = "images";
 
     public function __construct()
     {
