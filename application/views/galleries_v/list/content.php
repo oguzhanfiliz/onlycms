@@ -60,21 +60,24 @@
 
                                         $button_icon = "fa-image";
                                         $button_url = "galleries/upload_form/$item->id";
+                                        $button_name= "Resimlere";
 
                                     } else if($item->gallery_type == "video") {
 
                                         $button_icon = "fa-play-circle-o";
                                         $button_url = "galleries/gallery_video_list/$item->id";
+                                        $button_name= "Videolara";
 
                                     } else {
 
                                         $button_icon = "fa-folder";
                                         $button_url = "galleries/upload_form/$item->id";
+                                        $button_name= "Dosyalara";
 
                                     }
                                     ?>
                                     <a href="<?php echo base_url("galleries/update_form/$item->id"); ?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i> Düzenle</a>
-                                    <a href="<?php echo base_url($button_url); ?>" class="btn btn-sm btn-dark btn-outline"><i class="fa <?php echo $button_icon; ?>"></i> Galeriye gözat</a>
+                                    <a href="<?php echo base_url($button_url); ?>" class="btn btn-sm btn-dark btn-outline"><i class="fa <?php echo $button_icon; ?>"></i> <?php echo $button_name; ?> gözat</a>
                                 </td>
                             </tr>
 
