@@ -27,5 +27,4 @@ Complate!!!
 ####DEMO
 Live Demo:[Links](http://oguzhanfiliz.com.tr/onlycms)
 
-![](https://github.com/onlyfryou/onlycms/images/login.png)
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/login.jpg)
