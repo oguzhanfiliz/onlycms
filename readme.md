@@ -20,7 +20,7 @@ panel.sql upload database ,Open editor and edit
 	'database' => '',
 ```
 write your site address
-```html
+```php
 $config['base_url'] = "siteurl";
 ```
 Complate!!! 
