@@ -8,13 +8,16 @@ class Galleries extends CI_Controller
     {
 
         parent::__construct();
-
+        if(!get_active_user()){
+            redirect(base_url("login"));
+        }
         $this->viewFolder = "galleries_v";
 
         $this->load->model("gallery_model");
         $this->load->model("image_model");
         $this->load->model("video_model");
         $this->load->model("file_model");
+        
     }
 
     public function index(){

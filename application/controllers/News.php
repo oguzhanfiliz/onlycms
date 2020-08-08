@@ -8,7 +8,9 @@ class News extends CI_Controller
     {
 
         parent::__construct();
-
+        if(!get_active_user()){
+            redirect(base_url("login"));
+        }
         $this->viewFolder = "news_v";
 
         $this->load->model("news_model");

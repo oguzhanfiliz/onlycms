@@ -8,11 +8,13 @@ class Users extends CI_Controller
     {
 
         parent::__construct();
-
+        if(!get_active_user()){
+            redirect(base_url("login"));
+        }
         $this->viewFolder = "users_v";
 
         $this->load->model("user_model");
-
+      
     }
 
     public function index(){
@@ -395,6 +397,17 @@ class Users extends CI_Controller
             );
 
         }
+
+    }
+    public function login(){
+
+        $viewData = new stdClass();
+
+        /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "login";
+
+        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
 
     }
 
