@@ -26,6 +26,8 @@ $config['base_url'] = "siteurl";
 Complate!!! 
 #### DEMO
 Live Demo:[Links](http://oguzhanfiliz.com.tr/onlycms)
+#### Errors
+If you give errors. please contact me [mailto](mailto:oguzhanfiliz@outlook.com)
 # Screenshot
 #### Login
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/login.jpg)
