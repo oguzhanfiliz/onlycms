@@ -27,7 +27,7 @@ Complate!!!
 #### DEMO
 Live Demo:[Links](http://oguzhanfiliz.com.tr/onlycms)
 #### Errors
-If you give errors. please contact me [mailto](mailto:oguzhanfiliz@outlook.com)
+If you give errors. please [contact](mailto:oguzhanfiliz@outlook.com) me 
 # Screenshot
 #### Login
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/login.jpg)
