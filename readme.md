@@ -24,19 +24,19 @@ write your site address
 $config['base_url'] = "siteurl";
 ```
 Complate!!! 
-####DEMO
+#### DEMO
 Live Demo:[Links](http://oguzhanfiliz.com.tr/onlycms)
-####Login
+#### Login
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/login.jpg)
-####Dashboard
+#### Dashboard
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/dashboard.jpg)
-####Users
+#### Users
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/users.jpg)
-####Product
+#### Product
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/product.jpg)
-####Galleries
+#### Galleries
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/galleries.jpg)
-####Files And İmages
+#### Files And İmages
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/Filesandimages.jpg)
-####Video or Image News
+#### Video or Image News
 ![](https://github.com/onlyfryou/onlycms/blob/master/images/Videoorimagenews.jpg)
