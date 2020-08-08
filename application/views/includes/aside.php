@@ -65,6 +65,13 @@
                 </li>
 
                 <li>
+                    <a href="<?php echo base_url("emailsettings"); ?>">
+                        <i class="menu-icon zmdi zmdi-email zmdi-hc-lg"></i>
+                        <span class="menu-text">E-posta Ayarları</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="<?php echo base_url("galleries"); ?>">
                         <i class="menu-icon zmdi zmdi-apps zmdi-hc-lg"></i>
                         <span class="menu-text">Galeri İşlemleri</span>

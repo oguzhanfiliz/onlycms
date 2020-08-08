@@ -1,6 +1,6 @@
 <div class="simple-page-wrap">
     <div class="simple-page-logo animated swing">
-        <a href="index.html">
+        <a href="<?php echo base_url("userop/do_login"); ?>">
             <span><i class="fa fa-gg"></i></span>
             <span>CMS</span>
         </a>
@@ -27,7 +27,7 @@
     </div><!-- #login-form -->
 
     <div class="simple-page-footer">
-        <p><a href="password-forget.html">Şifremi Unuttum ?</a></p>
+        <p><a href="<?php echo base_url("sifremi-unuttum"); ?>">Şifremi Unuttum ?</a></p>
     </div><!-- .simple-page-footer -->
 
 
