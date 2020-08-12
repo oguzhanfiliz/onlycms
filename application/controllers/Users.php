@@ -8,13 +8,15 @@ class Users extends CI_Controller
     {
 
         parent::__construct();
-        if(!get_active_user()){
-            redirect(base_url("login"));
-        }
+
         $this->viewFolder = "users_v";
 
         $this->load->model("user_model");
-      
+
+        if(!get_active_user()){
+            redirect(base_url("login"));
+        }
+
     }
 
     public function index(){
@@ -54,8 +56,8 @@ class Users extends CI_Controller
         $this->form_validation->set_rules("user_name", "Kullanıcı Adı", "required|trim|is_unique[users.user_name]");
         $this->form_validation->set_rules("full_name", "Ad Soyad", "required|trim");
         $this->form_validation->set_rules("email", "E-posta", "required|trim|valid_email|is_unique[users.email]");
-        $this->form_validation->set_rules("password", "Şifre", "required|trim|min_length[6]|max_length[16]");
-        $this->form_validation->set_rules("re_password", "Şifre Tekrar", "required|trim|min_length[6]|max_length[16]|matches[password]");
+        $this->form_validation->set_rules("password", "Şifre", "required|trim|min_length[6]|max_length[8]");
+        $this->form_validation->set_rules("re_password", "Şifre Tekrar", "required|trim|min_length[6]|max_length[8]|matches[password]");
 
         $this->form_validation->set_message(
             array(
@@ -163,7 +165,6 @@ class Users extends CI_Controller
 
     }
 
-
     public function update($id){
 
         $this->load->library("form_validation");
@@ -257,8 +258,8 @@ class Users extends CI_Controller
 
         $this->load->library("form_validation");
 
-        $this->form_validation->set_rules("password", "Şifre", "required|trim|min_length[6]|max_length[16]");
-        $this->form_validation->set_rules("re_password", "Şifre Tekrar", "required|trim|min_length[6]|max_length[16]|matches[password]");
+        $this->form_validation->set_rules("password", "Şifre", "required|trim|min_length[6]|max_length[8]");
+        $this->form_validation->set_rules("re_password", "Şifre Tekrar", "required|trim|min_length[6]|max_length[8]|matches[password]");
 
         $this->form_validation->set_message(
             array(
@@ -344,7 +345,7 @@ class Users extends CI_Controller
         } else {
 
             $alert = array(
-                "title" => "İşlem Başarılı",
+                "title" => "İşlem Başarısız",
                 "text" => "Kayıt silme sırasında bir problem oluştu",
                 "type"  => "error"
             );
@@ -373,42 +374,6 @@ class Users extends CI_Controller
                 )
             );
         }
-    }
-
-    public function rankSetter(){
-
-
-        $data = $this->input->post("data");
-
-        parse_str($data, $order);
-
-        $items = $order["ord"];
-
-        foreach ($items as $rank => $id){
-
-            $this->user_model->update(
-                array(
-                    "id"        => $id,
-                    "rank !="   => $rank
-                ),
-                array(
-                    "rank"      => $rank
-                )
-            );
-
-        }
-
-    }
-    public function login(){
-
-        $viewData = new stdClass();
-
-        /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
-        $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "login";
-
-        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-
     }
 
 }

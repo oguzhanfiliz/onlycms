@@ -22,7 +22,6 @@
                         <th class="w50">#id</th>
                         <th>Başlık</th>
                         <th>url</th>
-<!--                        <th>Açıklama</th>-->
                         <th>Haber Türü</th>
                         <th>Görsel</th>
                         <th>Durumu</th>
@@ -37,20 +36,19 @@
                                 <td class="w50 text-center">#<?php echo $item->id; ?></td>
                                 <td><?php echo $item->title; ?></td>
                                 <td><?php echo $item->url; ?></td>
-<!--                                <td>--><?php //echo $item->description; ?><!--</td>-->
                                 <td class="text-center"><?php echo $item->news_type; ?></td>
-                                <td class="text-center">
+                                <td class="text-center w100">
                                     <?php if($item->news_type == "image") { ?>
 
                                         <img width="75" src="<?php echo base_url("uploads/$viewFolder/$item->img_url"); ?>"
                                              alt=""
                                              class="img-rounded">
+
                                     <?php } else if($item->news_type == "video") { ?>
 
-                                       <iframe
-                                            width="35%"
-                                  
-                                            src="https://i.ytimg.com/vi/<?php $imgurl=[]; $imgurl=$item->video_url; $yimg=explode("=",$imgurl);echo($yimg[1]); ?>/default.jpg"
+                                        <iframe
+                                            width="75"
+                                            src="<?php echo $item->video_url; ?>"
                                             frameborder="0"
                                             gesture="media"
                                             allow="encrypted-media"
@@ -60,7 +58,7 @@
 
                                     <?php } ?>
                                 </td>
-                                <td class="text-center">
+                                <td class="text-center w100">
                                     <input
                                         data-url="<?php echo base_url("news/isActiveSetter/$item->id"); ?>"
                                         class="isActive"
@@ -70,7 +68,7 @@
                                         <?php echo ($item->isActive) ? "checked" : ""; ?>
                                     />
                                 </td>
-                                <td class="text-center">
+                                <td class="text-center w200">
                                     <button
                                         data-url="<?php echo base_url("news/delete/$item->id"); ?>"
                                         class="btn btn-sm btn-danger btn-outline remove-btn">

@@ -1,6 +1,6 @@
 <div class="simple-page-wrap">
     <div class="simple-page-logo animated swing">
-        <a href="<?php echo base_url("userop/do_login"); ?>">
+        <a href="index.html">
             <span><i class="fa fa-gg"></i></span>
             <span>CMS</span>
         </a>

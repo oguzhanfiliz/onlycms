@@ -15,7 +15,6 @@
                             <small class="pull-right input-form-error"> <?php echo form_error("title"); ?></small>
                         <?php } ?>
                     </div>
-                   
 
                     <div class="row">
 

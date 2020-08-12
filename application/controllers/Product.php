@@ -8,13 +8,15 @@ class Product extends CI_Controller
     {
 
         parent::__construct();
-        if(!get_active_user()){
-            redirect(base_url("login"));
-        }
+
         $this->viewFolder = "product_v";
 
         $this->load->model("product_model");
         $this->load->model("product_image_model");
+
+        if(!get_active_user()){
+            redirect(base_url("login"));
+        }
 
     }
 

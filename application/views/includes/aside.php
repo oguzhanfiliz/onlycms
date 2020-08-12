@@ -5,15 +5,19 @@
         <div class="media">
             <div class="media-left">
                 <div class="avatar avatar-md avatar-circle">
-                    <a href="javascript:void(0)"><img class="img-responsive" src="<?php echo base_url("assets"); ?>/assets/images/221.jpg" alt="avatar"/></a>
+                    <a href="">
+                        <img class="img-responsive"
+                             src="<?php echo base_url("assets"); ?>/assets/images/221.jpg"
+                             alt="<?php echo convertToSEO($user->full_name); ?>"/>
+                    </a>
                 </div><!-- .avatar -->
             </div>
             <div class="media-body">
                 <div class="foldable">
-                    <h5><a href="javascript:void(0)" class="username"><?php echo $user->full_name; ?></a></h5>
+                    <h5><a href="<?php echo base_url(); ?>" class="username"><?php echo $user->full_name; ?></a></h5>
                     <ul>
                         <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="<?php echo base_url(); ?>" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <small>İşlemler</small>
                                 <span class="caret"></span>
                             </a>
@@ -53,14 +57,14 @@
                 <li>
                     <a href="<?php echo base_url(); ?>">
                         <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
-                        <span class="menu-text">Gösterge Paneli</span>
+                        <span class="menu-text">Dashboard</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="javascript:void(0)">
+                    <a href="<?php echo base_url("settings"); ?>">
                         <i class="menu-icon zmdi zmdi-settings zmdi-hc-lg"></i>
-                        <span class="menu-text">Ayarlar</span>
+                        <span class="menu-text">Site Ayarları</span>
                     </a>
                 </li>
 

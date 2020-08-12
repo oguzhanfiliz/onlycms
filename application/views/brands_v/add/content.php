@@ -15,7 +15,7 @@
                             <small class="pull-right input-form-error"> <?php echo form_error("title"); ?></small>
                         <?php } ?>
                     </div>
-                  
+
                     <div class="form-group image_upload_container">
                         <label>Görsel Seçiniz</label>
                         <input type="file" name="img_url" class="form-control">

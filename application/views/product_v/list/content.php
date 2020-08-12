@@ -33,9 +33,9 @@
                             <tr id="ord-<?php echo $item->id; ?>">
                                 <td class="order"><i class="fa fa-reorder"></i></td>
                                 <td class="w50 text-center">#<?php echo $item->id; ?></td>
-                                <td><?php echo substr($item->title,0,15); ?></td>
-                                <td><?php echo substr($item->url,0,15); ?></td>
-                                <td><?php echo substr($item->description,0,100); ?></td>
+                                <td><?php echo $item->title; ?></td>
+                                <td><?php echo $item->url; ?></td>
+                                <td><?php echo $item->description; ?></td>
                                 <td class="text-center">
                                     <input
                                         data-url="<?php echo base_url("product/isActiveSetter/$item->id"); ?>"

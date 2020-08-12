@@ -1,3 +1,5 @@
+<?php $settings = get_settings(); ?>
+
 <nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top primary">
     <!-- navbar header -->
     <div class="navbar-header">
@@ -16,9 +18,30 @@
             <span class="zmdi zmdi-hc-lg zmdi-search"></span>
         </button>
 
-        <a href="../index.html" class="navbar-brand">
-            <span class="brand-icon"><i class="fa fa-gg"></i></span>
-            <span class="brand-name">Teknokent</span>
+        <a href="<?php echo base_url(); ?>" class="navbar-brand">
+            <span class="brand-icon">
+
+                <?php if($settings->logo != "default"){ ?>
+                    <img
+                        width="70"
+                        src="<?php echo base_url("uploads/settings_v/$settings->logo"); ?>"
+                        alt=""
+                        class="img-responsive">
+
+                <?php } else {?>
+
+                    <img
+                        width="70"
+                        src="<?php echo base_url("assets/assets/images/index/infinity-logo.png"); ?>"
+                        alt=""
+                        class="img-responsive">
+
+                <?php } ?>
+
+            </span>
+            <span class="brand-name">
+                <?php echo $settings->company_name; ?>
+            </span>
         </a>
     </div><!-- .navbar-header -->
 
@@ -31,7 +54,7 @@
                     </a>
                 </li>
                 <li>
-                    <h5 class="page-title hidden-menubar-top hidden-float">Yönetim paneli</h5>
+                    <h5 class="page-title hidden-menubar-top hidden-float">Dashboard</h5>
                 </li>
             </ul>
 

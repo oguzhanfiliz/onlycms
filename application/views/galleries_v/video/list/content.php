@@ -32,17 +32,17 @@
                             <tr id="ord-<?php echo $item->id; ?>">
                                 <td class="order"><i class="fa fa-reorder"></i></td>
                                 <td class="w50 text-center">#<?php echo $item->id; ?></td>
-                                <td class="text-center w50"><?php echo $item->url?></td>
-                                <td class="text-center">
-                                <iframe
-                                            width="50%"
-                                            src="https://img.youtube.com/vi/<?php $imgurl=[]; $imgurl=$item->url; $yimg=explode("=",$imgurl);echo($yimg[1]); ?>/default.jpg"
-                                            frameborder="0"
-                                            gesture="media"
-                                            allow="encrypted-media"
-                                            allowfullscreen>
+                                <td class="text-center"><?php echo $item->url; ?></td>
+                                <td class="text-center w100">
+                                    <iframe
+                                        width="200"
+                                        src="<?php echo $item->url; ?>"
+                                        frameborder="0"
+                                        gesture="media"
+                                        allow="encrypted-media"
+                                        allowfullscreen>
 
-                                        </iframe>
+                                    </iframe>
                                 </td>
                                 <td class="text-center w100">
                                     <input

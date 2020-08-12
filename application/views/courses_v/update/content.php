@@ -22,21 +22,20 @@
 
                     <div class="row">
 
-                        
-
-                        <div class="row">
                         <div class="col-md-4">
-                          
-								<label for="datetimepicker1">Eğitim Tarihi</label>
-								<input type="hidden" name="event_date" value="<?php echo $item->event_date; ?>" id="datetimepicker1" data-plugin="datetimepicker" data-options="{ inline: true, viewMode: 'days' , format:'YYYY-MM-DD HH:mm'}">
-                          </div>
-                          <div class="col-md-8 image_upload_container">
+                            <label for="datetimepicker1">Eğitim Tarihi</label>
+                            <input type="hidden" value="<?php echo $item->event_date; ?>" name="event_date" id="datetimepicker1" data-plugin="datetimepicker" data-options="{inline: true, viewMode: 'days', format : 'YYYY-MM-DD HH:mm:ss'}" />
+                        </div><!-- END column -->
+
+
+                        <div class="col-md-1 image_upload_container">
                             <img src="<?php echo base_url("uploads/$viewFolder/$item->img_url"); ?>" alt="" class="img-responsive">
-                        </div>  
-                            <div class="form-group image_upload_container col-md-8">
-                        <label>Görsel Seçiniz</label>
-                        <input type="file" name="img_url" class="form-control">
-                    </div>
+                        </div>
+
+                        <div class="col-md-7 form-group image_upload_container">
+                            <label>Görsel Seçiniz</label>
+                            <input type="file" name="img_url" class="form-control">
+                        </div>
 
                     </div>
 

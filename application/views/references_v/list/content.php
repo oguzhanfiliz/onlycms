@@ -35,11 +35,11 @@
                                 <td class="w50 text-center">#<?php echo $item->id; ?></td>
                                 <td><?php echo $item->title; ?></td>
                                 <td><?php echo $item->url; ?></td>
-                                <td class="text-center">
+                                <td class="text-center w100">
                                     <img width="75" src="<?php echo base_url("uploads/$viewFolder/$item->img_url"); ?>"
                                          alt="" class="img-rounded">
                                 </td>
-                                <td class="text-center">
+                                <td class="text-center w100">
                                     <input
                                         data-url="<?php echo base_url("references/isActiveSetter/$item->id"); ?>"
                                         class="isActive"
@@ -49,7 +49,7 @@
                                         <?php echo ($item->isActive) ? "checked" : ""; ?>
                                     />
                                 </td>
-                                <td class="text-center">
+                                <td class="text-center w200">
                                     <button
                                         data-url="<?php echo base_url("references/delete/$item->id"); ?>"
                                         class="btn btn-sm btn-danger btn-outline remove-btn">

@@ -8,13 +8,15 @@ class Courses extends CI_Controller
     {
 
         parent::__construct();
-        if(!get_active_user()){
-            redirect(base_url("login"));
-        }
+
         $this->viewFolder = "courses_v";
 
         $this->load->model("course_model");
-     
+
+        if(!get_active_user()){
+            redirect(base_url("login"));
+        }
+
     }
 
     public function index(){
@@ -49,7 +51,7 @@ class Courses extends CI_Controller
     public function save(){
 
         $this->load->library("form_validation");
-        
+
         // Kurallar yazilir..
 
         if($_FILES["img_url"]["name"] == ""){
@@ -69,7 +71,7 @@ class Courses extends CI_Controller
         }
 
         $this->form_validation->set_rules("title", "Başlık", "required|trim");
-        $this->form_validation->set_rules("event_date", "Tarih", "required|trim");
+        $this->form_validation->set_rules("event_date", "Eğitim Tarihi", "required|trim");
 
         $this->form_validation->set_message(
             array(
@@ -185,7 +187,6 @@ class Courses extends CI_Controller
 
     }
 
-
     public function update($id){
 
         $this->load->library("form_validation");
@@ -193,7 +194,7 @@ class Courses extends CI_Controller
         // Kurallar yazilir..
 
         $this->form_validation->set_rules("title", "Başlık", "required|trim");
-        $this->form_validation->set_rules("event_date", "Tarih", "required|trim");
+        $this->form_validation->set_rules("event_date", "Eğitim Tarihi", "required|trim");
 
         $this->form_validation->set_message(
             array(
@@ -224,11 +225,11 @@ class Courses extends CI_Controller
                     $uploaded_file = $this->upload->data("file_name");
 
                     $data = array(
-                        "title"       => $this->input->post("title"),
+                        "title" => $this->input->post("title"),
                         "description" => $this->input->post("description"),
                         "event_date"  => $this->input->post("event_date"),
-                        "url"         => convertToSEO($this->input->post("title")),
-                        "img_url"     => $uploaded_file,
+                        "url" => convertToSEO($this->input->post("title")),
+                        "img_url" => $uploaded_file,
                     );
 
                 } else {
@@ -252,7 +253,7 @@ class Courses extends CI_Controller
                 $data = array(
                     "title" => $this->input->post("title"),
                     "description" => $this->input->post("description"),
-                    "event_date"  => $this->input->post("event_date"),  
+                    "event_date"  => $this->input->post("event_date"),
                     "url" => convertToSEO($this->input->post("title")),
                 );
 
