@@ -13,32 +13,7 @@
             <span class="zmdi zmdi-hc-lg zmdi-more"></span>
         </button>
 
-        <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="zmdi zmdi-hc-lg zmdi-search"></span>
-        </button>
-
         <a href="<?php echo base_url(); ?>" class="navbar-brand">
-            <span class="brand-icon">
-
-                <?php if($settings->logo != "default"){ ?>
-                    <img
-                        width="70"
-                        src="<?php echo base_url("uploads/settings_v/$settings->logo"); ?>"
-                        alt=""
-                        class="img-responsive">
-
-                <?php } else {?>
-
-                    <img
-                        width="70"
-                        src="<?php echo base_url("assets/assets/images/index/infinity-logo.png"); ?>"
-                        alt=""
-                        class="img-responsive">
-
-                <?php } ?>
-
-            </span>
             <span class="brand-name">
                 <?php echo $settings->company_name; ?>
             </span>
@@ -58,14 +33,7 @@
                 </li>
             </ul>
 
-            <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
-                <li class="nav-item dropdown hidden-float">
-                    <a href="javascript:void(0)" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
-                        <i class="zmdi zmdi-hc-lg zmdi-search"></i>
-                    </a>
-                </li>
-
-            </ul>
+         
         </div>
     </div><!-- navbar-container -->
 </nav>
