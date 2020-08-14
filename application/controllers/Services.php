@@ -1,6 +1,6 @@
 <?php
 
-class References extends CI_Controller
+class Services extends CI_Controller
 {
     public $viewFolder = "";
 
@@ -9,9 +9,9 @@ class References extends CI_Controller
 
         parent::__construct();
 
-        $this->viewFolder = "references_v";
+        $this->viewFolder = "services_v";
 
-        $this->load->model("reference_model");
+        $this->load->model("service_model");
 
         if(!get_active_user()){
             redirect(base_url("login"));
@@ -24,7 +24,7 @@ class References extends CI_Controller
         $viewData = new stdClass();
 
         /** Tablodan Verilerin Getirilmesi.. */
-        $items = $this->reference_model->get_all(
+        $items = $this->service_model->get_all(
             array(), "rank ASC"
         );
 
@@ -65,7 +65,7 @@ class References extends CI_Controller
             // İşlemin Sonucunu Session'a yazma işlemi...
             $this->session->set_flashdata("alert", $alert);
 
-            redirect(base_url("references/new_form"));
+            redirect(base_url("services/new_form"));
 
             die();
         }
@@ -77,7 +77,6 @@ class References extends CI_Controller
                 "required"  => "<b>{field}</b> alanı doldurulmalıdır"
             )
         );
-        
 
         // Form Validation Calistirilir..
         $validate = $this->form_validation->run();
@@ -100,7 +99,7 @@ class References extends CI_Controller
 
                 $uploaded_file = $this->upload->data("file_name");
 
-                $insert = $this->reference_model->add(
+                $insert = $this->service_model->add(
                     array(
                         "title"         => $this->input->post("title"),
                         "description"   => $this->input->post("description"),
@@ -140,7 +139,7 @@ class References extends CI_Controller
 
                 $this->session->set_flashdata("alert", $alert);
 
-                redirect(base_url("references/new_form"));
+                redirect(base_url("services/new_form"));
 
                 die();
 
@@ -149,7 +148,7 @@ class References extends CI_Controller
             // İşlemin Sonucunu Session'a yazma işlemi...
             $this->session->set_flashdata("alert", $alert);
 
-            redirect(base_url("references"));
+            redirect(base_url("services"));
 
         } else {
 
@@ -170,7 +169,7 @@ class References extends CI_Controller
         $viewData = new stdClass();
 
         /** Tablodan Verilerin Getirilmesi.. */
-        $item = $this->reference_model->get(
+        $item = $this->service_model->get(
             array(
                 "id"    => $id,
             )
@@ -240,7 +239,7 @@ class References extends CI_Controller
 
                     $this->session->set_flashdata("alert", $alert);
 
-                    redirect(base_url("references/update_form/$id"));
+                    redirect(base_url("services/update_form/$id"));
 
                     die();
 
@@ -256,7 +255,7 @@ class References extends CI_Controller
 
             }
 
-            $update = $this->reference_model->update(array("id" => $id), $data);
+            $update = $this->service_model->update(array("id" => $id), $data);
 
             // TODO Alert sistemi eklenecek...
             if($update){
@@ -279,7 +278,7 @@ class References extends CI_Controller
             // İşlemin Sonucunu Session'a yazma işlemi...
             $this->session->set_flashdata("alert", $alert);
 
-            redirect(base_url("references"));
+            redirect(base_url("services"));
 
         } else {
 
@@ -291,7 +290,7 @@ class References extends CI_Controller
             $viewData->form_error = true;
 
             /** Tablodan Verilerin Getirilmesi.. */
-            $viewData->item = $this->reference_model->get(
+            $viewData->item = $this->service_model->get(
                 array(
                     "id"    => $id,
                 )
@@ -304,7 +303,7 @@ class References extends CI_Controller
 
     public function delete($id){
 
-        $delete = $this->reference_model->delete(
+        $delete = $this->service_model->delete(
             array(
                 "id"    => $id
             )
@@ -331,7 +330,7 @@ class References extends CI_Controller
         }
 
         $this->session->set_flashdata("alert", $alert);
-        redirect(base_url("references"));
+        redirect(base_url("services"));
 
 
     }
@@ -342,7 +341,7 @@ class References extends CI_Controller
 
             $isActive = ($this->input->post("data") === "true") ? 1 : 0;
 
-            $this->reference_model->update(
+            $this->service_model->update(
                 array(
                     "id"    => $id
                 ),
@@ -364,7 +363,7 @@ class References extends CI_Controller
 
         foreach ($items as $rank => $id){
 
-            $this->reference_model->update(
+            $this->service_model->update(
                 array(
                     "id"        => $id,
                     "rank !="   => $rank

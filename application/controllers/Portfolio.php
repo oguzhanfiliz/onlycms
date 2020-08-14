@@ -1,6 +1,6 @@
 <?php
 
-class Product extends CI_Controller
+class Portfolio extends CI_Controller
 {
     public $viewFolder = "";
 
@@ -9,10 +9,11 @@ class Product extends CI_Controller
 
         parent::__construct();
 
-        $this->viewFolder = "product_v";
+        $this->viewFolder = "portfolio_v";
 
-        $this->load->model("product_model");
-        $this->load->model("product_image_model");
+        $this->load->model("portfolio_model");
+        $this->load->model("portfolio_image_model");
+        $this->load->model("portfolio_category_model");
 
         if(!get_active_user()){
             redirect(base_url("login"));
@@ -25,7 +26,7 @@ class Product extends CI_Controller
         $viewData = new stdClass();
 
         /** Tablodan Verilerin Getirilmesi.. */
-        $items = $this->product_model->get_all(
+        $items = $this->portfolio_model->get_all(
             array(), "rank ASC"
         );
 
@@ -41,6 +42,12 @@ class Product extends CI_Controller
 
         $viewData = new stdClass();
 
+        $viewData->categories = $this->portfolio_category_model->get_all(
+            array(
+                "isActive"  => 1
+            )
+        );
+
         /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
@@ -55,6 +62,9 @@ class Product extends CI_Controller
 
         // Kurallar yazilir..
         $this->form_validation->set_rules("title", "Başlık", "required|trim");
+        $this->form_validation->set_rules("category_id", "Kategori", "required|trim");
+        $this->form_validation->set_rules("client", "Müşteri", "required|trim");
+        $this->form_validation->set_rules("finishedAt", "Bitiş Tarihi", "required|trim");
 
         $this->form_validation->set_message(
             array(
@@ -62,20 +72,20 @@ class Product extends CI_Controller
             )
         );
 
-        // Form Validation Calistirilir..
-        // TRUE - FALSE
         $validate = $this->form_validation->run();
-
-        // Monitör Askısı
-        // monitor-askisi
 
         if($validate){
 
-            $insert = $this->product_model->add(
+            $insert = $this->portfolio_model->add(
                 array(
                     "title"         => $this->input->post("title"),
                     "description"   => $this->input->post("description"),
                     "url"           => convertToSEO($this->input->post("title")),
+                    "client"        => $this->input->post("client"),
+                    "finishedAt"    => $this->input->post("finishedAt"),
+                    "category_id"   => $this->input->post("category_id"),
+                    "place"         => $this->input->post("place"),
+                    "portfolio_url" => $this->input->post("portfolio_url"),
                     "rank"          => 0,
                     "isActive"      => 1,
                     "createdAt"     => date("Y-m-d H:i:s")
@@ -103,7 +113,7 @@ class Product extends CI_Controller
             // İşlemin Sonucunu Session'a yazma işlemi...
             $this->session->set_flashdata("alert", $alert);
 
-            redirect(base_url("product"));
+            redirect(base_url("portfolio"));
 
         } else {
 
@@ -113,7 +123,11 @@ class Product extends CI_Controller
             $viewData->viewFolder = $this->viewFolder;
             $viewData->subViewFolder = "add";
             $viewData->form_error = true;
-
+            $viewData->categories = $this->portfolio_category_model->get_all(
+                array(
+                    "isActive"  => 1
+                )
+            );
             $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
         }
 
@@ -129,9 +143,15 @@ class Product extends CI_Controller
         $viewData = new stdClass();
 
         /** Tablodan Verilerin Getirilmesi.. */
-        $item = $this->product_model->get(
+        $item = $this->portfolio_model->get(
             array(
                 "id"    => $id,
+            )
+        );
+
+        $viewData->categories = $this->portfolio_category_model->get_all(
+            array(
+                "isActive"  => 1
             )
         );
         
@@ -151,6 +171,10 @@ class Product extends CI_Controller
 
         // Kurallar yazilir..
         $this->form_validation->set_rules("title", "Başlık", "required|trim");
+        $this->form_validation->set_rules("category_id", "Kategori", "required|trim");
+        $this->form_validation->set_rules("client", "Müşteri", "required|trim");
+        $this->form_validation->set_rules("finishedAt", "Bitiş Tarihi", "required|trim");
+
 
         $this->form_validation->set_message(
             array(
@@ -158,23 +182,24 @@ class Product extends CI_Controller
             )
         );
 
-        // Form Validation Calistirilir..
-        // TRUE - FALSE
         $validate = $this->form_validation->run();
-
-        // Monitör Askısı
-        // monitor-askisi
 
         if($validate){
 
-            $update = $this->product_model->update(
+            $update = $this->portfolio_model->update(
                 array(
                     "id"    => $id
                 ),
+
                 array(
                     "title"         => $this->input->post("title"),
                     "description"   => $this->input->post("description"),
                     "url"           => convertToSEO($this->input->post("title")),
+                    "client"        => $this->input->post("client"),
+                    "finishedAt"    => $this->input->post("finishedAt"),
+                    "category_id"   => $this->input->post("category_id"),
+                    "place"         => $this->input->post("place"),
+                    "portfolio_url" => $this->input->post("portfolio_url"),
                 )
             );
 
@@ -199,14 +224,14 @@ class Product extends CI_Controller
             }
 
             $this->session->set_flashdata("alert", $alert);
-            redirect(base_url("product"));
+            redirect(base_url("portfolio"));
 
         } else {
 
             $viewData = new stdClass();
 
             /** Tablodan Verilerin Getirilmesi.. */
-            $item = $this->product_model->get(
+            $item = $this->portfolio_model->get(
                 array(
                     "id"    => $id,
                 )
@@ -217,6 +242,11 @@ class Product extends CI_Controller
             $viewData->subViewFolder = "update";
             $viewData->form_error = true;
             $viewData->item = $item;
+            $viewData->categories = $this->portfolio_category_model->get_all(
+                array(
+                    "isActive"  => 1
+                )
+            );
 
             $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
         }
@@ -230,7 +260,7 @@ class Product extends CI_Controller
 
     public function delete($id){
 
-        $delete = $this->product_model->delete(
+        $delete = $this->portfolio_model->delete(
             array(
                 "id"    => $id
             )
@@ -257,20 +287,20 @@ class Product extends CI_Controller
         }
 
         $this->session->set_flashdata("alert", $alert);
-        redirect(base_url("product"));
+        redirect(base_url("portfolio"));
 
 
     }
 
     public function imageDelete($id, $parent_id){
 
-        $fileName = $this->product_image_model->get(
+        $fileName = $this->portfolio_image_model->get(
             array(
                 "id"    => $id
             )
         );
 
-        $delete = $this->product_image_model->delete(
+        $delete = $this->portfolio_image_model->delete(
             array(
                 "id"    => $id
             )
@@ -282,9 +312,9 @@ class Product extends CI_Controller
 
             unlink("uploads/{$this->viewFolder}/$fileName->img_url");
 
-            redirect(base_url("product/image_form/$parent_id"));
+            redirect(base_url("portfolio/image_form/$parent_id"));
         } else {
-            redirect(base_url("product/image_form/$parent_id"));
+            redirect(base_url("portfolio/image_form/$parent_id"));
         }
 
     }
@@ -295,7 +325,7 @@ class Product extends CI_Controller
 
             $isActive = ($this->input->post("data") === "true") ? 1 : 0;
 
-            $this->product_model->update(
+            $this->portfolio_model->update(
                 array(
                     "id"    => $id
                 ),
@@ -312,7 +342,7 @@ class Product extends CI_Controller
 
             $isActive = ($this->input->post("data") === "true") ? 1 : 0;
 
-            $this->product_image_model->update(
+            $this->portfolio_image_model->update(
                 array(
                     "id"    => $id
                 ),
@@ -330,10 +360,10 @@ class Product extends CI_Controller
             $isCover = ($this->input->post("data") === "true") ? 1 : 0;
 
             // Kapak yapılmak istenen kayıt
-            $this->product_image_model->update(
+            $this->portfolio_image_model->update(
                 array(
                     "id"         => $id,
-                    "product_id" => $parent_id
+                    "portfolio_id" => $parent_id
                 ),
                 array(
                     "isCover"  => $isCover
@@ -342,10 +372,10 @@ class Product extends CI_Controller
 
 
             // Kapak yapılmayan diğer kayıtlar
-            $this->product_image_model->update(
+            $this->portfolio_image_model->update(
                 array(
                     "id !="      => $id,
-                    "product_id" => $parent_id
+                    "portfolio_id" => $parent_id
                 ),
                 array(
                     "isCover"  => 0
@@ -358,9 +388,9 @@ class Product extends CI_Controller
             $viewData->viewFolder = $this->viewFolder;
             $viewData->subViewFolder = "image";
 
-            $viewData->item_images = $this->product_image_model->get_all(
+            $viewData->item_images = $this->portfolio_image_model->get_all(
                 array(
-                    "product_id"    => $parent_id
+                    "portfolio_id"    => $parent_id
                 ), "rank ASC"
             );
 
@@ -382,7 +412,7 @@ class Product extends CI_Controller
 
         foreach ($items as $rank => $id){
 
-            $this->product_model->update(
+            $this->portfolio_model->update(
                 array(
                     "id"        => $id,
                     "rank !="   => $rank
@@ -407,7 +437,7 @@ class Product extends CI_Controller
 
         foreach ($items as $rank => $id){
 
-            $this->product_image_model->update(
+            $this->portfolio_image_model->update(
                 array(
                     "id"        => $id,
                     "rank !="   => $rank
@@ -429,15 +459,15 @@ class Product extends CI_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "image";
 
-        $viewData->item = $this->product_model->get(
+        $viewData->item = $this->portfolio_model->get(
             array(
                 "id"    => $id
             )
         );
 
-        $viewData->item_images = $this->product_image_model->get_all(
+        $viewData->item_images = $this->portfolio_image_model->get_all(
             array(
-                "product_id"    => $id
+                "portfolio_id"    => $id
             ), "rank ASC"
         );
 
@@ -460,14 +490,14 @@ class Product extends CI_Controller
 
             $uploaded_file = $this->upload->data("file_name");
 
-            $this->product_image_model->add(
+            $this->portfolio_image_model->add(
                 array(
                     "img_url"       => $uploaded_file,
                     "rank"          => 0,
                     "isActive"      => 1,
                     "isCover"       => 0,
                     "createdAt"     => date("Y-m-d H:i:s"),
-                    "product_id"    => $id
+                    "portfolio_id"    => $id
                 )
             );
 
@@ -486,9 +516,9 @@ class Product extends CI_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "image";
 
-        $viewData->item_images = $this->product_image_model->get_all(
+        $viewData->item_images = $this->portfolio_image_model->get_all(
             array(
-                "product_id"    => $id
+                "portfolio_id"    => $id
             )
         );
 

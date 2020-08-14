@@ -6,9 +6,8 @@
             <div class="media-left">
                 <div class="avatar avatar-md avatar-circle">
                     <a href="">
-                        <img class="img-responsive"
-                             src="<?php echo base_url("assets"); ?>/assets/images/221.jpg"
-                             alt="<?php echo convertToSEO($user->full_name); ?>"/>
+                        <img class="img-responsive" src="<?php echo base_url("assets"); ?>/assets/images/221.jpg"
+                            alt="<?php echo convertToSEO($user->full_name); ?>" />
                     </a>
                 </div><!-- .avatar -->
             </div>
@@ -17,7 +16,8 @@
                     <h5><a href="<?php echo base_url(); ?>" class="username"><?php echo $user->full_name; ?></a></h5>
                     <ul>
                         <li class="dropdown">
-                            <a href="<?php echo base_url(); ?>" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a href="<?php echo base_url(); ?>" class="dropdown-toggle usertitle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <small>İşlemler</small>
                                 <span class="caret"></span>
                             </a>
@@ -96,7 +96,33 @@
                         <span class="menu-text">Ürünler</span>
                     </a>
                 </li>
-
+                <li>
+                    <a href="<?php echo base_url("services"); ?>">
+                        <i class="menu-icon fa fa-tasks"></i>
+                        <span class="menu-text">Hizmetlerimiz</span>
+                    </a>
+                </li>
+                
+                <li class="has-submenu">
+                    <a href="javascript:void(0)" class="submenu-toggle">
+                        <i class="menu-icon fa fa-asterisk"></i>
+                        <span class="menu-text">Portfolyo İşlemleri</span>
+                        <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                        <a href="<?php echo base_url("portfolio_categories"); ?>">
+                        <span class="menu-text">Portfolyo Kategori</span>
+                         </a>
+                        </li>
+                        <li>
+                        <a href="<?php echo base_url("portfolio"); ?>">
+                        <span class="menu-text">Portfolyo</span>
+                         </a>
+                        </li>
+                     
+                    </ul>
+                </li>
                 <li>
                     <a href="<?php echo base_url("news"); ?>">
                         <i class="menu-icon fa fa-newspaper-o"></i>
