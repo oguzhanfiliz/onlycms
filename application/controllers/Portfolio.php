@@ -352,7 +352,7 @@ class Portfolio extends CI_Controller
             );
         }
     }
-
+    //iscoversetter işlemleri yapıldı
     public function isCoverSetter($id, $parent_id){
 
         if($id && $parent_id){
