@@ -1,12 +1,12 @@
 # Onlyfryou V2
 #### Content
 
-- Codeigniter
-- HTML
-- CSS
-- BOOTSTRAP
-- JQUERY
-- MVC
+* Codeigniter
+* HTML
+* CSS
+* BOOTSTRAP
+* JQUERY
+* MVC
 
 #### Config Directory
 
@@ -26,6 +26,8 @@ $config['base_url'] = "siteurl";
 Complate!!! 
 #### DEMO
 Live Demo:[Links](http://oguzhanfiliz.com.tr/onlycms)
+* username:onlyfryou@icloud.com
+* password:111111
 #### Errors
 If you give errors. please [contact](mailto:oguzhanfiliz@outlook.com) me 
 # Screenshot
