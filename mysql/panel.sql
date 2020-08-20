@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Aug 20, 2020 at 03:22 PM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.4.0
+-- Anamakine: 127.0.0.1:3306
+-- Üretim Zamanı: 20 Ağu 2020, 22:43:34
+-- Sunucu sürümü: 5.7.31
+-- PHP Sürümü: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `panel`
+-- Veritabanı: `panel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `brands`
+-- Tablo için tablo yapısı `brands`
 --
 
 DROP TABLE IF EXISTS `brands`;
@@ -40,16 +39,16 @@ CREATE TABLE IF NOT EXISTS `brands` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `brands`
+-- Tablo döküm verisi `brands`
 --
 
 INSERT INTO `brands` (`id`, `title`, `img_url`, `rank`, `isActive`, `createdAt`) VALUES
-(4, '<p>a<span style=\"background-color: rgb(255, 255, 0);\"><b>naysaslkdfhsldkfhdflkj lkasj</b></span>dflksasjdlk alk lkasdalksjd</p>', '<p>iletimsisdmidsmf sidmfisdmsdifms imsdfisdmismd </p>', 0, 1, '2017-12-29 08:04:45');
+(4, '<p>a<span style=\"background-color: rgb(255, 255, 0);\"><b>naysaslkdfhsldkfhdflkj lkasj</b></span>dflksasjdlk alk lkasdalksjd</p>', '<p>iletimsisdmidsmf sidmfisdmsdifms imsdfisdmismd </p>', 0, 1, '2017-12-29 08:04:45');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `courses`
+-- Tablo için tablo yapısı `courses`
 --
 
 DROP TABLE IF EXISTS `courses`;
@@ -57,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `img_url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `event_date` datetime DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
@@ -67,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `courses`
+-- Tablo döküm verisi `courses`
 --
 
 INSERT INTO `courses` (`id`, `url`, `title`, `description`, `img_url`, `event_date`, `rank`, `isActive`, `createdAt`) VALUES
@@ -76,7 +75,7 @@ INSERT INTO `courses` (`id`, `url`, `title`, `description`, `img_url`, `event_da
 -- --------------------------------------------------------
 
 --
--- Table structure for table `email_settings`
+-- Tablo için tablo yapısı `email_settings`
 --
 
 DROP TABLE IF EXISTS `email_settings`;
@@ -96,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `email_settings` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `email_settings`
+-- Tablo döküm verisi `email_settings`
 --
 
 INSERT INTO `email_settings` (`id`, `protocol`, `host`, `port`, `user`, `password`, `from`, `to`, `user_name`, `isActive`, `createdAt`) VALUES
@@ -105,7 +104,7 @@ INSERT INTO `email_settings` (`id`, `protocol`, `host`, `port`, `user`, `passwor
 -- --------------------------------------------------------
 
 --
--- Table structure for table `files`
+-- Tablo için tablo yapısı `files`
 --
 
 DROP TABLE IF EXISTS `files`;
@@ -120,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `files` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `files`
+-- Tablo döküm verisi `files`
 --
 
 INSERT INTO `files` (`id`, `gallery_id`, `url`, `rank`, `isActive`, `createdAt`) VALUES
@@ -130,7 +129,7 @@ INSERT INTO `files` (`id`, `gallery_id`, `url`, `rank`, `isActive`, `createdAt`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galleries`
+-- Tablo için tablo yapısı `galleries`
 --
 
 DROP TABLE IF EXISTS `galleries`;
@@ -147,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `galleries` (
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `galleries`
+-- Tablo döküm verisi `galleries`
 --
 
 INSERT INTO `galleries` (`id`, `url`, `title`, `gallery_type`, `folder_name`, `isActive`, `createdAt`, `rank`) VALUES
@@ -162,7 +161,7 @@ INSERT INTO `galleries` (`id`, `url`, `title`, `gallery_type`, `folder_name`, `i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `images`
+-- Tablo için tablo yapısı `images`
 --
 
 DROP TABLE IF EXISTS `images`;
@@ -177,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `images` (
 ) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `images`
+-- Tablo döküm verisi `images`
 --
 
 INSERT INTO `images` (`id`, `gallery_id`, `url`, `rank`, `isActive`, `createdAt`) VALUES
@@ -192,7 +191,7 @@ INSERT INTO `images` (`id`, `gallery_id`, `url`, `rank`, `isActive`, `createdAt`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `members`
+-- Tablo için tablo yapısı `members`
 --
 
 DROP TABLE IF EXISTS `members`;
@@ -207,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `members` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Tablo için tablo yapısı `news`
 --
 
 DROP TABLE IF EXISTS `news`;
@@ -215,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `news_type` varchar(10) COLLATE utf8_turkish_ci DEFAULT NULL,
   `img_url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `video_url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
@@ -226,7 +225,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `news`
+-- Tablo döküm verisi `news`
 --
 
 INSERT INTO `news` (`id`, `url`, `title`, `description`, `news_type`, `img_url`, `video_url`, `rank`, `isActive`, `createdAt`) VALUES
@@ -237,14 +236,14 @@ INSERT INTO `news` (`id`, `url`, `title`, `description`, `news_type`, `img_url`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `popups`
+-- Tablo için tablo yapısı `popups`
 --
 
 DROP TABLE IF EXISTS `popups`;
 CREATE TABLE IF NOT EXISTS `popups` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `page` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
   `isActive` tinyint(4) DEFAULT NULL,
   `createdAt` datetime DEFAULT NULL,
@@ -254,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `popups` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `portfolios`
+-- Tablo için tablo yapısı `portfolios`
 --
 
 DROP TABLE IF EXISTS `portfolios`;
@@ -262,7 +261,7 @@ CREATE TABLE IF NOT EXISTS `portfolios` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `finishedAt` datetime DEFAULT NULL,
   `client` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `category_id` int(11) DEFAULT NULL,
@@ -275,7 +274,7 @@ CREATE TABLE IF NOT EXISTS `portfolios` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `portfolios`
+-- Tablo döküm verisi `portfolios`
 --
 
 INSERT INTO `portfolios` (`id`, `url`, `title`, `description`, `finishedAt`, `client`, `category_id`, `place`, `portfolio_url`, `rank`, `isActive`, `createdAt`) VALUES
@@ -288,7 +287,7 @@ INSERT INTO `portfolios` (`id`, `url`, `title`, `description`, `finishedAt`, `cl
 -- --------------------------------------------------------
 
 --
--- Table structure for table `portfolio_categories`
+-- Tablo için tablo yapısı `portfolio_categories`
 --
 
 DROP TABLE IF EXISTS `portfolio_categories`;
@@ -301,7 +300,7 @@ CREATE TABLE IF NOT EXISTS `portfolio_categories` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `portfolio_categories`
+-- Tablo döküm verisi `portfolio_categories`
 --
 
 INSERT INTO `portfolio_categories` (`id`, `title`, `isActive`, `createdAt`) VALUES
@@ -311,7 +310,7 @@ INSERT INTO `portfolio_categories` (`id`, `title`, `isActive`, `createdAt`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `portfolio_images`
+-- Tablo için tablo yapısı `portfolio_images`
 --
 
 DROP TABLE IF EXISTS `portfolio_images`;
@@ -327,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `portfolio_images` (
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `portfolio_images`
+-- Tablo döküm verisi `portfolio_images`
 --
 
 INSERT INTO `portfolio_images` (`id`, `portfolio_id`, `img_url`, `rank`, `isActive`, `isCover`, `createdAt`) VALUES
@@ -350,7 +349,7 @@ INSERT INTO `portfolio_images` (`id`, `portfolio_id`, `img_url`, `rank`, `isActi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Tablo için tablo yapısı `products`
 --
 
 DROP TABLE IF EXISTS `products`;
@@ -358,7 +357,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `rank` int(11) DEFAULT NULL,
   `isActive` tinyint(4) DEFAULT NULL,
   `createdAt` datetime DEFAULT NULL,
@@ -366,7 +365,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `products`
+-- Tablo döküm verisi `products`
 --
 
 INSERT INTO `products` (`id`, `url`, `title`, `description`, `rank`, `isActive`, `createdAt`) VALUES
@@ -379,7 +378,7 @@ INSERT INTO `products` (`id`, `url`, `title`, `description`, `rank`, `isActive`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product_images`
+-- Tablo için tablo yapısı `product_images`
 --
 
 DROP TABLE IF EXISTS `product_images`;
@@ -395,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `product_images` (
 ) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `product_images`
+-- Tablo döküm verisi `product_images`
 --
 
 INSERT INTO `product_images` (`id`, `product_id`, `img_url`, `rank`, `isActive`, `isCover`, `createdAt`) VALUES
@@ -416,7 +415,7 @@ INSERT INTO `product_images` (`id`, `product_id`, `img_url`, `rank`, `isActive`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `references`
+-- Tablo için tablo yapısı `references`
 --
 
 DROP TABLE IF EXISTS `references`;
@@ -424,7 +423,7 @@ CREATE TABLE IF NOT EXISTS `references` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `img_url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   `isActive` tinyint(4) DEFAULT NULL,
@@ -433,7 +432,7 @@ CREATE TABLE IF NOT EXISTS `references` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `references`
+-- Tablo döküm verisi `references`
 --
 
 INSERT INTO `references` (`id`, `url`, `title`, `description`, `img_url`, `rank`, `isActive`, `createdAt`) VALUES
@@ -442,7 +441,7 @@ INSERT INTO `references` (`id`, `url`, `title`, `description`, `img_url`, `rank`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `services`
+-- Tablo için tablo yapısı `services`
 --
 
 DROP TABLE IF EXISTS `services`;
@@ -450,7 +449,7 @@ CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `img_url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   `isActive` tinyint(4) DEFAULT NULL,
@@ -461,7 +460,7 @@ CREATE TABLE IF NOT EXISTS `services` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `settings`
+-- Tablo için tablo yapısı `settings`
 --
 
 DROP TABLE IF EXISTS `settings`;
@@ -470,9 +469,9 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `company_name` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `slogan` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
   `address` text COLLATE utf8_turkish_ci NOT NULL,
-  `about_us` longtext COLLATE utf8_turkish_ci DEFAULT NULL,
-  `mission` longtext COLLATE utf8_turkish_ci DEFAULT NULL,
-  `vision` longtext COLLATE utf8_turkish_ci DEFAULT NULL,
+  `about_us` longtext COLLATE utf8_turkish_ci,
+  `mission` longtext COLLATE utf8_turkish_ci,
+  `vision` longtext COLLATE utf8_turkish_ci,
   `logo` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `phone_1` varchar(15) COLLATE utf8_turkish_ci DEFAULT NULL,
   `phone_2` varchar(15) COLLATE utf8_turkish_ci DEFAULT NULL,
@@ -489,16 +488,16 @@ CREATE TABLE IF NOT EXISTS `settings` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `settings`
+-- Tablo döküm verisi `settings`
 --
 
 INSERT INTO `settings` (`id`, `company_name`, `slogan`, `address`, `about_us`, `mission`, `vision`, `logo`, `phone_1`, `phone_2`, `fax_1`, `fax_2`, `email`, `facebook`, `twitter`, `instagram`, `linkedin`, `createdAt`, `updatedAt`) VALUES
-(2, 'KuvarSSoftt', 'Teknokent', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p>Teknokent<br></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ', '                                                                                                                                                                  <div class=\"col-md-6\">\r\n                    <div class=\"overflow-hidden mb-2\">\r\n                        <h2 class=\"text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation\" data-appear-animation=\"maskUp\" data-appear-animation-delay=\"1200\">Dumlupınar <strong class=\"font-weight-extra-bold\">TGB\'nin Vizyonu</strong></h2>\r\n                    </div>\r\n                    <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\" data-appear-animation-delay=\"1400\">Ülkemizin gelişmişlik seviyesine katkı sağlamak amacıyla\r\n                        yüksek/ileri teknolojiler alanında inovasyon kültürünün gelişmesini teşvik edici,\r\n                        yaratıcılık ve girişimcilik alanında önemli projelerin ekonomiye kazandırılması ve\r\n                        ticarileştirilmesi, üniversite-sanayi işbirliğinin gelişimine katkı sağlamak amacıyla ortak\r\n                        proje geliştirmek ve firmalar arasında sinerji oluşturmak üzere\r\n                        eşleştirme ve kümeleme çalışmalarıyla sürdürülebilir Ar-Ge ve inovasyon ekosistemi içerisinde,\r\n                        akademik ve endüstriyel girişimciliği destekleyerek, bölgesel ve ulusal düzeyde en yüksek katma\r\n                        değeri yaratmaktır.\r\n                </p></div>\r\n\r\n\r\n                <h2 class=\"text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation\" data-appear-animation=\"maskUp\" data-appear-animation-delay=\"1200\">Dumlupınar TGB\'nin Vizyonu <strong class=\"font-weight-extra-bold\"> Amaçları / Misyonu</strong></h2>\r\n            \r\n            <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\" data-appear-animation-delay=\"1400\">\r\n            </p><ul><b>\r\n                    <li>Türkiye\'de Teknoloji geliştiricisi Ar-Ge kurum ve kuruluşları ile teknoloji kullanıcısı sanayi\r\n                        şirketleri veya diğer teknoloji ya da Ar-Ge kurum ve kuruluşları\r\n                        arasında bilgilendirme, koordinasyon, araştırmayı yönlendirme, yeni Ar-Ge şirketlerinin\r\n                        oluşturulmasını teşvik etme, iş birliği geliştirme, fikri mülkiyet haklarının\r\n                        korunması, pazarlanması, satılması, fikri mülkiyetin satışından elde edilen gelirlerin\r\n                        yönetilmesi konularında destek vermek,\r\n                    </li>\r\n                    <li>Kütahya’da girişimcilik ekosistemini güçlendirmek ve bilişim, medikal, biyomedikal,\r\n                        elektrik-elektronik, savunma sanayi, maden, tarım ve diğer sektörlerin potansiyellerini\r\n                        değerlendirmek bölgenin güç çeşitliliğini öne çıkaracak yeni projeler ile bölgesel gelişmeyi\r\n                        hedeflemek ve ulusal ve uluslararası arenada söz sahibi olmak,\r\n                    </li>\r\n                    <li>Girişimciliği ve yenilikçiliği teşvik etmek ve desteklemek.</li>\r\n                    <li>Seçilmiş sektörlerde küresel ölçekte rekabet edebilir nitelikte şirketler yaratmak, öncelikli\r\n                        sektörlerden yeteri başvuru alınamaması halinde medikal,\r\n                        biyomedikal gibi yüksek katma değerli ürünler üretilen alanlarda verimliliği arttırmaya yönelik\r\n                        yöntem, teknik, teknoloji ve ürünlerin geliştirilmesini ve bunların uygulanmasını sağlamak.\r\n                    </li>\r\n                    <li> Ar-Ge yeteneği ve geleneğine sahip ulusal ve uluslararası şirketlerin faaliyetlerini\r\n                        sürdürebilmeleri için gerekli teknolojik alt yapıyı temin etmek.\r\n                    </li>\r\n                    <li>Yerel, ulusal ve uluslararası stratejik iş birlikleri ve üniversite-sanayi iş birliğinde\r\n                        sistematik ve doğru yöntemlerle mevcut zenginlik ve birikimi kullanılabilir hale getirmek,\r\n                        teknoloji transferine uygun ortam oluşturmak.\r\n                    </li>\r\n                    <li> İşleyişi ve yönetimi bakımından her yönüyle hesap verebilir ve izlenebilir olmak.</li>\r\n                    <li> Kümelenme odaklı bir yapı ile bölgenin potansiyeli dikkate alınarak, güçlü yanlar ve ihtiyaçlar\r\n                        doğrultusunda yüksek katma değerli ürünler geliştirmek.\r\n                    </li>\r\n                    <li> Bölge şirketlerinin kendi aralarında ve küme grupları/oluşumları arasında sinerji\r\n                        yaratmaktır.\r\n                    </li>\r\n            </b></ul><b>\r\n            </b>                                                                                                                                                ', '                                                                                                                                                                                                         <div class=\"overflow-hidden mb-2\">\r\n                        <h2 class=\"text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation\" data-appear-animation=\"maskUp\" data-appear-animation-delay=\"1200\">Dumlupınar <strong class=\"font-weight-extra-bold\">TGB\'nin Vizyonu</strong></h2>\r\n                    </div>\r\n                    <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\" data-appear-animation-delay=\"1400\">Ülkemizin gelişmişlik seviyesine katkı sağlamak amacıyla\r\n                        yüksek/ileri teknolojiler alanında inovasyon kültürünün gelişmesini teşvik edici,\r\n                        yaratıcılık ve girişimcilik alanında önemli projelerin ekonomiye kazandırılması ve\r\n                        ticarileştirilmesi, üniversite-sanayi işbirliğinin gelişimine katkı sağlamak amacıyla ortak\r\n                        proje geliştirmek ve firmalar arasında sinerji oluşturmak üzere\r\n                        eşleştirme ve kümeleme çalışmalarıyla sürdürülebilir Ar-Ge ve inovasyon ekosistemi içerisinde,\r\n                        akademik ve endüstriyel girişimciliği destekleyerek, bölgesel ve ulusal düzeyde en yüksek katma\r\n                        değeri yaratmaktır.\r\n                \r\n\r\n\r\n                </p><h2 class=\"text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation\" data-appear-animation=\"maskUp\" data-appear-animation-delay=\"1200\">Dumlupınar TGB\'nin Vizyonu <strong class=\"font-weight-extra-bold\"> Amaçları / Misyonu</strong></h2>\r\n            \r\n            <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\" data-appear-animation-delay=\"1400\">\r\n            </p><ul><b>\r\n                    <li>Türkiye\'de Teknoloji geliştiricisi Ar-Ge kurum ve kuruluşları ile teknoloji kullanıcısı sanayi\r\n                        şirketleri veya diğer teknoloji ya da Ar-Ge kurum ve kuruluşları\r\n                        arasında bilgilendirme, koordinasyon, araştırmayı yönlendirme, yeni Ar-Ge şirketlerinin\r\n                        oluşturulmasını teşvik etme, iş birliği geliştirme, fikri mülkiyet haklarının\r\n                        korunması, pazarlanması, satılması, fikri mülkiyetin satışından elde edilen gelirlerin\r\n                        yönetilmesi konularında destek vermek,\r\n                    </li>\r\n                    <li>Kütahya’da girişimcilik ekosistemini güçlendirmek ve bilişim, medikal, biyomedikal,\r\n                        elektrik-elektronik, savunma sanayi, maden, tarım ve diğer sektörlerin potansiyellerini\r\n                        değerlendirmek bölgenin güç çeşitliliğini öne çıkaracak yeni projeler ile bölgesel gelişmeyi\r\n                        hedeflemek ve ulusal ve uluslararası arenada söz sahibi olmak,\r\n                    </li>\r\n                    <li>Girişimciliği ve yenilikçiliği teşvik etmek ve desteklemek.</li>\r\n                    <li>Seçilmiş sektörlerde küresel ölçekte rekabet edebilir nitelikte şirketler yaratmak, öncelikli\r\n                        sektörlerden yeteri başvuru alınamaması halinde medikal,\r\n                        biyomedikal gibi yüksek katma değerli ürünler üretilen alanlarda verimliliği arttırmaya yönelik\r\n                        yöntem, teknik, teknoloji ve ürünlerin geliştirilmesini ve bunların uygulanmasını sağlamak.\r\n                    </li>\r\n                    <li> Ar-Ge yeteneği ve geleneğine sahip ulusal ve uluslararası şirketlerin faaliyetlerini\r\n                        sürdürebilmeleri için gerekli teknolojik alt yapıyı temin etmek.\r\n                    </li>\r\n                    <li>Yerel, ulusal ve uluslararası stratejik iş birlikleri ve üniversite-sanayi iş birliğinde\r\n                        sistematik ve doğru yöntemlerle mevcut zenginlik ve birikimi kullanılabilir hale getirmek,\r\n                        teknoloji transferine uygun ortam oluşturmak.\r\n                    </li>\r\n                    <li> İşleyişi ve yönetimi bakımından her yönüyle hesap verebilir ve izlenebilir olmak.</li>\r\n                    <li> Kümelenme odaklı bir yapı ile bölgenin potansiyeli dikkate alınarak, güçlü yanlar ve ihtiyaçlar\r\n                        doğrultusunda yüksek katma değerli ürünler geliştirmek.\r\n                    </li>\r\n                    <li> Bölge şirketlerinin kendi aralarında ve küme grupları/oluşumları arasında sinerji\r\n                        yaratmaktır.\r\n                    </li>\r\n            </b></ul><b>\r\n            </b>                                                                                                                                                                                    ', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p>Teknokent<br></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ', 'kuvarssoftt.png', '05444355071', '05444355071', '05444355071', '05444355071', 'oguzhanfiliz@outlook.com', 'http://facebook.com/onlyfryou', 'http://twitter.com/onlyfryouu1', 'http://instagram.com/busraoguzhan_', 'linedk.com/kasdasdk', '2020-08-12 16:18:32', '2020-08-20 13:50:58');
+(2, 'KuvarSSoftt', 'Teknokent', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p>Teknokent<br></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ', '   <div class=\"col-md-6\">\r\n                    <div class=\"overflow-hidden mb-2\">\r\n                        <h2 class=\"text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation\"\r\n                            data-appear-animation=\"maskUp\" data-appear-animation-delay=\"1200\">Dumlupınar <strong\r\n                                    class=\"font-weight-extra-bold\">TGB</strong></h2>\r\n                    </div>\r\n                    <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\"\r\n                       data-appear-animation-delay=\"1400\">Teknoloji Geliştirme Bölgeleri (TGB), üniversiteler, araştırma\r\n                        kurumları ve sanayi kuruluşlarının ileri teknoloji ile aynı ortam içerisinde AR-GE ve inovasyon\r\n                        çalışmalarını sürdürdükleri,\r\n                        projeler ve yenilikçi ürünler ortaya çıkardıkları, birbirleri arasında bilgi ve teknoloji\r\n                        transferi gerçekleştirdikleri, bu yolla bölgelerin ve ülkemizin kalkınmasına katkıda\r\n                        bulundukları, akademik, ekonomik ve sosyal yapının birleştiği organize araştırma, iş ve\r\n                        girişimcilik merkezleridir.\r\n                        2023 yılına kadar TGB’deki şirketler yürüttükleri Ar-Ge projeleri ve geliştirdikleri yazılımlar\r\n                        ile ilgili olarak KDV muafiyeti, gümrük vergisi muafiyeti gibi teşvikler alırken çalışan Ar-Ge\r\n                        ve yazılım personeline de stopaj teşviki, sigorta primi teşviki verilmektedir.\r\n                        TGB yönetici şirketleri tarafından Bölgede faaliyette bulunan firmalara danışmanlık hizmetleri,\r\n                        esnek kira sözleşmeleri, ortak toplantı mekanları, ortak faks, fotokopi vb. ofis ekipmanı,\r\n                        muhasebe hizmetleri gibi çeşitli hizmetler de verilebilmektedir.</p>\r\n                </div>\r\n\r\n                <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\" data-appear-animation-delay=\"1400\">\r\n                    Günümüzde bir ülkenin küresel rekabet edebilirlik düzeyi, o ülkenin ‘yeni bilgi’ üretebilme\r\n                    kapasitesi ve ‘teknolojik gelişimi’ ile doğru orantılıdır. Yeni bilgi ile teknolojik uygulamanın\r\n                    aynı çatı altında toplandığı Kamu-Üniversite-Sanayi İş Birliği Modeli, ülkelerin teknoloji tabanlı\r\n                    kalkınmasına doğrudan etkileri kanıtlanmış dünya çapında bir modeldir. TGB’ler; üniversiteler, AR-GE\r\n                    kuruluşları, firmalar ve pazar arasında bilgi ve teknoloji akışını yönetir ve teşvik eder, yenilikçi\r\n                    firmaların oluşmasını ve büyümesini kolaylaştırır, yüksek kalitede mekân ve olanaklar sağlar ve\r\n                    diğer katma değerli hizmetleri sunar.\r\n\r\n                    Kütahya Dumlupınar Üniversitesi 2009 yılında Kütahya Organize Serbest Bölgesinde TGB kurulması ile\r\n                    ilgili Bilim, Sanayi ve Teknoloji Bakanlığına başvuruda bulunmuştur. Başvuru Başbakanlığın uygun\r\n                    görüşü ile Bakanlar Kuruluna gönderilmiş ve Bakanlar Kurulu kararı 28.07.2009 tarihli Resmi\r\n                    gazetenin 27302 sayılı nüshasında yayınlanmıştır. Kütahya Dumlupınar Üniversitesi ve Bilim, Sanayi\r\n                    ve Teknoloji Bakanlığı’nın ortaklaşa kurmuş oldukları “Kütahya Dumlupınar Tasarım, Teknoloji\r\n                    Geliştirme Bölgesi (Dumlupınar TGB)’nin resmi olarak kurulmasından sonra Tasarım Teknokent Yönetici\r\n                    Anonim Şirketi (Dumlupınar Teknokent) 25/01/2010 tarihinde kurulmuş ve 2013 yılında faaliyete\r\n                    başlamıştır.\r\n\r\n                    Dumlupınar Teknokent binası bodrum + zemin + 2 kattan oluşan 58,80 metre uzunluğunda 18,50 metre\r\n                    genişliğinde olup yaklaşık 2000.00 m2 kiralanabilir ofis alanına sahiptir. Yazılım şirketleri başta\r\n                    olmak üzere otomasyon ve kimya sektörlerinden 30’a yakın şirket Dumlupınar Teknokent’te faaliyet\r\n                    göstermektedir.', '\r\n                <div class=\"col-md-6\">\r\n                    <div class=\"overflow-hidden mb-2\">\r\n                        <h2 class=\"text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation\"\r\n                            data-appear-animation=\"maskUp\" data-appear-animation-delay=\"1200\">Dumlupınar <strong\r\n                                    class=\"font-weight-extra-bold\">TGB\'nin Vizyonu</strong></h2>\r\n                    </div>\r\n                    <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\"\r\n                       data-appear-animation-delay=\"1400\">Ülkemizin gelişmişlik seviyesine katkı sağlamak amacıyla\r\n                        yüksek/ileri teknolojiler alanında inovasyon kültürünün gelişmesini teşvik edici,\r\n                        yaratıcılık ve girişimcilik alanında önemli projelerin ekonomiye kazandırılması ve\r\n                        ticarileştirilmesi, üniversite-sanayi işbirliğinin gelişimine katkı sağlamak amacıyla ortak\r\n                        proje geliştirmek ve firmalar arasında sinerji oluşturmak üzere\r\n                        eşleştirme ve kümeleme çalışmalarıyla sürdürülebilir Ar-Ge ve inovasyon ekosistemi içerisinde,\r\n                        akademik ve endüstriyel girişimciliği destekleyerek, bölgesel ve ulusal düzeyde en yüksek katma\r\n                        değeri yaratmaktır.\r\n                </div>\r\n\r\n\r\n                <h2 class=\"text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation\"\r\n                    data-appear-animation=\"maskUp\" data-appear-animation-delay=\"1200\">Dumlupınar TGB\'nin Vizyonu <strong\r\n                            class=\"font-weight-extra-bold\"> Amaçları / Misyonu</strong></h2>\r\n            </div>\r\n            <p class=\"appear-animation\" data-appear-animation=\"fadeInUpShorter\" data-appear-animation-delay=\"1400\">\r\n            <ul><b>\r\n                    <li>Türkiye\'de Teknoloji geliştiricisi Ar-Ge kurum ve kuruluşları ile teknoloji kullanıcısı sanayi\r\n                        şirketleri veya diğer teknoloji ya da Ar-Ge kurum ve kuruluşları\r\n                        arasında bilgilendirme, koordinasyon, araştırmayı yönlendirme, yeni Ar-Ge şirketlerinin\r\n                        oluşturulmasını teşvik etme, iş birliği geliştirme, fikri mülkiyet haklarının\r\n                        korunması, pazarlanması, satılması, fikri mülkiyetin satışından elde edilen gelirlerin\r\n                        yönetilmesi konularında destek vermek,\r\n                    </li>\r\n                    <li>Kütahya’da girişimcilik ekosistemini güçlendirmek ve bilişim, medikal, biyomedikal,\r\n                        elektrik-elektronik, savunma sanayi, maden, tarım ve diğer sektörlerin potansiyellerini\r\n                        değerlendirmek bölgenin güç çeşitliliğini öne çıkaracak yeni projeler ile bölgesel gelişmeyi\r\n                        hedeflemek ve ulusal ve uluslararası arenada söz sahibi olmak,\r\n                    </li>\r\n                    <li>Girişimciliği ve yenilikçiliği teşvik etmek ve desteklemek.</li>\r\n                    <li>Seçilmiş sektörlerde küresel ölçekte rekabet edebilir nitelikte şirketler yaratmak, öncelikli\r\n                        sektörlerden yeteri başvuru alınamaması halinde medikal,\r\n                        biyomedikal gibi yüksek katma değerli ürünler üretilen alanlarda verimliliği arttırmaya yönelik\r\n                        yöntem, teknik, teknoloji ve ürünlerin geliştirilmesini ve bunların uygulanmasını sağlamak.\r\n                    </li>\r\n                    <li> Ar-Ge yeteneği ve geleneğine sahip ulusal ve uluslararası şirketlerin faaliyetlerini\r\n                        sürdürebilmeleri için gerekli teknolojik alt yapıyı temin etmek.\r\n                    </li>\r\n                    <li>Yerel, ulusal ve uluslararası stratejik iş birlikleri ve üniversite-sanayi iş birliğinde\r\n                        sistematik ve doğru yöntemlerle mevcut zenginlik ve birikimi kullanılabilir hale getirmek,\r\n                        teknoloji transferine uygun ortam oluşturmak.\r\n                    </li>\r\n                    <li> İşleyişi ve yönetimi bakımından her yönüyle hesap verebilir ve izlenebilir olmak.</li>\r\n                    <li> Kümelenme odaklı bir yapı ile bölgenin potansiyeli dikkate alınarak, güçlü yanlar ve ihtiyaçlar\r\n                        doğrultusunda yüksek katma değerli ürünler geliştirmek.\r\n                    </li>\r\n                    <li> Bölge şirketlerinin kendi aralarında ve küme grupları/oluşumları arasında sinerji\r\n                        yaratmaktır.\r\n                    </li>\r\n            </ul>\r\n            </b>', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <p>Teknokent<br></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ', 'kuvarssoftt.png', '05444355071', '05444355071', '05444355071', '05444355071', 'oguzhanfiliz@outlook.com', 'http://facebook.com/onlyfryou', 'http://twitter.com/onlyfryouu1', 'http://instagram.com/busraoguzhan_', 'linedk.com/kasdasdk', '2020-08-12 16:18:32', '2020-08-20 22:37:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slides`
+-- Tablo için tablo yapısı `slides`
 --
 
 DROP TABLE IF EXISTS `slides`;
@@ -520,7 +519,7 @@ CREATE TABLE IF NOT EXISTS `slides` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `teams`
+-- Tablo için tablo yapısı `teams`
 --
 
 DROP TABLE IF EXISTS `teams`;
@@ -528,28 +527,28 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `title` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `description` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `description` text COLLATE utf8_turkish_ci,
   `category` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
   `img_url` varchar(255) COLLATE utf8_turkish_ci DEFAULT NULL,
   `rank` int(11) DEFAULT NULL,
   `isActive` tinyint(4) DEFAULT NULL,
   `createdAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `teams`
+-- Tablo döküm verisi `teams`
 --
 
 INSERT INTO `teams` (`id`, `url`, `title`, `description`, `category`, `img_url`, `rank`, `isActive`, `createdAt`) VALUES
 (4, 'prof--dr--ersan-oz', 'Prof. Dr. Ersan ÖZ', 'GENEL MÜDÜR', 'Genel Müdür', 'ersanoz.png', 0, 1, '2020-08-20 14:32:08'),
-(5, 'doc--dr--fatih-sen', 'Doç. Dr. Fatih ŞEN', 'GENEL MÜDÜR YARDIMCISI', 'GENEL MÜDÜR YARDIMCISI', 'fatihsen1.png', 0, 1, '2020-08-20 14:33:12'),
-(6, 'fatih-emre', 'Fatih Emre', 'İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI', 'İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI', 'resim31.jpg', 0, 1, '2020-08-20 14:39:34');
+(5, 'doc--dr--fatih-sen', 'Doç. Dr. Fatih ŞEN', 'GENEL MÜDÜR YARDIMCISI', 'GENEL MÜDÜR YARDIMCISI', 'fatihsen1.png', 1, 1, '2020-08-20 14:33:12'),
+(6, 'fatih-emre', 'Fatih Emre', 'İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI', 'İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI', 'resim31.jpg', 2, 1, '2020-08-20 14:39:34');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Tablo için tablo yapısı `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -565,7 +564,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `users`
+-- Tablo döküm verisi `users`
 --
 
 INSERT INTO `users` (`id`, `user_name`, `full_name`, `email`, `password`, `isActive`, `createdAt`) VALUES
@@ -574,7 +573,7 @@ INSERT INTO `users` (`id`, `user_name`, `full_name`, `email`, `password`, `isAct
 -- --------------------------------------------------------
 
 --
--- Table structure for table `videos`
+-- Tablo için tablo yapısı `videos`
 --
 
 DROP TABLE IF EXISTS `videos`;
@@ -589,7 +588,7 @@ CREATE TABLE IF NOT EXISTS `videos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `videos`
+-- Tablo döküm verisi `videos`
 --
 
 INSERT INTO `videos` (`id`, `gallery_id`, `url`, `rank`, `isActive`, `createdAt`) VALUES
