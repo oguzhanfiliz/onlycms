@@ -6,6 +6,7 @@
                     <div class="dz-message">
                         <h3 class="m-h-lg">Yüklemek istediğiniz resimleri buyara sürükleyiniz</h3>
                         <p class="m-b-lg text-muted">(Yüklemek için dosyalarınızı sürükleyiniz yada buraya tıklayınız)</p>
+                        <p class="m-b-lg text-muted">Önerilen Resim Boyutu:<b>1170x540px</b></p>
                     </div>
                 </form>
             </div><!-- .widget-body -->

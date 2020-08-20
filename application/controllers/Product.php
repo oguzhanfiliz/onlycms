@@ -13,6 +13,7 @@ class Product extends CI_Controller
 
         $this->load->model("product_model");
         $this->load->model("product_image_model");
+        $this->load->helper("text");
 
         if(!get_active_user()){
             redirect(base_url("login"));

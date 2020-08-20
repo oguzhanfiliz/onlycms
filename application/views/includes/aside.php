@@ -7,7 +7,7 @@
                 <div class="avatar avatar-md avatar-circle">
                     <a href="">
                         <img class="img-responsive" src="<?php echo base_url("assets"); ?>/assets/images/221.jpg"
-                            alt="<?php echo convertToSEO($user->full_name); ?>" />
+                             alt="<?php echo convertToSEO($user->full_name); ?>"/>
                     </a>
                 </div><!-- .avatar -->
             </div>
@@ -17,7 +17,7 @@
                     <ul>
                         <li class="dropdown">
                             <a href="<?php echo base_url(); ?>" class="dropdown-toggle usertitle" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                               aria-haspopup="true" aria-expanded="false">
                                 <small>İşlemler</small>
                                 <span class="caret"></span>
                             </a>
@@ -102,7 +102,13 @@
                         <span class="menu-text">Hizmetlerimiz</span>
                     </a>
                 </li>
-                
+                <li>
+                    <a href="<?php echo base_url("teams"); ?>">
+                        <i class="menu-icon fa fa-tasks"></i>
+                        <span class="menu-text">Teknokent Ekibi</span>
+                    </a>
+                </li>
+
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon fa fa-asterisk"></i>
@@ -111,16 +117,16 @@
                     </a>
                     <ul class="submenu">
                         <li>
-                        <a href="<?php echo base_url("portfolio_categories"); ?>">
-                        <span class="menu-text">Portfolyo Kategori</span>
-                         </a>
+                            <a href="<?php echo base_url("portfolio_categories"); ?>">
+                                <span class="menu-text">Portfolyo Kategori</span>
+                            </a>
                         </li>
                         <li>
-                        <a href="<?php echo base_url("portfolio"); ?>">
-                        <span class="menu-text">Portfolyo</span>
-                         </a>
+                            <a href="<?php echo base_url("portfolio"); ?>">
+                                <span class="menu-text">Portfolyo</span>
+                            </a>
                         </li>
-                     
+
                     </ul>
                 </li>
                 <li>

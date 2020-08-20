@@ -17,7 +17,7 @@
     <div class="row">
 
         <div class="form-group col-md-4">
-            <label>Facebook</label>
+            <label>Facebooks</label>
             <input class="form-control" placeholder="Facebook Adresiniz"
                    name="facebook">
         </div>
