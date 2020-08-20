@@ -16,12 +16,21 @@
                         <?php } ?>
                     </div>
                     <div class="form-group">
-                        <label>Açıklama</label>
+                        <label>Ünvan</label>
                         <input class="form-control" placeholder="Ünvan" name="description" value="<?php echo $item->description; ?>">
                     </div>
                     <div class="form-group">
-                        <label>Açıklama</label>
-                        <input class="form-control" placeholder="kategori" name="category" value="<?php echo $item->category; ?>">
+                        <label>Kategori</label>
+
+                        <select name="category" class="form-control">
+                            <option <?php echo$item->category ==="GENEL MÜDÜR"  ? "selected" : ""; ?> value="Genel Müdür">GENEL MÜDÜR</option>
+                            <option <?php echo$item->category ==="GENEL MÜDÜR YARDIMCISI"  ? "selected" : ""; ?> value="GENEL MÜDÜR YARDIMCISI">GENEL MÜDÜR YARDIMCISI</option>
+                            <option <?php echo$item->category ==="İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI" ? "selected" : ""; ?> value="İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI">İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI</option>
+                        </select>
+
+                        <?php if(isset($form_error)){ ?>
+                            <small class="pull-right input-form-error"> <?php echo form_error("category_id"); ?></small>
+                        <?php } ?>
                     </div>
                     <div class="row">
 
@@ -35,6 +44,7 @@
                         </div>
 
                     </div>
+                    <br>
 
                     <button type="submit" class="btn btn-primary btn-md btn-outline">Güncelle</button>
                     <a href="<?php echo base_url("teams"); ?>" class="btn btn-md btn-danger btn-outline">İptal</a>

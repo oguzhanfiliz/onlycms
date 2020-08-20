@@ -16,14 +16,22 @@
                         <?php } ?>
                     </div>
                     <div class="form-group">
-                        <label>Açıklama</label>
+                        <label>Ünvan</label>
                         <input class="form-control" placeholder="Ünvan" name="description">
 
                     </div>
                     <div class="form-group">
-                        <label>Açıklama</label>
-                        <input class="form-control" placeholder="kategori" name="category">
+                        <label>Kategori</label>
 
+                        <select name="category" class="form-control">
+                            <option value="Genel Müdür">GENEL MÜDÜR</option>
+                            <option value="GENEL MÜDÜR YARDIMCISI">GENEL MÜDÜR YARDIMCISI</option>
+                            <option value="İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI">İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI</option>
+                        </select>
+
+                        <?php if(isset($form_error)){ ?>
+                            <small class="pull-right input-form-error"> <?php echo form_error("category_id"); ?></small>
+                        <?php } ?>
                     </div>
                     <div class="form-group image_upload_container">
                         <label>Görsel Seçiniz</label>
