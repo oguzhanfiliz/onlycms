@@ -7,26 +7,33 @@
     <div class="col-md-12">
         <div class="widget">
             <div class="widget-body">
-                <form action="<?php echo base_url("teams/save"); ?>" method="post" enctype="multipart/form-data">
+                <form action="<?php echo base_url("manages/save"); ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>Başlık</label>
-                        <input class="form-control" placeholder="Başlık" name="title">
+                        <label>Ad Soyad</label>
+                        <input class="form-control" placeholder="Başlık"
+                               name="title"
+                               value="<?php echo isset($form_error) ? set_value("title") : ""; ?>">
                         <?php if(isset($form_error)){ ?>
                             <small class="pull-right input-form-error"> <?php echo form_error("title"); ?></small>
                         <?php } ?>
                     </div>
                     <div class="form-group">
-                        <label>Ünvan</label>
-                        <input class="form-control" placeholder="Ünvan" name="description">
+                        <label >Teknokent Ünvanı</label>
+                        <input class="form-control" placeholder="Teknokent Ünvanı" name="description" value="<?php echo isset($form_error) ? set_value("description") : ""; ?>">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Kişinin Ünvanı</label>
+                        <input class="form-control" placeholder="Ünvan" name="unvan">
 
                     </div>
                     <div class="form-group">
                         <label>Kategori</label>
 
                         <select name="category" class="form-control">
-                            <option value="Genel Müdür">GENEL MÜDÜR</option>
-                            <option value="GENEL MÜDÜR YARDIMCISI">GENEL MÜDÜR YARDIMCISI</option>
-                            <option value="İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI">İŞ GELIŞTIRME VE ŞIRKETLEŞME UZMANI</option>
+                            <option value="Yönetim Kurulu Başkanı">Yönetim Kurulu Başkanı</option>
+                            <option value="Yönetim Kurulu Başkan Vekili">Yönetim Kurulu Başkan Vekili</option>
+                            <option value="Üye">Üye</option>
                         </select>
 
                         <?php if(isset($form_error)){ ?>
@@ -39,7 +46,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-md btn-outline">Kaydet</button>
-                    <a href="<?php echo base_url("teams"); ?>" class="btn btn-md btn-danger btn-outline">İptal</a>
+                    <a href="<?php echo base_url("manages"); ?>" class="btn btn-md btn-danger btn-outline">İptal</a>
                 </form>
             </div><!-- .widget-body -->
         </div><!-- .widget -->

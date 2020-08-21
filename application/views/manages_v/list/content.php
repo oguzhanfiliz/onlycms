@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-md-12">
         <h4 class="m-b-lg">
-            Ekip Listesi
-            <a href="<?php echo base_url("teams/new_form"); ?>" class="btn btn-outline btn-primary btn-xs pull-right"> <i class="fa fa-plus"></i> Yeni Ekle</a>
+            Yönetici Listesi
+            <a href="<?php echo base_url("manages/new_form"); ?>" class="btn btn-outline btn-primary btn-xs pull-right"> <i class="fa fa-plus"></i> Yeni Ekle</a>
         </h4>
     </div><!-- END column -->
     <div class="col-md-12">
@@ -11,7 +11,7 @@
             <?php if(empty($items)) { ?>
 
                 <div class="alert alert-info text-center">
-                    <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a href="<?php echo base_url("teams/new_form"); ?>">tıklayınız</a></p>
+                    <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a href="<?php echo base_url("manages/new_form"); ?>">tıklayınız</a></p>
                 </div>
 
             <?php } else { ?>
@@ -26,7 +26,7 @@
                         <th>Durumu</th>
                         <th>İşlem</th>
                     </thead>
-                    <tbody class="sortable" data-url="<?php echo base_url("teams/rankSetter"); ?>">
+                    <tbody class="sortable" data-url="<?php echo base_url("manages/rankSetter"); ?>">
 
                         <?php foreach($items as $item) { ?>
 
@@ -41,7 +41,7 @@
                                 </td>
                                 <td class="text-center w100">
                                     <input
-                                        data-url="<?php echo base_url("teams/isActiveSetter/$item->id"); ?>"
+                                        data-url="<?php echo base_url("manages/isActiveSetter/$item->id"); ?>"
                                         class="isActive"
                                         type="checkbox"
                                         data-switchery
@@ -51,11 +51,11 @@
                                 </td>
                                 <td class="text-center w200">
                                     <button
-                                        data-url="<?php echo base_url("teams/delete/$item->id"); ?>"
+                                        data-url="<?php echo base_url("manages/delete/$item->id"); ?>"
                                         class="btn btn-sm btn-danger btn-outline remove-btn">
                                         <i class="fa fa-trash"></i> Sil
                                     </button>
-                                    <a href="<?php echo base_url("teams/update_form/$item->id"); ?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i> Düzenle</a>
+                                    <a href="<?php echo base_url("manages/update_form/$item->id"); ?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i> Düzenle</a>
                                 </td>
                             </tr>
 

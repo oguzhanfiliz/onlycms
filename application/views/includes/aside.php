@@ -102,13 +102,28 @@
                         <span class="menu-text">Hizmetlerimiz</span>
                     </a>
                 </li>
-                <li>
-                    <a href="<?php echo base_url("teams"); ?>">
-                        <i class="menu-icon fa fa-tasks"></i>
-                        <span class="menu-text">Teknokent Ekibi</span>
-                    </a>
-                </li>
 
+                <li class="has-submenu">
+                    <a href="javascript:void(0)" class="submenu-toggle">
+                        <i class="menu-icon fa fa-asterisk"></i>
+                        <span class="menu-text">Teknokent Yönetim</span>
+                        <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                    </a>
+                    <ul class="submenu">      <li>
+                            <a href="<?php echo base_url("manages"); ?>">
+                                <i class="menu-icon fa fa-tasks"></i>
+                                <span class="menu-text">Üniversite Ekibi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url("teams"); ?>">
+                                <i class="menu-icon fa fa-tasks"></i>
+                                <span class="menu-text">Teknokent Ekibi</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon fa fa-asterisk"></i>
