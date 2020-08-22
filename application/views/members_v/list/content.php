@@ -21,8 +21,6 @@
                         <th class="order"><i class="fa fa-reorder"></i></th>
                         <th class="w50">#id</th>
                         <th>Başlık</th>
-                        <th>kategori</th>
-                        <th>Görsel</th>
                         <th>Durumu</th>
                         <th>İşlem</th>
                     </thead>
@@ -33,12 +31,8 @@
                             <tr id="ord-<?php echo $item->id; ?>">
                                 <td class="order"><i class="fa fa-reorder"></i></td>
                                 <td class="w50 text-center">#<?php echo $item->id; ?></td>
-                                <td><?php echo $item->title; ?></td>
-                                <td><?php echo $item->category; ?></td>
-                                <td class="text-center w100">
-                                    <img width="75" src="<?php echo base_url("uploads/$viewFolder/$item->img_url"); ?>"
-                                         alt="" class="img-rounded">
-                                </td>
+                                <td><?php echo $item->email; ?></td>
+
                                 <td class="text-center w100">
                                     <input
                                         data-url="<?php echo base_url("teams/isActiveSetter/$item->id"); ?>"
@@ -55,7 +49,6 @@
                                         class="btn btn-sm btn-danger btn-outline remove-btn">
                                         <i class="fa fa-trash"></i> Sil
                                     </button>
-                                    <a href="<?php echo base_url("teams/update_form/$item->id"); ?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i> Düzenle</a>
                                 </td>
                             </tr>
 
