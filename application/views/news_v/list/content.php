@@ -46,15 +46,14 @@
 
                                     <?php } else if($item->news_type == "video") { ?>
 
-                                        <iframe
-                                            width="75"
-                                            src="<?php echo $item->video_url; ?>"
-                                            frameborder="0"
-                                            gesture="media"
-                                            allow="encrypted-media"
-                                            allowfullscreen>
+                                        <img width="75" 
+                                        src="<?php 
+                                                    	 $y_img=$item->video_url;
+														 $video_th=explode("=",$y_img);
+														 echo "https://img.youtube.com/vi/$video_th[1]/sddefault.jpg";?>" 
+                                             alt=""
+                                             class="img-rounded">
 
-                                        </iframe>
 
                                     <?php } ?>
                                 </td>
